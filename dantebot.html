@@ -365,6 +365,48 @@
             color: white;
             margin-top: 40px;
         }
+
+        .changelog-grid {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .changelog-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .version {
+            font-size: 1.4em;
+            color: #4a90e2;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .release-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .changelog-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .changelog-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .changelog-list li:before {
+            position: absolute;
+            left: 0;
+        }
     </style>
 </head>
 <body>
@@ -423,6 +465,28 @@
                 <li>Schnelle Reaktionszeit</li>
                 <li>Unterstützung verschiedener Audioformate</li>
             </ul>
+        </div>
+
+        <div id="kategorien" class="section" data-aos="fade-up">
+            <h2>📂 Verfügbare Kategorien</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🎭</div>
+                    <div class="stat-label">Dante</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-label">Mayline</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🦷</div>
+                    <div class="stat-label">Zahnfee</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏴‍☠️</div>
+                    <div class="stat-label">Popirat</div>
+                </div>
+            </div>
         </div>
 
         <div id="befehle" class="section" data-aos="fade-up">
@@ -526,57 +590,6 @@
             </div>
         </div>
 
-        <div id="kategorien" class="section" data-aos="fade-up">
-            <h2>📂 Verfügbare Kategorien</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">🎭</div>
-                    <div class="stat-label">Dante</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🌟</div>
-                    <div class="stat-label">Mayline</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🦷</div>
-                    <div class="stat-label">Zahnfee</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏴‍☠️</div>
-                    <div class="stat-label">Popirat</div>
-                </div>
-            </div>
-        </div>
-
-        <div id="credits" class="section" data-aos="fade-up">
-            <h2>🏆 Credits</h2>
-            <div class="credits-grid">
-                <div class="credit-card">
-                    <div class="credit-icon">👨‍💻</div>
-                    <div class="credit-title">Entwickler</div>
-                    <div class="credit-content">
-                        <a href="https://github.com/Furby87" target="_blank">@Furby87</a>
-                    </div>
-                </div>
-                
-                <div class="credit-card">
-                    <div class="credit-icon">🤖</div>
-                    <div class="credit-title">Bot API</div>
-                    <div class="credit-content">
-                        <a href="https://github.com/python-telegram-bot/python-telegram-bot" target="_blank">python-telegram-bot</a>
-                    </div>
-                </div>
-                
-                <div class="credit-card">
-                    <div class="credit-icon">🎵</div>
-                    <div class="credit-title">Audio Tools</div>
-                    <div class="credit-content">
-                        <a href="https://ffmpeg.org/" target="_blank">ffmpeg</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="section" data-aos="fade-up">
             <h2>🔍 Funktionen im Detail</h2>
             <div class="feature-list">
@@ -614,6 +627,52 @@
                             <li>Medientypanalyse</li>
                             <li>Top-Benutzer-Tracking</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="changelog" class="section" data-aos="fade-up">
+            <h2>📝 Changelog</h2>
+            <div class="changelog-grid">
+                <div class="changelog-card">
+                    <div class="version">Version 1.0.0</div>
+                    <div class="release-date">15. März 2024</div>
+                    <ul class="changelog-list">
+                        <li>🎉 Erste öffentliche Version</li>
+                        <li>✨ Grundlegende Bot-Funktionalität</li>
+                        <li>📂 Kategoriesystem implementiert</li>
+                        <li>🎵 Audio-Wiedergabe-System</li>
+                        <li>📊 Statistik-Tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="credits" class="section" data-aos="fade-up">
+            <h2>🏆 Credits</h2>
+            <div class="credits-grid">
+                <div class="credit-card">
+                    <div class="credit-icon">👨‍💻</div>
+                    <div class="credit-title">Entwickler</div>
+                    <div class="credit-content">
+                        <a href="https://github.com/Furby87" target="_blank">@Furby87</a>
+                    </div>
+                </div>
+                
+                <div class="credit-card">
+                    <div class="credit-icon">🤖</div>
+                    <div class="credit-title">Bot API</div>
+                    <div class="credit-content">
+                        <a href="https://github.com/python-telegram-bot/python-telegram-bot" target="_blank">python-telegram-bot</a>
+                    </div>
+                </div>
+                
+                <div class="credit-card">
+                    <div class="credit-icon">🎵</div>
+                    <div class="credit-title">Audio Tools</div>
+                    <div class="credit-content">
+                        <a href="https://ffmpeg.org/" target="_blank">ffmpeg</a>
                     </div>
                 </div>
             </div>
