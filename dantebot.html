@@ -316,8 +316,10 @@
             align-items: center;
             padding: 8px 15px;
             background: #4a90e2;
-            color: white !important;
+            color: white;
+            text-decoration: none;
             border-radius: 20px;
+            margin-bottom: 20px;
             transition: all 0.3s ease;
         }
 
@@ -359,18 +361,11 @@
     </style>
 </head>
 <body>
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html" class="back-button">← Zurück zur Startseite</a></li>
-            <li><a href="#funktionen">Funktionen</a></li>
-            <li><a href="#befehle">Befehle</a></li>
-            <li><a href="#kategorien">Kategorien</a></li>
-            <li><a href="#credits">Credits</a></li>
-            <li><a href="#support">Support</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
+        <a href="index.html" class="back-button">
+            ← Zurück zur Hauptseite
+        </a>
+        
         <div class="hero">
             <h1>DanteBot</h1>
             <p class="lead">Ein vielseitiger Telegram-Bot für Audiodateien</p>
