@@ -441,7 +441,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">📂</div>
-                    <div class="stat-number" id="audiocount">0+</div>
+                    <div class="stat-number" id="mediaCount">0+</div>
                     <div class="stat-label">Medien-Dateien</div>
                 </div>
                 <div class="stat-card">
@@ -464,6 +464,7 @@
                 <li>Unterstützung für Audio, Video und Bilder</li>
                 <li>Einfache Verwaltung durch Ordnerstruktur</li>
                 <li>Schnelle Reaktionszeit</li>
+                <li>Versteckter Konami-Modus mit Spezialeffekten</li>
             </ul>
         </div>
 
@@ -588,6 +589,48 @@
                     </div>
                 </div>
             </div>
+
+            <div class="command">
+                <div class="command-title">/seelmann [audio|video|photo]</div>
+                <div class="command-content">
+                    <p>Spielt eine zufällige Seelmann-Datei ab. Optional kann der Medientyp angegeben werden.</p>
+                    <div class="example">
+                        <div class="example-title">Beispiele:</div>
+                        <code>/seelmann</code> - Zufällige Datei aus allen Medientypen<br>
+                        <code>/seelmann audio</code> - Nur Audiodateien<br>
+                        <code>/seelmann video</code> - Nur Videodateien<br>
+                        <code>/seelmann photo</code> - Nur Bilder
+                    </div>
+                </div>
+            </div>
+
+            <div class="command">
+                <div class="command-title">/random [audio|video|photo]</div>
+                <div class="command-content">
+                    <p>Spielt eine zufällige Datei aus allen verfügbaren Kategorien ab. Optional kann der Medientyp angegeben werden.</p>
+                    <div class="example">
+                        <div class="example-title">Beispiele:</div>
+                        <code>/random</code> - Zufällige Datei aus allen Kategorien<br>
+                        <code>/random audio</code> - Zufällige Audiodatei<br>
+                        <code>/random video</code> - Zufälliges Video<br>
+                        <code>/random photo</code> - Zufälliges Bild
+                    </div>
+                </div>
+            </div>
+
+            <div class="command">
+                <div class="command-title">🎮 Geheimer Konami-Modus</div>
+                <div class="command-content">
+                    <p>Ein versteckter Modus mit speziellen Glitch-Effekten und verzerrten Texten!</p>
+                    <div class="example">
+                        <div class="example-title">Features:</div>
+                        <code>- Spezielle Glitch-Effekte</code><br>
+                        <code>- Verzerrte Text-Captions</code><br>
+                        <code>- Visuelle Überraschungen</code><br>
+                        <code>- Zeitlich begrenzte Aktivierung</code>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section" data-aos="fade-up">
@@ -629,6 +672,19 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="command">
+                    <div class="command-name">Konami-Modus</div>
+                    <div class="command-description">
+                        <ul>
+                            <li>Versteckte Spezialeffekte</li>
+                            <li>Glitch-Animationen</li>
+                            <li>Verzerrte Medienausgabe</li>
+                            <li>Zeitlich begrenzte Events</li>
+                            <li>Überraschungseffekte</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -637,15 +693,21 @@
             <div class="changelog-grid">
                 <div class="changelog-card">
                     <div class="version">Version 1.0.0</div>
-                    <div class="release-date">05. Februar 2025</div>
+                    <div class="release-date">6. Februar 2025</div>
                     <ul class="changelog-list">
                         <li>🎉 Erste öffentliche Version</li>
                         <li>✨ Grundlegende Bot-Funktionalität</li>
-                        <li>📂 Kategoriesystem implementiert</li>
-                        <li>🎵 Audio-, Video- und Bildunterstützung</li>
-                        <li>📊 Statistik-Tracking</li>
-                        <li>🔄 Zufallsbasierte Medienwiedergabe</li>
+                        <li>📂 Kategoriesystem implementiert (Dante, Mayline, Zahnfee, Popirat, Seelmann)</li>
+                        <li>🎵 Unterstützung für Audio, Video und Bilder</li>
+                        <li>🎲 Zufallsbasierte Medienwiedergabe</li>
+                        <li>🔍 Medientyp-spezifische Suche</li>
+                        <li>📊 Detailliertes Statistik-System</li>
                         <li>📱 Benutzerfreundliche Befehle</li>
+                        <li>🎮 Geheimer Konami-Modus mit Spezialeffekten</li>
+                        <li>⚡ 24/7 Verfügbarkeit mit 99.9% Uptime</li>
+                        <li>📈 Nutzungs- und Performance-Tracking</li>
+                        <li>🔄 /random Befehl für kategorieübergreifende Zufallswiedergabe</li>
+                        <li>📋 Detaillierte Dateiübersicht mit /files Befehl</li>
                     </ul>
                 </div>
             </div>
@@ -746,12 +808,12 @@
 
         // Animierte Zahlen für Audio und Nutzungen
         function animateNumbers() {
-            const audioTarget = 50;
-            const usageTarget = 250;
+            const audioTarget = 500;
+            const usageTarget = 2000;
             let audioCurrent = 0;
             let usageCurrent = 0;
             
-            const audioElement = document.getElementById('audiocount');
+            const audioElement = document.getElementById('audioCount');
             const usageElement = document.getElementById('usageCount');
             
             const interval = setInterval(() => {
