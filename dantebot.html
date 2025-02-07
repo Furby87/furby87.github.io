@@ -830,7 +830,7 @@
             
             const interval = setInterval(() => {
                 if (audioCurrent < audioTarget) {
-                    audioCurrent += 2;
+                    audioCurrent += 1;
                     if (audioCurrent > audioTarget) audioCurrent = audioTarget;
                     audioElement.textContent = audioCurrent.toLocaleString('de-DE') + '+';
                 }
