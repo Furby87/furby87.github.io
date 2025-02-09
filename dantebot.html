@@ -394,18 +394,19 @@
 
         .changelog-list {
             list-style: none;
-            padding: 0;
+            padding-left: 20px;
         }
 
         .changelog-list li {
-            margin-bottom: 10px;
-            padding-left: 25px;
             position: relative;
+            padding: 5px 0;
         }
 
-        .changelog-list li:before {
+        .changelog-list li::before {
+            content: "•";  /* oder alternativ: "▪" oder "→" oder "–" */
             position: absolute;
-            left: 0;
+            left: -15px;
+            color: #666;
         }
     </style>
 </head>
@@ -426,7 +427,7 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon">📱</div>
-                    <div class="stat-number">1.0.0</div>
+                    <div class="stat-number">1.2.4</div>
                     <div class="stat-label">Aktuelle Version</div>
                 </div>
                 <div class="stat-card">
@@ -451,7 +452,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">⚡</div>
-                    <div class="stat-number">92.5%</div>
+                    <div class="stat-number">92.6%</div>
                     <div class="stat-label">Uptime</div>
                 </div>
             </div>
@@ -496,6 +497,10 @@
                     <div class="stat-label">Random</div>
                 </div>
                 <div class="stat-card">
+                    <div class="stat-icon">🎭</div>
+                    <div class="stat-label">DKM</div>
+                </div>
+                <div class="stat-card">
                     <div class="stat-icon">🎮</div>
                     <div class="stat-label">Konami-Modus</div>
                 </div>
@@ -505,6 +510,34 @@
         <div id="befehle" class="section" data-aos="fade-up">
             <h2>⌨️ Verfügbare Befehle</h2>
             
+            <!-- Basis-Befehle -->
+            <div class="command">
+                <div class="command-title">/start</div>
+                <div class="command-content">
+                    <p>Zeigt die Willkommensnachricht und Grundinformationen zum Bot an.</p>
+                    <div class="example">
+                        <div class="example-title">Informationen:</div>
+                        <code>- Begrüßung</code><br>
+                        <code>- Grundlegende Funktionen</code><br>
+                        <code>- Schnellstart-Anleitung</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="command">
+                <div class="command-title">/help oder /befehle</div>
+                <div class="command-content">
+                    <p>Zeigt diese Befehlsübersicht an.</p>
+                    <div class="example">
+                        <div class="example-title">Enthält:</div>
+                        <code>- Alle verfügbaren Befehle</code><br>
+                        <code>- Befehlsbeschreibungen</code><br>
+                        <code>- Beispiele zur Nutzung</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategorie-Befehle -->
             <div class="command">
                 <div class="command-title">/Dante [audio|video|photo]</div>
                 <div class="command-content">
@@ -561,6 +594,22 @@
                 </div>
             </div>
 
+            <!-- Allgemeine Medien-Befehle -->
+            <div class="command">
+                <div class="command-title">/random [audio|video|photo]</div>
+                <div class="command-content">
+                    <p>Spielt eine zufällige Datei aus allen verfügbaren Kategorien ab. Optional kann der Medientyp angegeben werden.</p>
+                    <div class="example">
+                        <div class="example-title">Beispiele:</div>
+                        <code>/random</code> - Zufällige Datei aus allen Kategorien<br>
+                        <code>/random audio</code> - Zufällige Audiodatei<br>
+                        <code>/random video</code> - Zufälliges Video<br>
+                        <code>/random photo</code> - Zufälliges Bild
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info & Statistik Befehle -->
             <div class="command">
                 <div class="command-title">/dantebotstats</div>
                 <div class="command-content">
@@ -602,34 +651,7 @@
                 </div>
             </div>
 
-            <div class="command">
-                <div class="command-title">/seelmann [audio|video|photo]</div>
-                <div class="command-content">
-                    <p>Spielt eine zufällige Seelmann-Datei ab. Optional kann der Medientyp angegeben werden.</p>
-                    <div class="example">
-                        <div class="example-title">Beispiele:</div>
-                        <code>/seelmann</code> - Zufällige Datei aus allen Medientypen<br>
-                        <code>/seelmann audio</code> - Nur Audiodateien<br>
-                        <code>/seelmann video</code> - Nur Videodateien<br>
-                        <code>/seelmann photo</code> - Nur Bilder
-                    </div>
-                </div>
-            </div>
-
-            <div class="command">
-                <div class="command-title">/random [audio|video|photo]</div>
-                <div class="command-content">
-                    <p>Spielt eine zufällige Datei aus allen verfügbaren Kategorien ab. Optional kann der Medientyp angegeben werden.</p>
-                    <div class="example">
-                        <div class="example-title">Beispiele:</div>
-                        <code>/random</code> - Zufällige Datei aus allen Kategorien<br>
-                        <code>/random audio</code> - Zufällige Audiodatei<br>
-                        <code>/random video</code> - Zufälliges Video<br>
-                        <code>/random photo</code> - Zufälliges Bild
-                    </div>
-                </div>
-            </div>
-
+            <!-- Spezial-Modus -->
             <div class="command">
                 <div class="command-title">🎮 Geheimer Konami-Modus</div>
                 <div class="command-content">
@@ -702,25 +724,92 @@
 
         <div id="changelog" class="section" data-aos="fade-up">
             <h2>📝 Changelog</h2>
-            <div class="changelog-grid">
-                <div class="changelog-card">
-                    <div class="version">Version 1.0.0</div>
-                    <div class="release-date">6. Februar 2025</div>
-                    <ul class="changelog-list">
-                        <li>🎉 Erste öffentliche Version</li>
-                        <li>✨ Grundlegende Bot-Funktionalität</li>
-                        <li>📂 Kategoriesystem implementiert (Dante, Mayline, Zahnfee, Popirat, Seelmann)</li>
-                        <li>🎵 Unterstützung für Audio, Video und Bilder</li>
-                        <li>🎲 Zufallsbasierte Medienwiedergabe</li>
-                        <li>🔍 Medientyp-spezifische Suche</li>
-                        <li>📊 Detailliertes Statistik-System</li>
-                        <li>📱 Benutzerfreundliche Befehle</li>
-                        <li>🎮 Geheimer Konami-Modus mit Spezialeffekten</li>
-                        <li>⚡ 24/7 Verfügbarkeit mit 99.9% Uptime</li>
-                        <li>📈 Nutzungs- und Performance-Tracking</li>
-                        <li>🔄 /random Befehl für kategorieübergreifende Zufallswiedergabe</li>
-                        <li>📋 Detaillierte Dateiübersicht mit /files Befehl</li>
-                    </ul>
+            <div class="feature-list">
+                <div class="command">
+                    <div class="command-title">Version 1.2.4 (09. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>🌟 Neue Kategorie "DKM" mit Befehl `/dkm` hinzugefügt</li>
+                            <li>🎮 Erweiterte Glitch-Effekte für den Konami-Modus</li>
+                            <li>🔍 Verbesserte Medientyp-Filterung für alle Kategorien</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
+                    <div class="command-title">Version 1.2.3 (08. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>🎮 Neuer geheimer `/konami` Befehl mit Glitch-Effekten</li>
+                            <li>⭐ Spezieller Glitch-Modus für Medien-Captions</li>
+                            <li>🔮 Zalgo-Text und visuelle Effekte im Konami-Modus</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
+                    <div class="command-title">Version 1.2.2 (07. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>🎲 Neuer `/random` Befehl für zufällige Dateien aus allen Kategorien</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
+                    <div class="command-title">Version 1.2.1 (07. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>👨‍⚕️ Neue Kategorie "Seelmann" mit Befehl `/seelmann` hinzugefügt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
+                    <div class="command-title">Version 1.2.0 (06. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>📂 Neue Befehle `/files` und `/dateien` für Dateiübersicht</li>
+                            <li>💬 Neuer `/support` Befehl für Support-Informationen</li>
+                            <li>🔄 Automatische Reconnect-Funktion bei Verbindungsproblemen</li>
+                            <li>📊 Erweiterte Statistiken mit Uptime und Botversion</li>
+                            <li>🔒 Privatchat-Beschränkung für sensitive Befehle</li>
+                            <li>📝 Aktualisierte Befehlsdokumentation</li>
+                            <li>🛠️ Verbesserte Fehlerbehandlung mit Reconnect-Logik</li>
+                            <li>⭐ Erweiterte Willkommensnachricht mit Entwickler-Info</li>
+                            <li>⚡ Optimierte Befehlsstruktur</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
+                    <div class="command-title">Version 1.1.0 (05. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>🎵 Unterstützung für verschiedene Medientypen (Audio, Video, Bilder)</li>
+                            <li>🏴‍☠️ Neue Kategorie "Popirat"</li>
+                            <li>🔍 Filterung nach Medientyp für alle Kategorien</li>
+                            <li>⚠️ Detaillierte Fehlerbehandlung bei nicht vorhandenen Medientypen</li>
+                            <li>📊 Befehl `/dantebotstats` für detaillierte Nutzungsstatistiken</li>
+                            <li>👤 Benutzer-spezifische Nutzungsverfolgung</li>
+                            <li>ℹ️ Anzeige verfügbarer Medientypen bei Fehlern</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
+                    <div class="command-title">Version 1.0.0 (04. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>🎉 Initialer Release des Audio-Bots</li>
+                            <li>🤖 Grundlegende Bot-Funktionalität</li>
+                            <li>🎭 Befehl `/Dante` für Dante Audiodateien</li>
+                            <li>⭐ Befehl `/Mayline` für Mayline Audiodateien</li>
+                            <li>🦷 Befehl `/zahnfee` für Zahnfee Audiodateien</li>
+                            <li>👋 Befehl `/start` für Willkommensnachricht</li>
+                            <li>📝 Befehle `/befehle` und `/commands` für Befehlsübersicht</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -820,7 +909,7 @@
 
         // Animierte Zahlen für Audio und Nutzungen
         function animateNumbers() {
-            const audioTarget = 50;
+            const audioTarget = 60;
             const usageTarget = 250;
             let audioCurrent = 0;
             let usageCurrent = 0;
@@ -830,7 +919,7 @@
             
             const interval = setInterval(() => {
                 if (audioCurrent < audioTarget) {
-                    audioCurrent += 1;
+                    audioCurrent += 2;
                     if (audioCurrent > audioTarget) audioCurrent = audioTarget;
                     audioElement.textContent = audioCurrent.toLocaleString('de-DE') + '+';
                 }
