@@ -49,6 +49,7 @@
             margin: 20px 0;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
 
@@ -94,8 +95,12 @@
         }
 
         .command:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .command:active {
+            transform: scale(0.98);
         }
 
         .example {
@@ -408,6 +413,118 @@
             left: -15px;
             color: #666;
         }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #4a90e2;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+
+        .command.hidden {
+            display: none;
+        }
+
+        /* Neue Filter-Button Styles */
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: #f0f0f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+
+        /* Animierte Übergänge */
+        .command {
+            transition: all 0.3s ease;
+        }
+
+        .command:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .command:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .section {
+                padding: 20px;
+            }
+            .command-title {
+                font-size: 1em;
+            }
+            .stat-card {
+                padding: 15px;
+            }
+            .filter-buttons {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .filter-btn {
+                flex: 1 1 calc(33.333% - 8px);
+                min-width: 100px;
+            }
+            .command-content {
+                padding: 12px;
+            }
+        }
+
+        /* Entferne Copy-Button Styles */
+        .copy-btn, .copy-btn:hover, .copy-btn:active {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -424,10 +541,10 @@
 
         <div class="section" data-aos="fade-up">
             <h2>📊 Bot-Statistiken</h2>
-            <div class="stats-grid">
+            <div class="stats-grid" data-aos="fade-up" data-aos-delay="100">
                 <div class="stat-card">
                     <div class="stat-icon">📱</div>
-                    <div class="stat-number">1.2.4</div>
+                    <div class="stat-number">1.2.5</div>
                     <div class="stat-label">Aktuelle Version</div>
                 </div>
                 <div class="stat-card">
@@ -451,8 +568,8 @@
                     <div class="stat-label">Gesamtnutzungen</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">⚡</div>
-                    <div class="stat-number">92.6%</div>
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-number" id="uptimeDisplay">-</div>
                     <div class="stat-label">Uptime</div>
                 </div>
             </div>
@@ -463,9 +580,14 @@
             <ul class="feature-list">
                 <li>Zufällige Medien aus verschiedenen Kategorien abspielen</li>
                 <li>Unterstützung für Audio, Video und Bilder</li>
+                <li>Admin-Upload-System für neue Mediendateien</li>
                 <li>Einfache Verwaltung durch Ordnerstruktur</li>
+                <li>Detaillierte Nutzungsstatistiken</li>
                 <li>Schnelle Reaktionszeit</li>
-                <li>Versteckter Konami-Modus mit Spezialeffekten</li>
+                <li>Filterung nach Medientypen (Audio/Video/Foto)</li>
+                <li>Versteckter Konami-Modus mit Spezialeffekten und geheimer Kategorie</li>
+                <li>24/7 Verfügbarkeit</li>
+                <li>Automatische Fehlerbehandlung</li>
             </ul>
         </div>
 
@@ -504,14 +626,32 @@
                     <div class="stat-icon">🎮</div>
                     <div class="stat-label">Konami-Modus</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔒</div>
+                    <div class="stat-label">Secret</div>
+                </div>
             </div>
         </div>
 
         <div id="befehle" class="section" data-aos="fade-up">
             <h2>⌨️ Verfügbare Befehle</h2>
             
-            <!-- Basis-Befehle -->
-            <div class="command">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons" role="tablist">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Alle</button>
+                <button class="filter-btn" data-filter="system" role="tab" aria-selected="false">System</button>
+                <button class="filter-btn" data-filter="admin" role="tab" aria-selected="false">Admin</button>
+                <button class="filter-btn" data-filter="media" role="tab" aria-selected="false">Medien</button>
+                <button class="filter-btn" data-filter="info" role="tab" aria-selected="false">Info</button>
+            </div>
+            
+            <!-- Suchleiste -->
+            <div class="search-container">
+                <input type="text" id="commandSearch" placeholder="Befehl suchen..." class="search-input" aria-label="Befehl suchen">
+            </div>
+            
+            <!-- System-Befehle -->
+            <div class="command" data-category="system">
                 <div class="command-title">/start</div>
                 <div class="command-content">
                     <p>Zeigt die Willkommensnachricht und Grundinformationen zum Bot an.</p>
@@ -524,7 +664,7 @@
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="system">
                 <div class="command-title">/help oder /befehle</div>
                 <div class="command-content">
                     <p>Zeigt diese Befehlsübersicht an.</p>
@@ -537,8 +677,25 @@
                 </div>
             </div>
 
-            <!-- Kategorie-Befehle -->
-            <div class="command">
+            <!-- Admin-Befehle -->
+            <div class="command" data-category="admin">
+                <div class="command-title">
+                    <span class="tooltip" data-tooltip="Nur für Administratoren verfügbar">/upload [Kategorie]</span>
+                </div>
+                <div class="command-content">
+                    <p>Ermöglicht das Hochladen neuer Mediendateien in eine bestimmte Kategorie. (Nur für festgelegte Admin-IDs verfügbar)</p>
+                    <div class="example">
+                        <div class="example-title">Beispiele:</div>
+                        <code>/upload Dante</code> - Upload in Dante-Kategorie<br>
+                        <code>/upload Mayline</code> - Upload in Mayline-Kategorie<br>
+                        <code>/upload secret</code> - Upload in geheime Kategorie<br>
+                        <code>/upload dkm</code> - Upload in DKM-Kategorie
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medien-Befehle -->
+            <div class="command" data-category="media">
                 <div class="command-title">/Dante [audio|video|photo]</div>
                 <div class="command-content">
                     <p>Spielt eine zufällige Dante-Datei ab. Optional kann der Medientyp angegeben werden.</p>
@@ -552,7 +709,7 @@
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="media">
                 <div class="command-title">/Mayline [audio|video|photo]</div>
                 <div class="command-content">
                     <p>Spielt eine zufällige Mayline-Datei ab. Optional kann der Medientyp angegeben werden.</p>
@@ -566,7 +723,7 @@
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="media">
                 <div class="command-title">/zahnfee [audio|video|photo]</div>
                 <div class="command-content">
                     <p>Spielt eine zufällige Zahnfee-Datei ab. Optional kann der Medientyp angegeben werden.</p>
@@ -580,7 +737,7 @@
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="media">
                 <div class="command-title">/popirat [audio|video|photo]</div>
                 <div class="command-content">
                     <p>Spielt eine zufällige Popirat-Datei ab. Optional kann der Medientyp angegeben werden.</p>
@@ -594,7 +751,21 @@
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="media">
+                <div class="command-title">/seelmann [audio|video|photo]</div>
+                <div class="command-content">
+                    <p>Spielt eine zufällige Seelmann-Datei ab. Optional kann der Medientyp angegeben werden.</p>
+                    <div class="example">
+                        <div class="example-title">Beispiele:</div>
+                        <code>/seelmann</code> - Zufällige Datei aus allen Medientypen<br>
+                        <code>/seelmann audio</code> - Nur Audiodateien<br>
+                        <code>/seelmann video</code> - Nur Videodateien<br>
+                        <code>/seelmann photo</code> - Nur Bilder
+                    </div>
+                </div>
+            </div>
+
+            <div class="command" data-category="media">
                 <div class="command-title">/dkm [audio|video|photo]</div>
                 <div class="command-content">
                     <p>Spielt eine zufällige DKM-Datei ab. Optional kann der Medientyp angegeben werden.</p>
@@ -609,10 +780,10 @@
             </div>
 
             <!-- Allgemeine Medien-Befehle -->
-            <div class="command">
+            <div class="command" data-category="media">
                 <div class="command-title">/random [audio|video|photo]</div>
                 <div class="command-content">
-                    <p>Spielt eine zufällige Datei aus allen verfügbaren Kategorien ab. Optional kann der Medientyp angegeben werden.</p>
+                    <p>Spielt eine zufällige Datei aus allen verfügbaren Kategorien ab (außer geheimen Kategorien). Optional kann der Medientyp angegeben werden.</p>
                     <div class="example">
                         <div class="example-title">Beispiele:</div>
                         <code>/random</code> - Zufällige Datei aus allen Kategorien<br>
@@ -624,7 +795,7 @@
             </div>
 
             <!-- Info & Statistik Befehle -->
-            <div class="command">
+            <div class="command" data-category="info">
                 <div class="command-title">/dantebotstats</div>
                 <div class="command-content">
                     <p>Zeigt detaillierte Nutzungsstatistiken des Bots an.</p>
@@ -634,25 +805,29 @@
                         <code>- Nutzung pro Kategorie</code><br>
                         <code>- Nutzung pro Medientyp</code><br>
                         <code>- Top 5 Benutzer</code><br>
+                        <code>- Uptime des Bots</code><br>
+                        <code>- Aktuelle Version</code><br>
                         <code>- Fehlerstatistiken</code>
                     </div>
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="info">
                 <div class="command-title">/files oder /dateien</div>
                 <div class="command-content">
-                    <p>Zeigt eine Übersicht aller verfügbaren Dateien nach Kategorie und Medientyp.</p>
+                    <p>Zeigt eine detaillierte Übersicht aller verfügbaren Dateien nach Kategorie und Medientyp.</p>
                     <div class="example">
                         <div class="example-title">Ausgabe enthält:</div>
                         <code>- Dateien pro Kategorie</code><br>
                         <code>- Aufschlüsselung nach Medientyp</code><br>
-                        <code>- Gesamtanzahl Dateien</code>
+                        <code>- Gesamtanzahl Dateien</code><br>
+                        <code>- Speicherplatznutzung</code><br>
+                        <code>- Verfügbare Kategorien</code>
                     </div>
                 </div>
             </div>
 
-            <div class="command">
+            <div class="command" data-category="info">
                 <div class="command-title">/support</div>
                 <div class="command-content">
                     <p>Zeigt Support- und Entwickler-Informationen an.</p>
@@ -660,13 +835,16 @@
                         <div class="example-title">Informationen:</div>
                         <code>- Entwickler-Kontakt</code><br>
                         <code>- GitHub-Repository</code><br>
-                        <code>- Support-Kanäle</code>
+                        <code>- Support-Kanäle</code><br>
+                        <code>- Aktuelle Version</code><br>
+                        <code>- Bekannte Probleme</code><br>
+                        <code>- Geplante Updates</code>
                     </div>
                 </div>
             </div>
 
             <!-- Spezial-Modus -->
-            <div class="command">
+            <div class="command" data-category="system">
                 <div class="command-title">🎮 Geheimer Konami-Modus</div>
                 <div class="command-content">
                     <p>Ein versteckter Modus mit speziellen Glitch-Effekten und verzerrten Texten!</p>
@@ -675,6 +853,7 @@
                         <code>- Spezielle Glitch-Effekte</code><br>
                         <code>- Verzerrte Text-Captions</code><br>
                         <code>- Visuelle Überraschungen</code><br>
+                        <code>- Zugriff auf geheime Kategorie</code><br>
                         <code>- Zeitlich begrenzte Aktivierung</code>
                     </div>
                 </div>
@@ -740,11 +919,24 @@
             <h2>📝 Changelog</h2>
             <div class="feature-list">
                 <div class="command">
+                    <div class="command-title">Version 1.2.5 (14. Februar 2025)</div>
+                    <div class="command-content">
+                        <ul class="changelog-list">
+                            <li>👑 Festlegbare Admins</li>
+                            <li>⚡ Admin Funktionen (Upload)</li>
+                            <li>🔐 Upload-Funktion für die "secret" Kategorie</li>
+                            <li>🛠️ Verbesserte Fehlerbehandlung beim Datei-Upload</li>
+                            <li>📈 Optimierte Download-Funktionalität</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command">
                     <div class="command-title">Version 1.2.4 (09. Februar 2025)</div>
                     <div class="command-content">
                         <ul class="changelog-list">
-                            <li>🌟 Neue Kategorie "DKM" mit Befehl `/dkm` hinzugefügt</li>
-                            <li>🎮 Erweiterte Glitch-Effekte für den Konami-Modus</li>
+                            <li>🎭 Neue Kategorie "DKM" mit Befehl `/dkm` hinzugefügt</li>
+                            <li>✨ Erweiterte Glitch-Effekte für den Konami-Modus</li>
                             <li>🔍 Verbesserte Medientyp-Filterung für alle Kategorien</li>
                         </ul>
                     </div>
@@ -755,8 +947,8 @@
                     <div class="command-content">
                         <ul class="changelog-list">
                             <li>🎮 Neuer geheimer `/konami` Befehl mit Glitch-Effekten</li>
-                            <li>⭐ Spezieller Glitch-Modus für Medien-Captions</li>
-                            <li>🔮 Zalgo-Text und visuelle Effekte im Konami-Modus</li>
+                            <li>🌟 Spezieller Glitch-Modus für Medien-Captions</li>
+                            <li>🎨 Zalgo-Text und visuelle Effekte im Konami-Modus</li>
                         </ul>
                     </div>
                 </div>
@@ -771,7 +963,7 @@
                 </div>
 
                 <div class="command">
-                    <div class="command-title">Version 1.2.1 (07. Februar 2025)</div>
+                    <div class="command-title">Version 1.2.1 (06. Februar 2025)</div>
                     <div class="command-content">
                         <ul class="changelog-list">
                             <li>👨‍⚕️ Neue Kategorie "Seelmann" mit Befehl `/seelmann` hinzugefügt</li>
@@ -780,7 +972,7 @@
                 </div>
 
                 <div class="command">
-                    <div class="command-title">Version 1.2.0 (06. Februar 2025)</div>
+                    <div class="command-title">Version 1.2.0 (05. Februar 2025)</div>
                     <div class="command-content">
                         <ul class="changelog-list">
                             <li>📂 Neue Befehle `/files` und `/dateien` für Dateiübersicht</li>
@@ -789,15 +981,15 @@
                             <li>📊 Erweiterte Statistiken mit Uptime und Botversion</li>
                             <li>🔒 Privatchat-Beschränkung für sensitive Befehle</li>
                             <li>📝 Aktualisierte Befehlsdokumentation</li>
-                            <li>🛠️ Verbesserte Fehlerbehandlung mit Reconnect-Logik</li>
-                            <li>⭐ Erweiterte Willkommensnachricht mit Entwickler-Info</li>
+                            <li>⚙️ Verbesserte Fehlerbehandlung mit Reconnect-Logik</li>
+                            <li>💫 Erweiterte Willkommensnachricht mit Entwickler-Info</li>
                             <li>⚡ Optimierte Befehlsstruktur</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="command">
-                    <div class="command-title">Version 1.1.0 (05. Februar 2025)</div>
+                    <div class="command-title">Version 1.1.0 (02. Februar 2025)</div>
                     <div class="command-content">
                         <ul class="changelog-list">
                             <li>🎵 Unterstützung für verschiedene Medientypen (Audio, Video, Bilder)</li>
@@ -805,23 +997,23 @@
                             <li>🔍 Filterung nach Medientyp für alle Kategorien</li>
                             <li>⚠️ Detaillierte Fehlerbehandlung bei nicht vorhandenen Medientypen</li>
                             <li>📊 Befehl `/dantebotstats` für detaillierte Nutzungsstatistiken</li>
-                            <li>👤 Benutzer-spezifische Nutzungsverfolgung</li>
+                            <li>👥 Benutzer-spezifische Nutzungsverfolgung</li>
                             <li>ℹ️ Anzeige verfügbarer Medientypen bei Fehlern</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="command">
-                    <div class="command-title">Version 1.0.0 (04. Februar 2025)</div>
+                    <div class="command-title">Version 1.0.0 (01. Februar 2025)</div>
                     <div class="command-content">
                         <ul class="changelog-list">
                             <li>🎉 Initialer Release des Audio-Bots</li>
                             <li>🤖 Grundlegende Bot-Funktionalität</li>
-                            <li>🎭 Befehl `/Dante` für Dante Audiodateien</li>
+                            <li>🎵 Befehl `/Dante` für Dante Audiodateien</li>
                             <li>⭐ Befehl `/Mayline` für Mayline Audiodateien</li>
                             <li>🦷 Befehl `/zahnfee` für Zahnfee Audiodateien</li>
                             <li>👋 Befehl `/start` für Willkommensnachricht</li>
-                            <li>📝 Befehle `/befehle` und `/commands` für Befehlsübersicht</li>
+                            <li>📚 Befehle `/befehle` und `/commands` für Befehlsübersicht</li>
                         </ul>
                     </div>
                 </div>
@@ -835,7 +1027,7 @@
                     <div class="credit-icon">👨‍💻</div>
                     <div class="credit-title">Entwickler</div>
                     <div class="credit-content">
-                        <a href="https://github.com/Furby87" target="_blank">@Furby87</a>
+                        <a href="https://github.com/Furby87" target="_blank" rel="noopener">@Furby87</a>
                     </div>
                 </div>
                 
@@ -843,7 +1035,7 @@
                     <div class="credit-icon">🤖</div>
                     <div class="credit-title">Bot Framework</div>
                     <div class="credit-content">
-                        <a href="https://github.com/python-telegram-bot/python-telegram-bot" target="_blank">python-telegram-bot</a>
+                        <a href="https://github.com/python-telegram-bot/python-telegram-bot" target="_blank" rel="noopener">python-telegram-bot</a>
                     </div>
                 </div>
                 
@@ -851,7 +1043,7 @@
                     <div class="credit-icon">🎵</div>
                     <div class="credit-title">Media Tools</div>
                     <div class="credit-content">
-                        <a href="https://ffmpeg.org/" target="_blank">ffmpeg</a>
+                        <a href="https://ffmpeg.org/" target="_blank" rel="noopener">ffmpeg</a>
                     </div>
                 </div>
             </div>
@@ -862,11 +1054,11 @@
             <div class="support-content">
                 <p>Bei Fragen oder Problemen kannst du dich gerne an mich wenden:</p>
                 <div class="support-links">
-                    <a href="https://t.me/Furby87" class="support-button" target="_blank">
+                    <a href="https://t.me/Furby87" class="support-button" target="_blank" rel="noopener">
                         <span class="support-icon">📱</span>
                         Telegram Support (@Furby87)
                     </a>
-                    <a href="https://github.com/Furby87" class="support-button" target="_blank">
+                    <a href="https://github.com/Furby87" class="support-button" target="_blank" rel="noopener">
                         <span class="support-icon">💻</span>
                         GitHub Profil
                     </a>
@@ -952,6 +1144,49 @@
 
         // Initialisiere Animationen beim Laden
         document.addEventListener('DOMContentLoaded', animateNumbers);
+
+        // Filter und Suchfunktionalität
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const commands = document.querySelectorAll('.command');
+            const searchInput = document.getElementById('commandSearch');
+            
+            // Filter-Button Funktionalität
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+                    
+                    const category = btn.dataset.filter;
+                    filterCommands(searchInput.value.toLowerCase(), category);
+                });
+            });
+            
+            // Suchfunktion
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const activeCategory = document.querySelector('.filter-btn.active').dataset.filter;
+                filterCommands(searchTerm, activeCategory);
+            });
+            
+            // Filter-Funktion
+            function filterCommands(searchTerm, category) {
+                commands.forEach(cmd => {
+                    const title = cmd.querySelector('.command-title').textContent.toLowerCase();
+                    const content = cmd.querySelector('.command-content').textContent.toLowerCase();
+                    const cmdCategory = cmd.dataset.category;
+                    
+                    const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+                    const matchesCategory = category === 'all' || cmdCategory === category;
+                    
+                    cmd.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+                });
+            }
+        });
     </script>
 </body>
 </html>
