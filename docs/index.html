@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furby87 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="glass">
+        <div class="logo">Furby87</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#stats">Stats</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1 class="reveal">Hi, I'm <span class="gradient-text">Furby87</span> 👋</h1>
+            <p class="reveal">Allround-Developer & Pentest Lover. Nerd & Open-source Enthusiast always looking for new things to break and build.</p>
+            <div class="reveal" style="display: flex; gap: 1rem;">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="https://github.com/Furby87" class="btn" style="border: 1px solid var(--glass-border); color: #fff;" target="_blank">Follow Me</a>
+            </div>
+        </section>
+
+        <!-- About / Timeline Section -->
+        <section id="about">
+            <h2 class="section-title reveal">About Me & Journey</h2>
+            <div class="about-container reveal">
+                <div class="about-text glass">
+                    <p>I am an adaptable developer centered around security, reverse engineering, and automated environment scripts. I build with Python, C++, and Bash while preserving simple scalable node designs for botbase clients, streamer automation setups and secure white-box penetration auditing.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Started Scripting</h3>
+                            <span>2014</span>
+                            <p>Initial releases of Arma3 scripts and Twitch IRC bot modules testing integration flows.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Automation Specialist</h3>
+                            <span>2022</span>
+                            <p>Created remote management clients for Steam management nodes and account mesh syncing structures.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h3>Present Day</h3>
+                            <span>2026</span>
+                            <p>Sustaining advanced content pipelines involving live triggers, streams syncing, and secure socket architectures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title reveal">Open Source Projects</h2>
+            
+            <div class="filter-bar reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bots">Bots & Automation</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+                <button class="filter-btn" data-filter="gaming">Gaming / Utils</button>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                <!-- Dynamically loaded via JS -->
+                <div class="project-card glass" style="text-align: center; grid-column: 1 / -1;">
+                    <p>Loading projects from GitHub...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Stats Section -->
+        <section id="stats">
+            <h2 class="section-title reveal">GitHub Activity & Stats</h2>
+            <div class="stats-grid reveal">
+                <div class="stats-card glass">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Furby87&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" alt="Stats" />
+                </div>
+                <div class="stats-card glass">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Furby87&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" alt="Languages" />
+                </div>
+                <div class="stats-card glass">
+                    <img src="https://streak-stats.demolab.com?user=Furby87&locale=en&mode=weekly&theme=dracula&hide_border=false&border_radius=5" alt="Streak" />
+                </div>
+                <div class="stats-card glass">
+                    <img src="https://github-profile-trophy.vercel.app?username=Furby87&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false" alt="Trophies" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title reveal">Tech Stack & Tools</h2>
+            <div class="skills-container reveal">
+                <span class="skill-badge glass"><i class="fab fa-python" style="color:#3776ab;"></i> Python</span>
+                <span class="skill-badge glass"><i class="fab fa-js" style="color:#f7df1e;"></i> JavaScript</span>
+                <span class="skill-badge glass"><i class="fas fa-terminal" style="color:#4d4d4d;"></i> Bash</span>
+                <span class="skill-badge glass"><i class="fab fa-git-alt" style="color:#f1502f;"></i> Git</span>
+                <span class="skill-badge glass"><i class="fas fa-microchip" style="color:#00979d;"></i> Arduino</span>
+                <span class="skill-badge glass"><i class="fas fa-shield-halved" style="color:#ff003c;"></i> Kali Linux</span>
+                <span class="skill-badge glass"><i class="fab fa-windows" style="color:#0078d7;"></i> Windows</span>
+                <span class="skill-badge glass"><i class="fas fa-database" style="color:#336791;"></i> SQLite</span>
+                <span class="skill-badge glass"><i class="fab fa-discord" style="color:#5865f2;"></i> Discord API</span>
+                <span class="skill-badge glass"><i class="fas fa-cube" style="color:#ffcd00;"></i> C++</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass">
+        <p>&copy; 2026 Furby87. Built with 💜 using Glassmorphism.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

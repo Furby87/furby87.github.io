@@ -4,7 +4,7 @@
 
 ![Typing](https://readme-typing-svg.demolab.com/?lines=Pentest-Lover👋;Nerd💻;Open-for-new-Stuff🚀)
 
-<a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-love.svg" width="130" alt="made with love  markdown badge" ></a>  <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" width="130" alt="made with swag markdown badge"></a> 
+<a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-love.svg" width="130" alt="made with love  markdown badge" ></a>  <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" width="130" alt="made with swag markdown badge"></a>
 ![ProfileViews](https://komarev.com/ghpvc/?username=furby87&color=brightgreen&style=flat&base=150&abbreviated=true&label=PROFILE+VIEWS)
 <br><br>
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/3b4607a1-1cc6-41f1-926f-892ae880e7a5" width="500">
@@ -34,7 +34,7 @@
 - 🌱 I’m currently learning ... C++
 - 🤔 I’m looking for help with ... OSINT
 - 💬 Ask me about anything ... Python Bots
-- 📫 How to reach me: Discord (Furby87)
+- 📫 How to reach me: Discord or Telegram (Furby87)
 - 😄 Pronouns: Who/Where xD
 - ⚡ Fun fact: ...
 
@@ -59,7 +59,8 @@ Here are some ideas to get you started:
 -->
 ![](https://hit.yhype.me/github/profile?user_id=6781054)
 
-### 🎮 Let's Play!
+### 🎮 Let's Play
+
 [![Connect4](https://img.shields.io/badge/Play-Connect4-blue)](https://github.com/Furby87/connect4-game)
 
 ![Jokes](https://readme-jokes.vercel.app/api?theme=dark)
