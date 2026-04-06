@@ -28,36 +28,18 @@
                 radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.08) 0px, transparent 50%);
             color: var(--text-main);
             font-family: 'Outfit', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            line-height: 1.6;
-            min-height: 100vh;
+            margin: 0; padding: 0; overflow-x: hidden; line-height: 1.6; min-height: 100vh;
         }
 
         .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
+            position: fixed; top: 0; left: 0; height: 3px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
-            width: 0%;
-            z-index: 9999;
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+            width: 0%; z-index: 9999; box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
             transition: width 0.1s ease;
         }
 
-        header {
-            padding: 5rem 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
-        }
+        header { padding: 5rem 0; text-align: center; position: relative; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; }
 
         .glass {
             background: var(--glass-bg);
@@ -69,15 +51,8 @@
             transition: all 0.3s ease;
         }
 
-        .section {
-            padding: 40px;
-            margin-bottom: 30px;
-        }
-
-        .section:hover {
-            border-color: rgba(255, 255, 255, 0.08);
-            transform: translateY(-2px);
-        }
+        .section { padding: 40px; margin-bottom: 30px; }
+        .section:hover { border-color: rgba(255, 255, 255, 0.08); transform: translateY(-2px); }
 
         .gradient-text {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -86,95 +61,52 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .header-logo {
-            width: 110px;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3));
-        }
+        .header-logo { width: 110px; margin-bottom: 25px; filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3)); }
 
         .bot-link {
-            display: inline-block !important;
-            background: linear-gradient(45deg, var(--primary), var(--secondary)) !important;
-            color: #0c0d18 !important;
-            padding: 15px 40px !important;
-            border-radius: 50px !important;
-            text-decoration: none !important;
-            font-weight: 800 !important;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 6px 25px rgba(168, 85, 247, 0.4) !important;
+            display: inline-block !important; background: linear-gradient(45deg, var(--primary), var(--secondary)) !important;
+            color: #0c0d18 !important; padding: 15px 40px !important; border-radius: 50px !important;
+            text-decoration: none !important; font-weight: 800 !important; font-size: 14px;
+            text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 25px rgba(168, 85, 247, 0.4) !important;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         }
 
-        .bot-link:hover {
-            transform: scale(1.05) !important;
-            box-shadow: 0 10px 35px rgba(168, 85, 247, 0.6) !important;
-        }
+        .bot-link:hover { transform: scale(1.05) !important; box-shadow: 0 10px 35px rgba(168, 85, 247, 0.6) !important; }
 
         .back-button {
-            position: absolute;
-            left: 30px;
-            top: 30px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--glass-border);
+            position: absolute; left: 30px; top: 30px; color: var(--text-muted);
+            text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 12px;
+            background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border);
             transition: all 0.3s ease;
         }
 
-        .back-button:hover {
-            color: var(--text-main);
-            border-color: var(--secondary);
-            background: rgba(34, 211, 238, 0.05);
-        }
+        .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
 
         .button-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 20px; margin-top: 30px;
         }
 
         .action-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 25px 15px;
-            text-decoration: none;
-            color: var(--text-main);
-            border: 1px solid var(--glass-border);
-            text-align: center;
+            display: flex; flex-direction: column; align-items: center; padding: 25px 15px;
+            text-decoration: none; color: var(--text-main); border: 1px solid var(--glass-border); text-align: center;
         }
 
-        .action-button:hover {
-            background: rgba(255, 255, 255, 0.03);
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
-        }
-
-        .action-button .icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
+        .action-button:hover { background: rgba(255, 255, 255, 0.03); border-color: var(--primary); box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); }
+        .action-button .icon { font-size: 32px; margin-bottom: 12px; }
 
         .feature-img {
-            width: 100%;
-            border-radius: 16px;
-            margin-top: 25px;
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 100%; border-radius: 16px; margin-top: 25px; border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease;
         }
+        .feature-img:hover { transform: scale(1.02); }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 35px;
         }
+        .gallery-item { text-align: center; }
+        .gallery-item p { font-size: 0.9rem; color: var(--text-muted); margin-top: 15px; }
 
         @media (max-width: 600px) {
             .button-grid { grid-template-columns: repeat(2, 1fr); }
@@ -198,34 +130,23 @@
     </header>
 
     <div class="container" data-aos="fade-up">
-        <!-- Dashboard Overview -->
+        <!-- Documentation Center -->
         <div class="section glass">
             <h2 class="gradient-text">🚀 Documentation Center</h2>
-            <p style="color: var(--text-muted);">Master all Pro features of the enterprise-grade TikTok tracker.</p>
+            <p style="color: var(--text-muted);">Umfassende Anleitungen für maximale Performance & Stealth-Tracking.</p>
             <div class="button-grid">
-                <a href="tikleapcrawler_wizard.html" class="action-button glass">
-                    <span class="icon">🚀</span>
-                    <span class="text">Setup</span>
-                </a>
-                <a href="tikleapcrawler_stats.html" class="action-button glass">
-                    <span class="icon">📊</span>
-                    <span class="text">Stats</span>
-                </a>
-                <a href="tikleapcrawler_data.html" class="action-button glass">
-                    <span class="icon">📥</span>
-                    <span class="text">Export</span>
-                </a>
-                <a href="tikleapcrawler_groups.html" class="action-button glass">
-                    <span class="icon">👥</span>
-                    <span class="text">Teams</span>
-                </a>
-                <a href="tikleapcrawler_proxies.html" class="action-button glass">
-                    <span class="icon">🛡️</span>
-                    <span class="text">Proxies</span>
-                </a>
+                <a href="tikleapcrawler_wizard.html" class="action-button glass"><span class="icon">🚀</span><span class="text">Setup</span></a>
+                <a href="tikleapcrawler_stats.html" class="action-button glass"><span class="icon">📊</span><span class="text">Stats</span></a>
+                <a href="tikleapcrawler_data.html" class="action-button glass"><span class="icon">📥</span><span class="text">Export</span></a>
+                <a href="tikleapcrawler_groups.html" class="action-button glass"><span class="icon">👥</span><span class="text">Teams</span></a>
+                <a href="tikleapcrawler_proxies.html" class="action-button glass"><span class="icon">🛡️</span><span class="text">Proxies</span></a>
                 <a href="tikleapcrawler_cli.html" class="action-button glass">
                     <span class="icon">💻</span>
                     <span class="text">CLI</span>
+                </a>
+                <a href="tikleapcrawler_config.html" class="action-button glass">
+                    <span class="icon">⚙️</span>
+                    <span class="text">Config</span>
                 </a>
                 <a href="tikleapcrawler_changelog.html" class="action-button glass">
                     <span class="icon">📜</span>
@@ -238,21 +159,44 @@
             </div>
         </div>
 
-        <!-- Dashboard View -->
-        <div class="section glass" style="text-align: center;">
-            <h2 class="gradient-text">Pro-Analytics Dashboard</h2>
-            <p style="color: var(--text-muted);">Real-time tracking with intelligent 3-card stats and self-healing logs.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" 
-                 onerror="this.src='images/tikleapcrawler/dashboard7.png'" 
-                 alt="Dashboard v2" class="feature-img">
-        </div>
-
-        <!-- Gallery -->
+        <!-- Professional Gallery -->
         <div class="section glass">
-            <h2 class="gradient-text">Feature Insights</h2>
+            <h2 class="gradient-text" style="text-align: center;">🎨 Feature Insights & High-Fidelity UI</h2>
+            <p style="text-align: center; color: var(--text-muted);">Erlebe das modernste Interface für TikTok Creator Analysen.</p>
+            
             <div class="gallery-grid">
-                <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/statistics7.png" onerror="this.src='images/tikleapcrawler/statistics7.png'" class="feature-img" style="margin-top:0;">
-                <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/traymenu.png" onerror="this.src='images/tikleapcrawler/traymenu.png'" class="feature-img" style="margin-top:0;">
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" onerror="this.src='images/tikleapcrawler/dashboard7.png'" class="feature-img">
+                    <p><b>Pro-Cockpit Dashboard:</b> Alle KPIs & Live-Logs auf einen Blick.</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-left">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/statistics7.png" onerror="this.src='images/tikleapcrawler/statistics7.png'" class="feature-img">
+                    <p><b>Visual Analytics:</b> Interaktive Graphen für Langzeit-Trends.</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png" onerror="this.src='images/tikleapcrawler/data_export7.png'" class="feature-img">
+                    <p><b>Deep Data Insights:</b> Detaillierte KPI-Matrix (Max, Min, Avg).</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-left">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/groups_manager.png" onerror="this.src='images/tikleapcrawler/groups_manager.png'" class="feature-img">
+                    <p><b>Group Editor:</b> Verwalte Creator-Teams direkt in der App.</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/proxies_sidebar.png" onerror="this.src='images/tikleapcrawler/proxies_sidebar.png'" class="feature-img">
+                    <p><b>Infrastructure:</b> Proxy Engines & Realtime Monitoring.</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-left">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/traymenu.png" onerror="this.src='images/tikleapcrawler/traymenu.png'" class="feature-img">
+                    <p><b>System Integration:</b> Diskreter Betrieb aus dem System-Tray.</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png" onerror="this.src='images/tikleapcrawler/setup_step4.png'" class="feature-img">
+                    <p><b>Setup-Assistent:</b> In weniger als 2 Minuten startklar.</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-left">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/cli_mode.jpg" onerror="this.src='images/tikleapcrawler/cli_mode.jpg'" class="feature-img">
+                    <p><b>Headless Engine:</b> Volle Leistung via CLI für Linux & Android.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -261,8 +205,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-        
-        // Scroll Progress
         window.addEventListener('scroll', () => {
             const scrollProgress = document.querySelector('.scroll-progress');
             const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
