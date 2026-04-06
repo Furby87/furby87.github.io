@@ -1,0 +1,350 @@
+/* Subpages Glassmorphic Theme Overrides */
+
+body {
+    background: #0c0d18 !important;
+    color: #fff !important;
+    background-image: radial-gradient(circle at top right, rgba(168, 85, 247, 0.12), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.12), transparent 40%) !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+.container {
+    max-width: 900px !important;
+    padding: 1.5rem !important;
+}
+
+/* Glass Section styles */
+.section {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 16px !important;
+    color: #f3f4f6 !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+    margin-bottom: 2rem !important;
+}
+
+.section h2 {
+    color: #fff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Commands items list */
+.command {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-left: 4px solid #22d3ee !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    transition: all 0.3s ease !important;
+    padding: 1.2rem !important;
+}
+
+.command:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+    transform: translateX(4px) !important;
+}
+
+.command-title, .command-name {
+    color: #22d3ee !important;
+    font-weight: 700 !important;
+}
+
+.example, .example-box {
+    background: rgba(0, 0, 0, 0.25) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.02) !important;
+    color: #e5e7eb !important;
+}
+
+code {
+    background: #11121d !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #22d3ee !important;
+}
+
+.stat-card, .credit-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.stat-label, .credit-content, .credit-content a, .command-description {
+    color: #cbd5e1 !important;
+}
+
+.stat-card:hover, .credit-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(34, 211, 238, 0.3) !important;
+}
+
+.stat-number {
+    color: #a855f7 !important;
+}
+
+.back-button, .support-button {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #d1d5db !important;
+    border-radius: 20px !important;
+}
+
+.back-button:hover, .support-button:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.bot-link {
+    background: linear-gradient(45deg, #a855f7, #22d3ee) !important;
+    color: #0c0d18 !important;
+    border-radius: 25px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
+    border: none !important;
+}
+
+.filter-buttons .filter-btn {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #9ca3af !important;
+}
+
+.filter-buttons .filter-btn.active {
+    background: linear-gradient(45deg, #a855f7, #22d3ee) !important;
+    color: #0c0d18 !important;
+}
+
+footer {
+    background: transparent !important;
+    color: #6b7280 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+header {
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Copy Button */
+.copy-button {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #e2e8f0 !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.copy-button:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Back to Top Arrow with Glassmorphism */
+.back-to-top {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+    display: flex !important; /* Force flex display when active */
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    transform: translateY(-5px) !important;
+    color: #ffd147 !important;
+}
+
+footer p {
+    color: #e2e8f0 !important;
+    font-size: 0.9rem !important;
+}
+
+.disclaimer {
+    color: #94a3b8 !important;
+    font-size: 0.85rem !important;
+    margin: 5px auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.fab {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 30px !important;
+    z-index: 1000 !important;
+}
+
+.fab-button {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    font-size: 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.fab-button:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    transform: translateY(-5px) !important;
+    color: #ffd147 !important;
+}
+
+footer a {
+    color: #22d3ee !important;
+    text-decoration: none !important;
+}
+
+footer a:hover {
+    text-decoration: underline !important;
+}
+
+/* Fix mobile break points for subpages */
+@media (max-width: 768px) {
+    .hero h1, header h1 {
+        font-size: 2.2rem !important;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    .stat-card {
+        padding: 15px !important;
+    }
+    .section {
+        padding: 18px !important;
+    }
+}
+
+/* Readability fixes for Telegram Message box mocks */
+.telegram-message {
+    background: #11121d !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+}
+
+.telegram-message * {
+    color: inherit !important;
+}
+
+.message-content {
+    background: #1a1b2b !important;
+    color: #e5e7eb !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Card overrides inside Subpages for background white solid removal */
+.feature-card, .action-button, .action-card, .stats-counter {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+}
+
+.feature-card h3, .stat-card h3, .action-button .text {
+    color: #fff !important;
+}
+
+.feature-card p, .stat-card p, .action-button .tooltip-text {
+    color: #9ca3af !important;
+}
+
+.feature-action, .usage-example, .command-details {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    color: #e5e7eb !important;
+}
+
+.action-button:hover, .stat-card:hover, .feature-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Custom Scrollbar for Subpages */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0c0d18;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#a855f7, #22d3ee);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#22d3ee, #a855f7);
+}
+
+/* Scroll Progress Top Bar for Subpages */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to right, #a855f7, #22d3ee) !important;
+    z-index: 10000;
+    transform: none !important;
+}
+
+/* Unified back button style for Subpages */
+.back-button {
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 14px !important;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    transform: translateX(-4px) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Unified footer style for Subpages */
+footer {
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+    padding: 25px 0 !important;
+    margin-top: 50px !important;
+    color: #94a3b8 !important;
+}
+
+footer a {
+    color: #fff !important;
+}

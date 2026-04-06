@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTMP VLC Anleitung - TikTok Info Bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="subpages.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            background: linear-gradient(-45deg, #fe2c55, #ff4d79, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fe2c55;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .image-container {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .responsive-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .back-button {
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: absolute; 
+            left: 20px; 
+            top: 20px; 
+            color: white; 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #fe2c55;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(254, 44, 85, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(254, 44, 85, 0.4);
+            background: #e62548;
+        }
+
+
+        
+        ol li {
+            margin-bottom: 20px;
+        }
+        
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #fe2c55;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="ttuserinfobot.html" class="back-button">
+            <span style="font-size: 20px;">←</span> Zurück
+        </a>
+        <h1>RTMP Stream mit VLC abspielen</h1>
+        <div class="subtitle">Schritt-für-Schritt Anleitung für PC und Smartphone</div>
+    </header>
+
+    <div class="container">
+        <div class="section" data-aos="fade-up">
+            <p>Wenn du eine RTMP-URL von unserem Bot erhältst, kannst du damit den Livestream direkt im VLC Media Player anschauen. Hier sind die einfachen Schritte:</p>
+            
+            <h3>✅ Auf dem PC (Windows &amp; Mac)</h3>
+            <ol>
+                <li>
+                    <b>Öffne VLC Media Player</b><br>
+                    Falls du VLC noch nicht installiert hast, lade es 
+                    <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer" style="color: #fe2c55; text-decoration: none; font-weight: bold;">hier herunter</a>.
+                </li>
+                <li>
+                    <b>Netzwerkstream öffnen</b><br>
+                    - Klicke auf "Medien" in der oberen Menüleiste.<br>
+                    - Wähle "Netzwerkstream öffnen..." (oder drücke <code>Strg + N</code>).<br>
+                    <div class="image-container">
+                        <img src="img/vlc/pc_netzwerkstream_oeffnen.png" alt="VLC - Netzwerkstream öffnen" class="responsive-img">
+                    </div>
+                </li>
+                <li>
+                    <b>RTMP-URL eingeben</b><br>
+                    - Kopiere die RTMP-URL aus Telegram und füge sie in das Feld ein.<br>
+                    - Klicke auf "Wiedergabe".<br>
+                    <div class="image-container">
+                        <img src="img/vlc/pc_rtmp_url.png" alt="VLC - RTMP-URL eingeben" class="responsive-img"><br>
+                        <img src="img/vlc/pc_wiedergabe_button.png" alt="VLC - Wiedergabe Button" class="responsive-img">
+                    </div>
+                </li>
+                <li>
+                    <b>Livestream genießen!</b> 🎬<br>
+                    Wenn die URL korrekt ist und der Stream aktiv ist, wird das Video direkt abgespielt.
+                </li>
+            </ol>
+            
+            <h3>📱 Auf dem Handy (Android &amp; iOS)</h3>
+            <ol>
+                <li>
+                    <b>Lade VLC herunter</b><br>
+                    - Android: <a href="https://play.google.com/store/apps/details?id=org.videolan.vlc" target="_blank" rel="noopener noreferrer" style="color: #fe2c55; text-decoration: none; font-weight: bold;">Google Play Store</a><br>
+                    - iOS: <a href="https://apps.apple.com/de/app/vlc-for-mobile/id650377962" target="_blank" rel="noopener noreferrer" style="color: #fe2c55; text-decoration: none; font-weight: bold;">App Store</a><br>
+                    <div class="image-container">
+                        <img src="img/vlc/vlc_for_android.jpg" alt="VLC Android" class="responsive-img">
+                    </div>
+                </li>
+                <li>
+                    <b>Netzwerkstream öffnen</b><br>
+                    - Öffne die VLC-App.<br>
+                    - Tippe auf das Menü (☰ oder "Mehr").<br>
+                    - Wähle "Stream öffnen" oder "Netzwerk".<br>
+                    <div class="image-container">
+                        <img src="img/vlc/android_netzwerkstream_oeffnen.jpg" alt="VLC Mobile - Netzwerkstream" class="responsive-img">
+                    </div>
+                </li>
+                <li>
+                    <b>RTMP-URL einfügen</b><br>
+                    - Kopiere die RTMP-URL aus Telegram.<br>
+                    - Füge sie in das Feld ein und bestätige mit "Öffnen".<br>
+                    <div class="image-container">
+                        <img src="img/vlc/android_rtmp_url.jpg" alt="VLC Mobile - RTMP-URL eingeben" class="responsive-img">
+                    </div>
+                </li>
+                <li>
+                    <b>Livestream starten!</b> 🎥<br>
+                    Falls der Stream aktiv ist, sollte er jetzt in VLC abgespielt werden.
+                </li>
+            </ol>
+            
+            <h3>❓ Häufige Probleme &amp; Lösungen</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #fe2c55;">
+                    <b>Stream startet nicht?</b><br>
+                    👉 Stelle sicher, dass der Stream aktiv ist und die URL korrekt kopiert wurde.
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #fe2c55;">
+                    <b>Kein Bild oder Ton?</b><br>
+                    👉 Versuche, VLC neu zu starten oder eine andere RTMP-Quelle zu testen.
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #fe2c55;">
+                    <b>RTMP wird nicht unterstützt?</b><br>
+                    👉 Manche VLC-Versionen haben Probleme mit RTMP. Falls es nicht funktioniert, probiere eine ältere Version oder eine alternative App wie <b>"RTMP Stream Player"</b> für Android.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">↑</a>
+
+    <div id="global-footer" data-type="tiktok"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Set current year
+        document.querySelectorAll('.current-year').forEach(el => {
+            el.textContent = new Date().getFullYear();
+        });
+
+        // Back to top button optimized listener
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            if (backToTopButton) {
+                backToTopButton.style.display = winScroll > 300 ? "flex" : "none";
+            }
+        }, { passive: true });
+
+        // Smooth scroll to top
+        if (backToTopButton) {
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
+    <script src="config.js"></script>
+    <script src="components.js"></script>
+</body>
+</html>

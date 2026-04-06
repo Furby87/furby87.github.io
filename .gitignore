@@ -1,0 +1,42 @@
+# ignore backups
+docs/backups/*
+
+# ignore _temp
+/maskenschau_temp
+maskenschau_temp/*
+*_temp/*
+*_temp
+*_backup/*
+*_backup
+*_old/*
+*_old
+*_vlc/*
+*_vlc
+*_vlc_integration/*
+*_vlc_integration
+*_vlc_integration_backup/*
+*_vlc_integration_backup
+*_vlc_integration_backup_old/*
+*_vlc_integration_backup_old
+
+# venv
+.venv/*
+.venv
+venv/*
+venv
+
+# ignore .env files
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.example
+.env.local.example
+.env.production.example
+.env.development.example
+.env.test.example
+.env.example.local
+.env.example.production
+.env.example.development
+.env.example.test
