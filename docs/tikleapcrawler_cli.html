@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikLeap Crawler Pro - CLI-Modus</title>
+    
+    <!-- Original Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Furby87/furby87.github.io/main/style.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Furby87/furby87.github.io/main/subpages.css">
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: linear-gradient(-45deg, #fe2c55, #ff4d79, #23a6d5, #23d5ab); background-size: 400% 400%; animation: gradient 15s ease infinite; color: #1c1e21; }
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #fff; width: 0%; z-index: 9999; transition: width 0.1s ease; border-radius: 0 5px 5px 0; box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { background-color: #fe2c55; color: white; padding: 3rem 0; text-align: center; margin-bottom: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; }
+        .back-button { position: absolute; left: 20px; top: 20px; color: white; text-decoration: none; padding: 8px 15px; border-radius: 20px; background: rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
+        .back-button:hover { background: rgba(255, 255, 255, 0.3); }
+        .section { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 10px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        pre { background: rgba(0,0,0,0.05); padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; overflow-x: auto; border: 1px solid rgba(0,0,0,0.1); margin-top: 15px; color: #1c1e21; }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <header>
+        <a href="tikleapcrawler.html" class="back-button">← Zurück</a>
+        <div data-aos="zoom-in">
+            <h1>Kommandozeile (CLI)</h1>
+            <div class="subtitle">Headless Operation für Server</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section" data-aos="fade-up">
+            <h2>💻 main.py & Standalone EXE</h2>
+            <p>Für den Serverbetrieb oder Container-Umgebungen (Docker) bietet der CLI-Modus maximale Stabilität.</p>
+            <pre>python main.py</pre>
+            <p>Der Crawler führt einen initialen Run durch und plant danach automatische Intervalle (standardmäßig 6h).</p>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h2>🧪 Zeitersparnis durch Argumente</h2>
+            <ul>
+                <li><code>--test-single</code>: Einmaliger Crawl zur Prüfung der Konfiguration.</li>
+                <li><code>--test-schedule</code>: Geraffte Zeitplan-Simulation zum Debuggen.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollableHeight) * 100;
+            if (scrollProgress) scrollProgress.style.width = scrolled + '%';
+        });
+    </script>
+</body>
+</html>

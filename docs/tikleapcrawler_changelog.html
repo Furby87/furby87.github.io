@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikLeap Crawler Pro - Historie</title>
+    
+    <!-- Original Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Furby87/furby87.github.io/main/style.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Furby87/furby87.github.io/main/subpages.css">
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: linear-gradient(-45deg, #fe2c55, #ff4d79, #23a6d5, #23d5ab); background-size: 400% 400%; animation: gradient 15s ease infinite; color: #1c1e21; }
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: #fff; width: 0%; z-index: 9999; transition: width 0.1s ease; border-radius: 0 5px 5px 0; box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { background-color: #fe2c55; color: white; padding: 3rem 0; text-align: center; margin-bottom: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; }
+        .back-button { position: absolute; left: 20px; top: 20px; color: white; text-decoration: none; padding: 8px 15px; border-radius: 20px; background: rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
+        .back-button:hover { background: rgba(255, 255, 255, 0.3); }
+        .section { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 10px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        
+        .version-tag { background: #fe2c55; color: white; padding: 5px 15px; border-radius: 50px; font-weight: bold; margin-bottom: 15px; display: inline-block; font-size: 0.85rem; }
+        .change-list { list-style: none; padding: 0; }
+        .change-list li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 0.95rem; }
+        .change-list li::before { content: "✓"; color: #fe2c55; position: absolute; left: 0; font-weight: bold; }
+        
+        .history-line { border-left: 3px solid #fe2c55; margin-left: 15px; padding-left: 25px; }
+        .bot-link { display: inline-block !important; background: linear-gradient(45deg, #fe2c55, #ff4d79) !important; color: white !important; padding: 12px 30px !important; border-radius: 50px !important; text-decoration: none !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3) !important; margin-top: 20px !important; }
+        .bot-link:hover { transform: scale(1.05) !important; box-shadow: 0 6px 20px rgba(254, 44, 85, 0.4) !important; }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <header>
+        <a href="tikleapcrawler.html" class="back-button">← Zurück</a>
+        <div data-aos="zoom-in">
+            <h1>Produkt Historie</h1>
+            <div class="subtitle">Versionsübersicht & Meilensteine</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- v2.0.8 -->
+        <div class="section" data-aos="fade-up">
+            <span class="version-tag">ACTUAL VERSION - v2.0.8</span>
+            <h3>✨ UI/UX Overhaul & Branding</h3>
+            <ul class="change-list">
+                <li><b>Enterprise Dark-UI:</b> Umstellung aller Dialoge auf CTKMessagebox.</li>
+                <li><b>Custom Branding:</b> Neues App-Icon & Sidebar Logo.</li>
+                <li><b>ABC Sort:</b> Alphabetische Sortierung im Profil-Manager.</li>
+                <li><b>Crawl Summary:</b> Detaillierter Abschlussbericht nach jedem Run.</li>
+            </ul>
+        </div>
+
+        <!-- v2.0.7 -->
+        <div class="section" data-aos="fade-up">
+            <span class="version-tag">v2.0.7</span>
+            <h3>🛡️ Security & Realtime Updates</h3>
+            <ul class="change-list">
+                <li><b>Force Proxy Mode:</b> Vollständige Unterbindung der lokalen IP.</li>
+                <li><b>Realtime Proxy-Counter:</b> Event-getriebene Anzeige in der Sidebar.</li>
+                <li><b>Ressourcen-Management:</b> Signal-basiertes System statt Polling.</li>
+            </ul>
+        </div>
+
+        <!-- v2.0.5 -->
+        <div class="section" data-aos="fade-up">
+            <span class="version-tag">v2.0.5</span>
+            <h3>👥 Teams & Gruppen</h3>
+            <ul class="change-list">
+                <li><b>Kanal-Gruppen:</b> Aggregierte Ansichten in Dashboard & Stats.</li>
+                <li><b>Gruppen-Manager:</b> Integrierter Editor für JSON-Konfigs.</li>
+                <li><b>Migration-Sync:</b> Automatische Namens-Aktualisierung in Gruppen.</li>
+            </ul>
+        </div>
+
+        <!-- v2.0.4 -->
+        <div class="section" data-aos="fade-up">
+            <span class="version-tag">v2.0.4</span>
+            <h3>🔄 Migration & Smart Reset</h3>
+            <ul class="change-list">
+                <li><b>Account-Migration:</b> Nahtloses Umschreiben der SQLite-History.</li>
+                <li><b>Tagesreset-Korrektur:</b> Korrektur von Peak-Werten bei Countdown-Resets.</li>
+                <li><b>Update-Checker:</b> Automatischer Abgleich mit GitHub-Releases.</li>
+            </ul>
+        </div>
+
+        <!-- v2.0.0 -->
+        <div class="section" data-aos="fade-up">
+            <span class="version-tag">v2.0.0</span>
+            <h3>🚀 The Big GUI Engine Update</h3>
+            <ul class="change-list">
+                <li><b>Modern GUI:</b> Erster Release mit CustomTkinter Framework.</li>
+                <li><b>Engine Switch:</b> Wechsel von Selenium auf blitzschnelles curl_cffi.</li>
+                <li><b>System Tray:</b> Vollständige Hintergrund-Integration & Autopilot.</li>
+                <li><b>Onboarding Wizard:</b> Automatisches Initial-Setup.</li>
+            </ul>
+        </div>
+
+        <div class="section" data-aos="fade-up" style="text-align: center;">
+            <p>Vollständiges Changelog (inkl. v1.x) auf GitHub verfügbar.</p>
+            <a href="https://github.com/Furby87/TikleapCrawler/blob/main/CHANGELOG.md" target="_blank" class="bot-link">REPOSITIORY CHANGELOG</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollableHeight) * 100;
+            if (scrollProgress) scrollProgress.style.width = scrolled + '%';
+        });
+    </script>
+</body>
+</html>
