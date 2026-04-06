@@ -67,8 +67,9 @@
         }
 
         .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        
-        .step-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .step-img { width: 100%; border-radius: 16px; margin-top: 25px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); aspect-ratio: 16/10; object-fit: cover; background: rgba(255,255,255,0.02); }
+        .highlight { color: var(--secondary); font-weight: 600; }
+        pre { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; color: var(--secondary); border: 1px solid var(--glass-border); font-size: 0.85rem; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -82,35 +83,39 @@
     </header>
 
     <div class="container" data-aos="fade-up">
+        <!-- Step 1 -->
         <div class="glass">
             <h2 class="gradient-text">Schritt 1: Initialisierung</h2>
-            <p style="color: var(--text-muted);">Prüfung der Arbeitsumgebung und Dateisystem-Berechtigungen.</p>
+            <p style="color: var(--text-muted);">Das System prüft den <span class="highlight">Portablen-Modus</span>. Es werden automatisch die Ordner `data/` und `logs/` erstellt, falls diese fehlen. Es ist keine manuelle Ordnerstruktur-Erstellung nötig.</p>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step1.png" 
-                 onerror="this.src='images/tikleapcrawler/setup_step1.png'" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step1.png'" 
                  alt="Step 1" class="step-img">
         </div>
 
+        <!-- Step 2 -->
         <div class="glass">
-            <h2 class="gradient-text">Schritt 2: Smart Profile Parser</h2>
-            <p style="color: var(--text-muted);">Importiere TikTok-Namen oder komplette Links blitzschnell.</p>
+            <h2 class="gradient-text">Schritt 2: Smart Link Parser 🔗</h2>
+            <p style="color: var(--text-muted);">Der <span class="highlight">Smart-Parser</span> (v2.0.8) erkennt automatisch das Eingabeformat. Du musst dich nicht um die genaue URL kümmern:</p>
+            <pre># Einfacher Name
+@username
+# Vollständiger Link
+https://www.tikleap.com/profile/0fficial404</pre>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>Einfacher Name:</b> `@username` wird zu TikLeap-URL.</li>
+                <li><b>TikTok Link:</b> Automatische Extraktion des Usernames.</li>
+                <li><b>TikLeap Link:</b> Übernahme des direkten Profil-Endpunkts.</li>
+            </ul>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step2_filled.png" 
-                 onerror="this.src='images/tikleapcrawler/setup_step2_filled.png'" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step2_filled.png'" 
                  alt="Step 2" class="step-img">
         </div>
 
+        <!-- Step 3 & 4 summaries -->
         <div class="glass">
-            <h2 class="gradient-text">Schritt 3: Team-Gruppen</h2>
-            <p style="color: var(--text-muted);">Organisiere Accounts in logischen Teams für aggregierte Statistiken.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step3.png" 
-                 onerror="this.src='images/tikleapcrawler/setup_step3.png'" 
-                 alt="Step 3" class="step-img">
-        </div>
-
-        <div class="glass">
-            <h2 class="gradient-text">Schritt 4: Crawler-Finish</h2>
-            <p style="color: var(--text-muted);">Konfiguriere Intervalle und Proxies zum Abschluss.</p>
+            <h2 class="gradient-text">Schritt 3 & 4: Finetuning</h2>
+            <p style="color: var(--text-muted);">Bestimme deine <span class="highlight">Teams</span> und konfiguriere den <span class="highlight">Auto-Pilot</span>. Nach Abschluss wird die `profiles.txt` automatisch geschrieben und die `settings.json` initialisiert.</p>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png" 
-                 onerror="this.src='images/tikleapcrawler/setup_step4.png'" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step4.png'" 
                  alt="Step 4" class="step-img">
         </div>
     </div>

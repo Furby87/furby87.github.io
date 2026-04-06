@@ -67,7 +67,7 @@
         }
 
         .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        .cli-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .cli-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); aspect-ratio: 16/10; object-fit: cover; background: rgba(255,255,255,0.02); }
         pre { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; color: var(--secondary); overflow-x: auto; border: 1px solid var(--glass-border); }
     </style>
 </head>
@@ -85,9 +85,9 @@
         <div class="glass">
             <h2 class="gradient-text">💻 Portabilität</h2>
             <p style="color: var(--text-muted);">Der TikLeap Crawler ist vollständig Headless-kompatibel und läuft ressourcensparend auf Servern oder Android (Termux).</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/cli_mode.jpg" 
-                 onerror="this.src='images/tikleapcrawler/cli_mode.jpg'" 
-                 alt="CLI Mode" class="cli-img">
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/dashboard7.png'" 
+                 alt="CLI Engine" class="cli-img">
         </div>
 
         <div class="glass">

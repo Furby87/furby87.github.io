@@ -67,7 +67,9 @@
         }
 
         .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        .group-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .group-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); aspect-ratio: 16/10; object-fit: cover; background: rgba(255,255,255,0.02); }
+        .highlight { color: var(--secondary); font-weight: 600; }
+        pre { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; color: var(--secondary); border: 1px solid var(--glass-border); font-size: 0.85rem; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -81,22 +83,29 @@
     </header>
 
     <div class="container" data-aos="fade-up">
+        <!-- Team Dashboard Integration -->
         <div class="glass">
-            <h2 class="gradient-text">👥 Team Management</h2>
-            <p style="color: var(--text-muted);">Fasse mehrere Kanäle zu logischen Gruppen zusammen. Statistiken und Dashboard passen sich automatisch an.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/groups_manager.png" 
-                 onerror="this.src='images/tikleapcrawler/groups_manager.png'" 
-                 alt="Groups Manager" class="group-img">
+            <h2 class="gradient-text">👥 Team Dashboard Logic</h2>
+            <p style="color: var(--text-muted);">Das <span class="highlight">Team-Feature</span> (v2.0.5) erlaubt Agencies, hunderte Accounts in logischen Teams (`groups.json`) zu organisieren. Im Team-Modus aggregiert das Dashboard:</p>
+            <pre>{
+  "Team Alpha": [
+    "creator_link_1",
+    "creator_link_2"
+  ]
+}</pre>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>Total Revenue:</b> Die Live-Einnahmen aller Teammitglieder werden addiert.</li>
+                <li><b>Avg/Member:</b> Durchschnittlicher Verdienst innerhalb der Gruppe.</li>
+            </ul>
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/groups2.png" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/groups2.png'" 
+                 alt="Team Groups" class="group-img">
         </div>
 
+        <!-- Integrated JSON Editor -->
         <div class="glass">
-            <h2 class="gradient-text">⚖️ View Mode Toggle</h2>
-            <p style="color: var(--text-muted);">Schalte in Sekundenbruchteilen zwischen "Einzelansicht" und "Gruppenansicht" um.</p>
-        </div>
-
-        <div class="glass">
-            <h2 class="gradient-text">🤖 Auto-Sync Migration</h2>
-            <p style="color: var(--text-muted);">Benennst du ein Profil um? Der TikLeap Crawler aktualisiert deine Gruppen-Konfiguration automatisch.</p>
+            <h2 class="gradient-text">🖊️ Integrated Group-Manager</h2>
+            <p style="color: var(--text-muted);">Du musst keine JSON-Dateien manuell editieren. Über den Button <span class="highlight">👥 Gruppen verwalten</span> öffnet sich ein sicherer Editor mit Echtzeit-Validierung.</p>
         </div>
     </div>
 

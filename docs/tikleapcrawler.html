@@ -98,6 +98,7 @@
         .feature-img {
             width: 100%; border-radius: 16px; margin-top: 25px; border: 1px solid var(--glass-border);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease;
+            aspect-ratio: 16 / 10; object-fit: cover; background: rgba(255,255,255,0.02);
         }
         .feature-img:hover { transform: scale(1.02); }
 
@@ -120,8 +121,8 @@
     <header>
         <a href="index.html" class="back-button">← BACK</a>
         <div data-aos="zoom-out" data-aos-duration="1200">
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/icon.png" 
-                 onerror="this.src='images/tikleapcrawler/icon.png'" 
+            <img src="icon.png" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/icon.png'" 
                  alt="TikLeap Logo" class="header-logo">
             <h1 class="animate__animated animate__fadeInDown gradient-text" style="font-size: 3.2rem; margin: 0;">TikLeap Crawler Pro</h1>
             <p class="animate__animated animate__fadeInUp animate__delay-1s" style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px;">PREMIUM EARNINGS TRACKER & ANALYTICS HUB</p>
@@ -140,22 +141,10 @@
                 <a href="tikleapcrawler_data.html" class="action-button glass"><span class="icon">📥</span><span class="text">Export</span></a>
                 <a href="tikleapcrawler_groups.html" class="action-button glass"><span class="icon">👥</span><span class="text">Teams</span></a>
                 <a href="tikleapcrawler_proxies.html" class="action-button glass"><span class="icon">🛡️</span><span class="text">Proxies</span></a>
-                <a href="tikleapcrawler_cli.html" class="action-button glass">
-                    <span class="icon">💻</span>
-                    <span class="text">CLI</span>
-                </a>
-                <a href="tikleapcrawler_config.html" class="action-button glass">
-                    <span class="icon">⚙️</span>
-                    <span class="text">Config</span>
-                </a>
-                <a href="tikleapcrawler_changelog.html" class="action-button glass">
-                    <span class="icon">📜</span>
-                    <span class="text">Log</span>
-                </a>
-                <a href="https://t.me/Furby1337" class="action-button glass">
-                    <span class="icon">💬</span>
-                    <span class="text">Help</span>
-                </a>
+                <a href="tikleapcrawler_config.html" class="action-button glass"><span class="icon">⚙️</span><span class="text">Config</span></a>
+                <a href="tikleapcrawler_cli.html" class="action-button glass"><span class="icon">💻</span><span class="text">CLI</span></a>
+                <a href="tikleapcrawler_changelog.html" class="action-button glass"><span class="icon">📜</span><span class="text">Log</span></a>
+                <a href="https://t.me/Furby1337" class="action-button glass"><span class="icon">💬</span><span class="text">Help</span></a>
             </div>
         </div>
 
@@ -166,35 +155,35 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item" data-aos="fade-right">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" onerror="this.src='images/tikleapcrawler/dashboard7.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/dashboard7.png'" class="feature-img">
                     <p><b>Pro-Cockpit Dashboard:</b> Alle KPIs & Live-Logs auf einen Blick.</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-left">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/statistics7.png" onerror="this.src='images/tikleapcrawler/statistics7.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/statistics7.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/statistics7.png'" class="feature-img">
                     <p><b>Visual Analytics:</b> Interaktive Graphen für Langzeit-Trends.</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-right">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png" onerror="this.src='images/tikleapcrawler/data_export7.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/data_export7.png'" class="feature-img">
                     <p><b>Deep Data Insights:</b> Detaillierte KPI-Matrix (Max, Min, Avg).</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-left">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/groups_manager.png" onerror="this.src='images/tikleapcrawler/groups_manager.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/groups2.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/groups2.png'" class="feature-img">
                     <p><b>Group Editor:</b> Verwalte Creator-Teams direkt in der App.</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-right">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/proxies_sidebar.png" onerror="this.src='images/tikleapcrawler/proxies_sidebar.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/profile_manager6.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/profile_manager6.png'" class="feature-img">
                     <p><b>Infrastructure:</b> Proxy Engines & Realtime Monitoring.</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-left">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/traymenu.png" onerror="this.src='images/tikleapcrawler/traymenu.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/traymenu.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/traymenu.png'" class="feature-img">
                     <p><b>System Integration:</b> Diskreter Betrieb aus dem System-Tray.</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-right">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png" onerror="this.src='images/tikleapcrawler/setup_step4.png'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step4.png'" class="feature-img">
                     <p><b>Setup-Assistent:</b> In weniger als 2 Minuten startklar.</p>
                 </div>
                 <div class="gallery-item" data-aos="fade-left">
-                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/cli_mode.jpg" onerror="this.src='images/tikleapcrawler/cli_mode.jpg'" class="feature-img">
+                    <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" onerror="this.onerror=null; this.src='images/tikleapcrawler/dashboard7.png'" class="feature-img">
                     <p><b>Headless Engine:</b> Volle Leistung via CLI für Linux & Android.</p>
                 </div>
             </div>

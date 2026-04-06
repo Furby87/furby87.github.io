@@ -67,7 +67,8 @@
         }
 
         .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        .data-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .data-img { width: 100%; border-radius: 16px; margin-top: 25px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .highlight { color: var(--secondary); font-weight: 600; }
     </style>
 </head>
 <body>
@@ -81,27 +82,30 @@
     </header>
 
     <div class="container" data-aos="fade-up">
+        <!-- 2x3 Matrix Explanation -->
         <div class="glass">
-            <h2 class="gradient-text">📊 CSV & JSON Export</h2>
-            <p style="color: var(--text-muted);">Isoliere Daten einzelner Creator oder exportiere das gesamte Portfolio für Excel/PowerBI.</p>
+            <h2 class="gradient-text">📊 Die 2x3 KPI Matrix</h2>
+            <p style="color: var(--text-muted);">In der Version 2.0.8 haben wir die KPI-Karten restrukturiert, um eine logische Lesbarkeit zu gewährleisten. Die Matrix zeigt dir <span class="highlight">Ereignis-basierte</span> Höchst- und Tiefstwerte:</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>Top-Row (Main Stats):</b> Gesamter Umsatz, Durchschnitt und Monats-Trend.</li>
+                <li><b>Bottom-Row (Outlier Analytics):</b> Der absolut beste Tag (Max) und der schwächste Tag (Min > $0).</li>
+                <li><b>Live-Calculations:</b> Alle Werte werden in Echtzeit aus der `SQLite` Datenbank neu berechnet, wenn du einen Kanal auswählst.</li>
+            </ul>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png" 
                  onerror="this.src='images/tikleapcrawler/data_export7.png'" 
-                 alt="Data Export v2" class="data-img">
+                 alt="Data Analytics" class="data-img">
         </div>
 
+        <!-- Export Logic -->
         <div class="glass">
-            <h2 class="gradient-text">🔍 2x3 KPI Matrix</h2>
-            <ul style="color: var(--text-muted); padding-left: 20px;">
-                <li><b>Total Revenue:</b> Brutto-Einnahmen des Kanals.</li>
-                <li><b>Average/Day:</b> Durchschnitt bei aktiven Tagen.</li>
-                <li><b>Extreme Values:</b> Höchster und niedrigster Tageswert ($ > 0).</li>
-                <li><b>Monthly Estimates:</b> Dynamische Hochrechnungen.</li>
-            </ul>
+            <h2 class="gradient-text">📥 Excel-Ready Exports</h2>
+            <p style="color: var(--text-muted);">Beim Klick auf <span class="highlight">📤 CSV Export</span> wird automatisch eine Datei generiert, die ISO-konforme Datumsformate nutzt. Dies ermöglicht die direkte Weiterverarbeitung in **Microsoft Excel**, **Google Sheets** oder **Power BI**, ohne Text-zu-Spalten Korrekturen.</p>
         </div>
 
+        <!-- Migration -->
         <div class="glass">
-            <h2 class="gradient-text">🗑️ Data Governance</h2>
-            <p style="color: var(--text-muted);">Lösche oder migriere Daten sicher direkt aus der Anwendung.</p>
+            <h2 class="gradient-text">🔄 Migration-Tool (Pro Only)</h2>
+            <p style="color: var(--text-muted);">Ändert ein Creator seinen Link? Nutze das <span class="highlight">Account Migration-Tool</span>. Dies schreibt die gesamte Historie in der Datenbank auf den neuen Namen um, sodass du keine historischen Daten verlierst.</p>
         </div>
     </div>
 

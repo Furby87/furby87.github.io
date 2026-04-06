@@ -67,7 +67,9 @@
         }
 
         .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        .proxy-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .proxy-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); aspect-ratio: 16/10; object-fit: cover; background: rgba(255,255,255,0.02); }
+        .highlight { color: var(--secondary); font-weight: 600; }
+        pre { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; color: var(--secondary); border: 1px solid var(--glass-border); font-size: 0.85rem; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -81,22 +83,32 @@
     </header>
 
     <div class="container" data-aos="fade-up">
+        <!-- Force Mode Explanation -->
         <div class="glass">
-            <h2 class="gradient-text">🛡️ Stealth Bypass</h2>
-            <p style="color: var(--text-muted);">Umgehe Cloudflare und Akamai Sperren mit dem integrierten Proxy-System und automatischer TLS-Impersonation.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/proxies_sidebar.png" 
-                 onerror="this.src='images/tikleapcrawler/proxies_sidebar.png'" 
+            <h2 class="gradient-text">🛡️ Force Proxy Mode</h2>
+            <p style="color: var(--text-muted);">Der <span class="highlight">Force Mode</span> (v2.0.7) ist eine kritische Sicherheitsfunktion für High-Volume Tracking. Standardmäßig nutzt der Crawler deine lokale IP für den ersten Versuch. Im Force-Mode wird <span class="highlight">keine einzige Anfrage</span> über deine echte Internetverbindung gesendet.</p>
+            <pre>http://username:password@ip:port
+http://113.160.132.26:8080
+socks5://45.136.131.68:8446</pre>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li>Absoluter Schutz vor IP-Banns auf TikLeap.</li>
+                <li>Ideal für 24/7 Autopilot-Betrieb mit vielen Accounts.</li>
+                <li>Intelligente Wahl eines zufälligen Proxys ab der ersten Millisekunde.</li>
+            </ul>
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/profile_manager6.png" 
+                 onerror="this.onerror=null; this.src='images/tikleapcrawler/profile_manager6.png'" 
                  alt="Proxy Engine" class="proxy-img">
         </div>
 
+        <!-- Automatic Self-Healing -->
         <div class="glass">
-            <h2 class="gradient-text">🚜 Auto-Harvester</h2>
-            <p style="color: var(--text-muted);">Der Crawler sammelt bei Bedarf autonom neue Proxies aus öffentlichen Listen und verifiziert diese im Hintergrund.</p>
-        </div>
-
-        <div class="glass">
-            <h2 class="gradient-text">⚡ Force Proxy Mode</h2>
-            <p style="color: var(--text-muted);">Aktiviere den "Force Mode", um deine reale IP vollständig vor TikLeap zu verbergen.</p>
+            <h2 class="gradient-text">🚜 Smart Self-Healing Engine</h2>
+            <p style="color: var(--text-muted);">Die Proxy-Verwaltung arbeitet <span class="highlight">Event-Driven</span>. Wenn ein Proxy während eines Laufs blockiert wird:</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 10px;">
+                <li>Der Proxy wird sofort aus der `proxies.txt` entfernt.</li>
+                <li>Der Echtzeit-Zähler in der Sidebar aktualisiert sich live.</li>
+                <li>Der Crawler rotiert automatisch zum nächsten verfügbaren Proxy.</li>
+            </ul>
         </div>
     </div>
 

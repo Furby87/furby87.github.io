@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikLeap Crawler Pro - Stats</title>
+    <title>TikLeap Crawler Pro - Configuration</title>
     
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -67,7 +67,8 @@
         }
 
         .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        .stat-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); aspect-ratio: 16/10; object-fit: cover; background: rgba(255,255,255,0.02); }
+        pre { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; color: var(--secondary); overflow-x: auto; border: 1px solid var(--glass-border); font-size: 0.85rem; line-height: 1.5; }
+        .highlight { color: var(--secondary); font-weight: 600; }
     </style>
 </head>
 <body>
@@ -75,28 +76,40 @@
     <header>
         <a href="tikleapcrawler.html" class="back-button">← BACK</a>
         <div data-aos="zoom-out">
-            <h1 class="gradient-text" style="font-size: 2.8rem; margin: 0;">Statistics & Charts</h1>
-            <p style="color: var(--text-muted);">Visualizing growth and revenue trends</p>
+            <h1 class="gradient-text" style="font-size: 2.8rem; margin: 0;">Configuration Files</h1>
+            <p style="color: var(--text-muted);">Advanced settings & authentication</p>
         </div>
     </header>
 
     <div class="container" data-aos="fade-up">
+        <!-- cookie.txt -->
         <div class="glass">
-            <h2 class="gradient-text">📈 Revenue Timeline (v2.0.8)</h2>
-            <p style="color: var(--text-muted);">Interactive Matplotlib charts with dynamic legends and 12px "Pro" styling.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/statistics7.png" 
-                 onerror="this.onerror=null; this.src='images/tikleapcrawler/statistics7.png'" 
-                 alt="Stats v2" class="stat-img">
+            <h2 class="gradient-text">🍪 cookie.txt</h2>
+            <p style="color: var(--text-muted);">Erforderlich für den Zugriff auf geschützte TikLeap-Profile. Nutze eine Browser-Extension (z.B. "Get cookies.txt") im Netscape-Format.</p>
+            <pre># Netscape HTTP Cookie File
+.tikleap.com	TRUE	/	TRUE	1735689600	session_id	xyz123...
+.tikleap.com	TRUE	/	TRUE	1735689600	csrf_token	abc456...</pre>
         </div>
 
+        <!-- settings.json -->
         <div class="glass">
-            <h2 class="gradient-text">🥇 Leaderboard Icons</h2>
-            <p style="color: var(--text-muted);">Visual ranking of top-performing accounts with medal icons (🥇, 🥈, 🥉).</p>
+            <h2 class="gradient-text">⚙️ settings.json</h2>
+            <p style="color: var(--text-muted);">Speichert deine globalen Präferenzen. Wird automatisch im Ordner <span class="highlight">/data</span> verwaltet.</p>
+            <pre>{
+    "timeframe": "Letzte 30 Tage",
+    "legend_size": "Legende: Mikro",
+    "auto_interval": "Alle 6 Std",
+    "use_proxies": true,
+    "only_proxies": false,
+    "view_mode": "Einzeln"
+}</pre>
         </div>
 
+        <!-- user_agent.txt -->
         <div class="glass">
-            <h2 class="gradient-text">📊 Portfolio aggregation</h2>
-            <p style="color: var(--text-muted);">Aggregated statistics for teams and the entire portfolio at a glance.</p>
+            <h2 class="gradient-text">📱 user_agent.txt</h2>
+            <p style="color: var(--text-muted);">Optional. Erlaube dem Crawler, sich als ein spezifisches Gerät auszugeben.</p>
+            <pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</pre>
         </div>
     </div>
 
