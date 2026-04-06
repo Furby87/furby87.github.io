@@ -348,3 +348,56 @@ footer {
 footer a {
     color: #fff !important;
 }
+
+/* Restored list padding */
+.section ol, .section ul {
+    padding-left: 25px !important;
+}
+
+/* Interactive Accordion FAQ */
+.faq-accordion {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    margin-bottom: 10px !important;
+    padding: 12px 15px !important;
+    transition: all 0.3s ease !important;
+}
+
+.faq-accordion:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.faq-accordion summary {
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    color: #e2e8f0 !important;
+    list-style: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    outline: none !important;
+}
+
+.faq-accordion summary::-webkit-details-marker {
+    display: none !important;
+}
+
+.faq-accordion summary::after {
+    content: "▼" !important;
+    font-size: 0.8rem !important;
+    color: #fe2c55 !important;
+    transition: transform 0.3s ease !important;
+}
+
+.faq-accordion[open] summary::after {
+    transform: rotate(-180deg) !important;
+}
+
+.faq-content {
+    margin-top: 15px !important;
+    padding-top: 15px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #94a3b8 !important;
+    line-height: 1.5 !important;
+}

@@ -736,6 +736,13 @@
             transform: translateX(-5px);
         }
     </style>
+    <!-- Open Graph SEO & Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TikTok User Info Bot | OSINT & Analytics">
+    <meta property="og:description" content="Tiefgreifende TikTok Analysen direkt in Telegram. Verfolge Live-Streams, tracke Follower-Wachstum und analysiere Profile.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Furby87/Furby87/main/docs/img/og_tiktok_bot.png">
+    <meta name="theme-color" content="#fe2c55">
 </head>
 <body>
     <div class="scroll-progress"></div>
@@ -1155,10 +1162,6 @@
         // Back to top button
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            const progress = document.querySelector('.scroll-progress');
-            if (progress) progress.style.width = scrolled + "%";
             
             const btt = document.querySelector('.back-to-top');
             if (btt) {

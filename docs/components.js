@@ -36,3 +36,43 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 });
+
+// Globale Utility Funktion: Text in Zwischenablage kopieren mit visuellem UX Feedback
+window.copyToClipboard = function(text, buttonElement) {
+    navigator.clipboard.writeText(text).then(() => {
+        if(buttonElement) {
+            const originalText = buttonElement.innerText;
+            // Visuelles Feedback
+            buttonElement.innerText = "✅ Kopiert!";
+            buttonElement.style.color = "#4ade80"; 
+            buttonElement.style.borderColor = "#4ade80";
+            
+            // Revert after 2 seconds
+            setTimeout(() => {
+                buttonElement.innerText = originalText;
+                buttonElement.style.color = "";
+                buttonElement.style.borderColor = "";
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Kopieren fehlgeschlagen:', err);
+    });
+};
+
+// Globaler Scroll Progress Bar Listener (greift auf allen Seiten mit .scroll-progress Div)
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBar = document.querySelector('.scroll-progress');
+    if (progressBar) {
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            
+            if(height > 0) {
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            } else {
+                progressBar.style.width = '100%';
+            }
+        }, { passive: true });
+    }
+});

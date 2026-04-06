@@ -148,8 +148,16 @@
             color: #fe2c55;
         }
     </style>
+    <!-- Open Graph SEO & Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tutorial: RTMP Streams über VLC abspielen">
+    <meta property="og:description" content="Schritt-für-Schritt Anleitung, um TikTok Livestreams über den VLC Media Player anstatt der App anzusehen.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Furby87/Furby87/main/docs/img/og_vlc_tutorial.png">
+    <meta name="theme-color" content="#f87171">
 </head>
 <body>
+    <div class="scroll-progress"></div>
     <header>
         <a href="ttuserinfobot.html" class="back-button">
             <span style="font-size: 20px;">←</span> Zurück
@@ -160,9 +168,14 @@
 
     <div class="container">
         <div class="section" data-aos="fade-up">
-            <p>Wenn du eine RTMP-URL von unserem Bot erhältst, kannst du damit den Livestream direkt im VLC Media Player anschauen. Hier sind die einfachen Schritte:</p>
-            
-            <h3>✅ Auf dem PC (Windows &amp; Mac)</h3>
+            <p style="font-size: 1.1rem; margin: 0; display: flex; align-items: center; gap: 15px;">
+                <span class="icon" style="font-size: 2rem;">ℹ️</span> 
+                <span>Wenn du eine RTMP-URL von unserem Bot erhältst, kannst du damit den Livestream direkt im VLC Media Player anschauen. Wähle unten dein Gerät aus und befolge die simplen Schritte.</span>
+            </p>
+        </div>
+        
+        <div class="section" data-aos="fade-up" data-aos-delay="100">
+            <h2 style="display: flex; align-items: center; gap: 10px; margin-top: 0;">✅ Auf dem PC (Windows &amp; Mac)</h2>
             <ol>
                 <li>
                     <b>Öffne VLC Media Player</b><br>
@@ -187,12 +200,17 @@
                     </div>
                 </li>
                 <li>
-                    <b>Livestream genießen!</b> 🎬<br>
-                    Wenn die URL korrekt ist und der Stream aktiv ist, wird das Video direkt abgespielt.
+                    <b>Wiedergabe starten!</b> 🎬<br>
+                    Wenn die URL korrekt ist und der Stream aktiv ist, wird das Video abgespielt.<br>
+                    <div style="background: rgba(254, 44, 85, 0.1); border-left: 3px solid #fe2c55; padding: 10px; margin-top: 10px; border-radius: 4px; color: #e2e8f0; font-size: 0.9em;">
+                        <strong>Tipp:</strong> RTMP-Streams benötigen oft eine kleine Pufferzeit. Bitte gib dem VLC Player 5 bis 10 Sekunden Zeit, um den Stream aufzubauen!
+                    </div>
                 </li>
             </ol>
-            
-            <h3>📱 Auf dem Handy (Android &amp; iOS)</h3>
+        </div>
+        
+        <div class="section" data-aos="fade-up" data-aos-delay="200">
+            <h2 style="display: flex; align-items: center; gap: 10px; margin-top: 0;">📱 Auf mobilen Geräten (Smartphone &amp; Tablet)</h2>
             <ol>
                 <li>
                     <b>Lade VLC herunter</b><br>
@@ -220,26 +238,37 @@
                     </div>
                 </li>
                 <li>
-                    <b>Livestream starten!</b> 🎥<br>
-                    Falls der Stream aktiv ist, sollte er jetzt in VLC abgespielt werden.
+                    <b>Wiedergabe starten!</b> 🎥<br>
+                    Falls der Stream aktiv ist, wird das Video abgespielt.<br>
+                    <div style="background: rgba(254, 44, 85, 0.1); border-left: 3px solid #fe2c55; padding: 10px; margin-top: 10px; border-radius: 4px; color: #e2e8f0; font-size: 0.9em;">
+                        <strong>Tipp:</strong> RTMP-Streams benötigen oft eine Pufferzeit. Bitte habe 5 bis 10 Sekunden Geduld!
+                    </div>
                 </li>
             </ol>
-            
-            <h3>❓ Häufige Probleme &amp; Lösungen</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #fe2c55;">
-                    <b>Stream startet nicht?</b><br>
-                    👉 Stelle sicher, dass der Stream aktiv ist und die URL korrekt kopiert wurde.
-                </li>
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #fe2c55;">
-                    <b>Kein Bild oder Ton?</b><br>
-                    👉 Versuche, VLC neu zu starten oder eine andere RTMP-Quelle zu testen.
-                </li>
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #fe2c55;">
-                    <b>RTMP wird nicht unterstützt?</b><br>
-                    👉 Manche VLC-Versionen haben Probleme mit RTMP. Falls es nicht funktioniert, probiere eine ältere Version oder eine alternative App wie <b>"RTMP Stream Player"</b> für Android.
-                </li>
-            </ul>
+        </div>
+        
+        <div class="section" data-aos="fade-up" data-aos-delay="300">
+            <h2 style="display: flex; align-items: center; gap: 10px; margin-top: 0;">❓ Fehlerbehebung &amp; FAQ</h2>
+            <div style="margin-top: 20px;">
+                <details class="faq-accordion">
+                    <summary>Stream startet nicht?</summary>
+                    <div class="faq-content">
+                        👉 Stelle sicher, dass der Stream aktuell wirklich aktiv (Live) ist und die URL fehlerfrei und ohne Leerzeichen kopiert wurde.
+                    </div>
+                </details>
+                <details class="faq-accordion">
+                    <summary>Kein Bild oder Ton?</summary>
+                    <div class="faq-content">
+                        👉 Wartest du bereits 10 Sekunden? Falls ja, versuche VLC neu zu starten oder teste kurz eine alternative RTMP-Quelle aus.
+                    </div>
+                </details>
+                <details class="faq-accordion">
+                    <summary>RTMP wird nicht unterstützt?</summary>
+                    <div class="faq-content">
+                        👉 Manche neueren VLC-Versionen (oft auf iOS) haben Probleme mit dem älteren RTMP-Protokoll. Falls es vehement nicht klappt, probiere eine alternative App wie z.B. <b>"RTMP Stream Player"</b>.
+                    </div>
+                </details>
+            </div>
         </div>
     </div>
 

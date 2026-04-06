@@ -299,11 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Scroll Listeners
 window.addEventListener('scroll', () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-
-    const progress = document.querySelector('.scroll-progress');
-    if (progress) progress.style.width = scrolled + "%";
 
     const btt = document.querySelector('.back-to-top');
     if (btt) {

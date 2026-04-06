@@ -529,6 +529,13 @@
             display: none;
         }
     </style>
+    <!-- Open Graph SEO & Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dante Meltdown Bot | Audio Tracker">
+    <meta property="og:description" content="Telegram Audio & Music Player Bot für Meltdowns. Spiele Audio, verwalte Queues und tracke Soundboards.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Furby87/Furby87/main/docs/img/og_dante_bot.png">
+    <meta name="theme-color" content="#22d3ee">
 </head>
 <body>
     <div class="scroll-progress"></div>
@@ -1085,10 +1092,6 @@
         // Back to top button Funktionalität
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            const progress = document.querySelector('.scroll-progress');
-            if (progress) progress.style.width = scrolled + "%";
             
             const btt = document.querySelector('.back-to-top');
             if (btt) {
