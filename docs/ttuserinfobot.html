@@ -747,8 +747,8 @@
 <body>
     <div class="scroll-progress"></div>
     <header>
-        <a href="index.html" class="back-button" style="position: absolute; left: 20px; top: 20px; color: white; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-            <span style="font-size: 20px;">←</span> Zurück
+        <a href="index.html" class="back-button-top">
+            <span>←</span> Zurück
         </a>
         <h1>TikTok User Info Bot</h1>
         <div class="subtitle">Der leistungsstarke Telegram-Bot für TikTok-Profilanalysen</div>
@@ -1037,20 +1037,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
         function toggleExample(id) {
             const element = document.getElementById(id);
             if (element.style.display === 'none' || !element.style.display) {

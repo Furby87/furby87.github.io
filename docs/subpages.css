@@ -1,16 +1,27 @@
-/* Subpages Glassmorphic Theme Overrides */
+:root {
+    --bg-color: #0c0d18;
+    --glass-bg: rgba(255, 255, 255, 0.02);
+    --glass-border: rgba(255, 255, 255, 0.04);
+    --primary: #a855f7;
+    --secondary: #22d3ee;
+    --text-main: #f8f9fa;
+    --text-muted: #94a3b8;
+}
 
 body {
-    background: #0c0d18 !important;
-    color: #fff !important;
-    background-image: radial-gradient(circle at top right, rgba(168, 85, 247, 0.12), transparent 40%),
-                      radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.12), transparent 40%) !important;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    background: var(--bg-color) !important;
+    color: var(--text-main) !important;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.08) 0px, transparent 50%) !important;
+    font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif !important;
+    margin: 0; padding: 0; min-height: 100vh;
 }
 
 .container {
-    max-width: 900px !important;
-    padding: 1.5rem !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    padding: 0 20px 60px !important;
 }
 
 /* Glass Section styles */
@@ -128,6 +139,9 @@ footer {
 header {
     background-color: transparent !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 5rem 0 !important;
+    text-align: center !important;
+    position: relative !important;
 }
 
 /* Copy Button */
@@ -150,14 +164,23 @@ header {
 
 /* Back to Top Arrow with Glassmorphism */
 .back-to-top {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
     background: rgba(0, 0, 0, 0.3) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #fff !important;
-    display: flex !important; /* Force flex display when active */
+    display: none; /* Managed by JS */
     align-items: center !important;
     justify-content: center !important;
+    z-index: 1000 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
 }
 
 .back-to-top:hover {
@@ -313,25 +336,30 @@ footer a:hover {
 
 /* Unified back button style for Subpages */
 .back-button {
-    padding: 8px 16px !important;
-    border-radius: 20px !important;
+    position: absolute !important;
+    left: 30px !important;
+    top: 30px !important;
+    padding: 10px 20px !important;
+    border-radius: 12px !important;
     background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--glass-border) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
-    color: #fff !important;
+    color: var(--text-muted) !important;
     text-decoration: none !important;
     transition: all 0.3s ease !important;
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center !important;
     gap: 8px !important;
     font-size: 14px !important;
+    z-index: 100 !important;
 }
 
 .back-button:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
-    transform: translateX(-4px) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-main) !important;
+    background: rgba(34, 211, 238, 0.05) !important;
+    transform: scale(1.02) !important;
+    border-color: var(--secondary) !important;
 }
 
 /* Unified footer style for Subpages */
@@ -401,3 +429,181 @@ footer a {
     color: #94a3b8 !important;
     line-height: 1.5 !important;
 }
+
+/* --- Phase 3: Global Utility Classes for Clean HTML --- */
+.back-button-top {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 100;
+}
+
+.back-button-top span {
+    font-size: 20px;
+}
+
+.info-banner-red {
+    background: rgba(254, 44, 85, 0.1);
+    border-left: 3px solid #fe2c55;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-banner-red .icon {
+    font-size: 2rem;
+}
+
+.command-row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-title-large {
+    font-size: 2.8rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-subtitle-muted {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlight-red {
+    color: #fe2c55;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.highlight-red:hover {
+    text-decoration: underline;
+}
+
+
+/* Documentation Navigation Buttons */
+.doc-navigation {
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.nav-btn {
+    text-decoration: none !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    padding: 10px 20px !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.nav-btn:hover {
+    background: rgba(168, 85, 247, 0.15) !important;
+    border-color: #a855f7 !important;
+    transform: translateY(-2px) !important;
+}
+
+.nav-btn.next {
+    background: rgba(34, 211, 238, 0.1) !important;
+    border-color: rgba(34, 211, 238, 0.2) !important;
+}
+
+.nav-btn.next:hover {
+    background: rgba(34, 211, 238, 0.2) !important;
+    border-color: #22d3ee !important;
+}
+
+/* Documentation Components */
+.highlight { 
+    color: var(--secondary); 
+    font-weight: 600; 
+}
+
+pre { 
+    background: rgba(0,0,0,0.3); 
+    padding: 20px; 
+    border-radius: 12px; 
+    color: var(--secondary); 
+    overflow-x: auto; 
+    border: 1px solid var(--glass-border); 
+    font-size: 0.85rem; 
+    line-height: 1.5; 
+    margin-top: 15px;
+}
+
+.doc-img, .stat-img, .wizard-img, .proxy-img, .group-img, .data-img, .config-img, .cli-img, .step-img { 
+    width: 100%; 
+    border-radius: 16px; 
+    margin-top: 25px; 
+    border: 1px solid var(--glass-border); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+    aspect-ratio: 16/10; 
+    object-fit: cover; 
+    background: rgba(255,255,255,0.02); 
+}
+
+/* Changelog & Versioning */
+.version-tag {
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.log-item { 
+    border-left: 3px solid var(--primary); 
+    padding-left: 20px; 
+    margin-bottom: 30px; 
+    position: relative; 
+}
+
+.log-item::before { 
+    content: ''; 
+    position: absolute; 
+    left: -8px; 
+    top: 0; 
+    width: 13px; 
+    height: 13px; 
+    border-radius: 50%; 
+    background: var(--secondary); 
+    border: 3px solid var(--bg-color); 
+}
+
+.log-date { 
+    font-weight: 800; 
+    color: var(--secondary); 
+    font-size: 0.9rem; 
+    margin-bottom: 5px; 
+    display: block; 
+}
+
+.log-title { 
+    font-weight: 600; 
+    font-size: 1.2rem; 
+    margin-bottom: 10px; 
+    color: var(--text-main); 
+}
+
+.log-content { 
+    color: var(--text-muted); 
+    font-size: 0.95rem; 
+}
+

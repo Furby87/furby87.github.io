@@ -1084,30 +1084,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-
-        // Back to top button Funktionalität
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            
-            const btt = document.querySelector('.back-to-top');
-            if (btt) {
-                btt.style.display = winScroll > 300 ? "flex" : "none";
-            }
-        });
-
-        // Smooth scroll to top
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
         // Befehlsaufklapp-Funktionalität
         document.querySelectorAll('.command').forEach(command => {
             command.addEventListener('click', () => {

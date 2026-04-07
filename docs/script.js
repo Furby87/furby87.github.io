@@ -1,7 +1,7 @@
 // Category Mapping Rules (Keywords in name or description)
 const CATEGORIES = {
     bots: ['bot', 'recorder', 'live', 'sysbot', 'transcriber', 'FurbyBot'],
-    tools: ['switcher', 'plugin', 'stats', 'scripts', 'tracker', 'API'],
+    tools: ['switcher', 'plugin', 'stats', 'scripts', 'tracker', 'API', 'framework', 'crawler'],
     gaming: ['pokemon', 'arma', 'steam', 'connect4', 'bitburner', 'ts-fmod']
 };
 
@@ -15,7 +15,7 @@ const STATIC_PROJECTS = [
         html_url: 'https://github.com/Furby87/TT_USER_INFO_TG_BOT',
         demo_url: 'https://t.me/TikTokAbfrageBot',
         info_url: 'ttuserinfobot.html',
-        category: 'bots',
+        categories: ['bots'],
         status: 'active'
     },
     {
@@ -26,25 +26,38 @@ const STATIC_PROJECTS = [
         html_url: 'https://github.com/Furby87/AudioBot',
         demo_url: 'https://t.me/DanteMeltdownBot',
         info_url: 'dantebot.html',
-        category: 'bots',
+        categories: ['bots'],
         status: 'maintenance'
+    },
+    {
+        name: 'TikLeap Crawler Pro',
+        description: 'Advanced Headless Automation & Monitoring Framework für TikTok earnings.',
+        language: 'Python',
+        stargazers_count: 0,
+        html_url: 'https://github.com/Furby87/TikleapCrawler',
+        demo_url: '',
+        info_url: 'tikleapcrawler.html',
+        categories: ['tools', 'bots'], // In Tools und Bots & Automation sichtbar
+        status: 'active'
     }
 ];
 
 let allProjects = []; // Store combined projects listing
 
-// Classify Project Category
+// Classify Project Categories (can return multiple)
 function classifyProject(repo) {
-    if (repo.fork) return 'forks';
+    if (repo.fork) return ['forks'];
     const name = repo.name.toLowerCase();
     const desc = (repo.description || '').toLowerCase();
+    const matchedCategories = [];
 
     for (const [cat, keywords] of Object.entries(CATEGORIES)) {
         if (keywords.some(k => name.includes(k.toLowerCase()) || desc.includes(k.toLowerCase()))) {
-            return cat;
+            matchedCategories.push(cat);
         }
     }
-    return 'tools'; // Default fallback
+    
+    return matchedCategories.length > 0 ? matchedCategories : ['tools']; 
 }
 
 // Fetch GitHub Repositories
@@ -67,7 +80,6 @@ async function fetchRepos() {
         const dynamicProjects = repos
             .filter(repo => repo.name !== username && !STATIC_PROJECTS.some(s => s.html_url.includes(repo.name)))
             .map(repo => {
-                const category = classifyProject(repo);
                 return {
                     name: repo.name,
                     description: repo.description,
@@ -75,7 +87,7 @@ async function fetchRepos() {
                     stargazers_count: repo.stargazers_count,
                     html_url: repo.html_url,
                     topics: repo.topics || [],
-                    category: category
+                    categories: classifyProject(repo)
                 };
             });
 
@@ -104,7 +116,7 @@ function renderProjects(projects) {
     projects.forEach(repo => {
         const card = document.createElement('div');
         card.className = 'project-card glass reveal active';
-        card.setAttribute('data-category', repo.category);
+        card.setAttribute('data-category', (repo.categories || []).join(' '));
 
         const description = repo.description ? repo.description : 'No description provided.';
         const language = repo.language ? repo.language : 'Code';
@@ -123,11 +135,10 @@ function renderProjects(projects) {
         const demoLink = repo.demo_url ? `<a href="${repo.demo_url}" target="_blank" style="color:var(--secondary); text-decoration:none;"><i class="fas fa-play"></i> Live</a>` : '';
         const infoLink = repo.info_url ? `<a href="${repo.info_url}" style="color:var(--secondary); text-decoration:none;"><i class="fas fa-circle-info"></i> Info</a>` : '';
 
-        const statusHtml = `<div class="project-status ${status}"><span></span>${
-            status === 'active' ? 'Aktiv' : 
-            status === 'maintenance' ? 'Wartung' : 
-            status === 'outdated' ? 'Outdated' : 'Offline'
-        }</div>`;
+        const statusHtml = `<div class="project-status ${status}"><span></span>${status === 'active' ? 'Aktiv' :
+            status === 'maintenance' ? 'Wartung' :
+                status === 'outdated' ? 'Outdated' : 'Offline'
+            }</div>`;
 
         card.innerHTML = `
             ${statusHtml}
@@ -212,7 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const counts = { all: allProjects.length };
 
         allProjects.forEach(p => {
-            if (p.category) counts[p.category] = (counts[p.category] || 0) + 1;
+            if (p.categories) {
+                p.categories.forEach(cat => {
+                    counts[cat] = (counts[cat] || 0) + 1;
+                });
+            }
         });
 
         buttons.forEach(btn => {
@@ -233,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const query = document.getElementById('projectSearch')?.value.toLowerCase() || '';
 
         const filtered = allProjects.filter(p => {
-            const matchesCat = activeFilter === 'all' || p.category === activeFilter;
+            const matchesCat = activeFilter === 'all' || (p.categories || []).includes(activeFilter);
             const matchesQuery = p.name.toLowerCase().includes(query) || (p.description || '').toLowerCase().includes(query);
             return matchesCat && matchesQuery;
         });
@@ -297,19 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Scroll Listeners
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+// Managed by components.js - duplicate removed
 
-    const btt = document.querySelector('.back-to-top');
-    if (btt) {
-        btt.style.display = winScroll > 300 ? "flex" : "none";
-    }
-});
 
 // ==========================================
 // 🌌 1. Vanilla Particle Mesh Background
 // ==========================================
-(function() {
+(function () {
     const canvas = document.createElement('canvas');
     canvas.id = 'particles-canvas';
     document.body.appendChild(canvas);
@@ -332,11 +341,11 @@ window.addEventListener('scroll', () => {
     }
     resize();
     window.addEventListener('resize', resize);
-    
+
     // Global mousemove tracking for document
-    window.addEventListener('mousemove', (e) => { 
-        mouse.x = e.clientX; 
-        mouse.y = e.clientY; 
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
     });
 
     class Particle {
@@ -351,17 +360,17 @@ window.addEventListener('scroll', () => {
             this.x += this.vx; this.y += this.vy;
             if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
             if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-            
+
             // Mouse push/pull kinetic
             let dx = mouse.x - this.x; let dy = mouse.y - this.y;
-            let dist = Math.sqrt(dx*dx + dy*dy);
+            let dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < mouse.radius && mouse.x !== null) {
-                this.x -= dx * 0.005; this.y -= dy * 0.005; 
+                this.x -= dx * 0.005; this.y -= dy * 0.005;
             }
         }
         draw() {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.12)';
-            ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2); ctx.fill();
+            ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
         }
     }
 
@@ -372,13 +381,13 @@ window.addEventListener('scroll', () => {
         for (let i = 0; i < particles.length; i++) {
             particles[i].update();
             particles[i].draw();
-            
+
             for (let j = i + 1; j < particles.length; j++) {
                 let dx = particles[i].x - particles[j].x;
                 let dy = particles[i].y - particles[j].y;
-                let dist = Math.sqrt(dx*dx + dy*dy);
+                let dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < 110) {
-                    ctx.strokeStyle = `rgba(34, 211, 238, ${0.06 * (1 - dist/110)})`; // theme cyan glow
+                    ctx.strokeStyle = `rgba(34, 211, 238, ${0.06 * (1 - dist / 110)})`; // theme cyan glow
                     ctx.lineWidth = 0.8;
                     ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke();
                 }
@@ -392,7 +401,7 @@ window.addEventListener('scroll', () => {
 // ==========================================
 // 🕵️‍♂️ 2. Cyberpunk Glitch Text Effect
 // ==========================================
-(function() {
+(function () {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$@&%#!";
     document.querySelectorAll('.glitch-title').forEach(title => {
         title.addEventListener('mouseover', event => {
@@ -400,7 +409,7 @@ window.addEventListener('scroll', () => {
             const target = event.currentTarget; // safer than target on spans
             const targetText = target.getAttribute('data-value') || target.innerText;
             clearInterval(target.glitchInterval);
-            
+
             target.glitchInterval = setInterval(() => {
                 target.innerText = targetText.split("")
                     .map((letter, index) => {
@@ -408,7 +417,7 @@ window.addEventListener('scroll', () => {
                         return letters[Math.floor(Math.random() * letters.length)];
                     })
                     .join("");
-                    
+
                 if (iterations >= targetText.length) clearInterval(target.glitchInterval);
                 iterations += 1 / 2; // speed
             }, 40);
@@ -419,7 +428,7 @@ window.addEventListener('scroll', () => {
 // ==========================================
 // 📅 3. Dynamic Copyright Year Footer
 // ==========================================
-(function() {
+(function () {
     document.querySelectorAll('.current-year').forEach(el => {
         el.innerText = new Date().getFullYear();
     });

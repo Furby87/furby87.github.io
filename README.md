@@ -2,6 +2,13 @@
 
 ![Typing](https://readme-typing-svg.demolab.com/?lines=Hello👋;Allround-Developer💻;Open-Source+Enthusiast🚀)
 
+<div align="center">
+  <a href="https://furby87.github.io" target="_blank">
+    <img src="https://img.shields.io/badge/My_Portfolio-Check_it_out-fe2c55?style=for-the-badge&logo=github&logoColor=white" alt="Check out my portfolio!">
+  </a>
+</div>
+
+
 ![Typing](https://readme-typing-svg.demolab.com/?lines=Pentest-Lover👋;Nerd💻;Open-for-new-Stuff🚀)
 
 <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-love.svg" width="130" alt="made with love  markdown badge" ></a>  <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" width="130" alt="made with swag markdown badge"></a>

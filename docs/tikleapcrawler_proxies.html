@@ -6,79 +6,21 @@
     <title>TikLeap Crawler Pro - Proxy Engine</title>
     
     <!-- Dependencies & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #0c0d18;
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: rgba(255, 255, 255, 0.04);
-            --primary: #a855f7;
-            --secondary: #22d3ee;
-            --text-main: #f8f9fa;
-            --text-muted: #94a3b8;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.08) 0px, transparent 50%);
-            color: var(--text-main);
-            font-family: 'Outfit', sans-serif;
-            margin: 0; padding: 0; min-height: 100vh;
-        }
-
-        .scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            width: 0%; z-index: 9999; transition: width 0.1s ease;
-        }
-
-        header { padding: 4rem 0; text-align: center; position: relative; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
-
-        .glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-        }
-
-        .gradient-text {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .back-button {
-            position: absolute; left: 30px; top: 30px;
-            color: var(--text-muted); text-decoration: none; font-weight: 600;
-            padding: 10px 20px; border-radius: 12px;
-            background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover { color: var(--text-main); border-color: var(--secondary); background: rgba(34, 211, 238, 0.05); }
-        .proxy-img { width: 100%; border-radius: 16px; margin-top: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); aspect-ratio: 16/10; object-fit: cover; background: rgba(255,255,255,0.02); }
-        .highlight { color: var(--secondary); font-weight: 600; }
-        pre { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; color: var(--secondary); border: 1px solid var(--glass-border); font-size: 0.85rem; margin-top: 15px; }
-    </style>
+    <link rel="stylesheet" href="subpages.css">
 </head>
 <body>
     <div class="scroll-progress"></div>
     <header>
-        <a href="tikleapcrawler.html" class="back-button">← BACK</a>
+        <a href="tikleapcrawler.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> ZURÜCK
+        </a>
         <div data-aos="zoom-out">
-            <h1 class="gradient-text" style="font-size: 2.8rem; margin: 0;">Proxy Engine</h1>
-            <p style="color: var(--text-muted);">Elite anti-detection and bypass systems</p>
+            <h1 class="gradient-text hero-title-large">Proxy Engine</h1>
+            <p class="hero-subtitle-muted">Elite anti-detection and bypass systems</p>
         </div>
     </header>
 
@@ -114,14 +56,10 @@ socks5://45.136.131.68:8446</pre>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.querySelector('.scroll-progress');
-            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / scrollableHeight) * 100;
-            if (scrollProgress) scrollProgress.style.width = scrolled + '%';
-        });
-    </script>
+
+    <!-- Global Footer -->
+    <div id="global-footer" data-type="tikleap"></div>
+    <script src="config.js"></script>
+    <script src="components.js"></script>
 </body>
 </html>
