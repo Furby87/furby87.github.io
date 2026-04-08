@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - Configuration</title>
-    
+
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
 </head>
+
 <body>
     <div class="scroll-progress"></div>
     <header>
@@ -19,7 +23,7 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="gradient-text hero-title-large">Configuration</h1>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">Configuration</span></h1>
             <p class="hero-subtitle-muted">Fine-tune the engine for maximum efficiency</p>
         </div>
     </header>
@@ -27,8 +31,9 @@
     <div class="container" data-aos="fade-up">
         <!-- cookie.txt -->
         <div class="glass">
-            <h2 class="gradient-text">🍪 cookie.txt</h2>
-            <p style="color: var(--text-muted);">Erforderlich für den Zugriff auf geschützte TikLeap-Profile. Nutze eine Browser-Extension (z.B. "Get cookies.txt") im Netscape-Format.</p>
+            <h2 class="gradient-text">🍪 <span class="text-gradient">cookie.txt</span></h2>
+            <p style="color: var(--text-muted);">Erforderlich für den Zugriff auf geschützte TikLeap-Profile. Nutze eine
+                Browser-Extension (z.B. "Get cookies.txt") im Netscape-Format.</p>
             <pre># Netscape HTTP Cookie File
 .tikleap.com	TRUE	/	TRUE	1735689600	session_id	xyz123...
 .tikleap.com	TRUE	/	TRUE	1735689600	csrf_token	abc456...</pre>
@@ -36,8 +41,9 @@
 
         <!-- settings.json -->
         <div class="glass">
-            <h2 class="gradient-text">⚙️ settings.json</h2>
-            <p style="color: var(--text-muted);">Speichert deine globalen Präferenzen. Wird automatisch im Ordner <span class="highlight">/data</span> verwaltet.</p>
+            <h2 class="gradient-text">⚙️ <span class="text-gradient">settings.json</span></h2>
+            <p style="color: var(--text-muted);">Speichert deine globalen Präferenzen. Wird automatisch im Ordner <span
+                    class="highlight">/data</span> verwaltet.</p>
             <pre>{
     "timeframe": "Letzte 30 Tage",
     "legend_size": "Legende: Mikro",
@@ -50,8 +56,9 @@
 
         <!-- user_agent.txt -->
         <div class="glass">
-            <h2 class="gradient-text">📱 user_agent.txt</h2>
-            <p style="color: var(--text-muted);">Optional. Erlaube dem Crawler, sich als ein spezifisches Gerät auszugeben.</p>
+            <h2 class="gradient-text">📱 <span class="text-gradient">user_agent.txt</span></h2>
+            <p style="color: var(--text-muted);">Optional. Erlaube dem Crawler, sich als ein spezifisches Gerät
+                auszugeben.</p>
             <pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</pre>
         </div>
     </div>
@@ -64,4 +71,5 @@
     <script src="config.js"></script>
     <script src="components.js"></script>
 </body>
+
 </html>

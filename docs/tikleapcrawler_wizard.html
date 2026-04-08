@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - Setup Wizard</title>
-    
+
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
 </head>
+
 <body>
     <div class="scroll-progress"></div>
     <header>
@@ -27,17 +31,20 @@
     <div class="container" data-aos="fade-up">
         <!-- Step 1 -->
         <div class="glass">
-            <h2 class="gradient-text">Schritt 1: Initialisierung</h2>
-            <p style="color: var(--text-muted);">Das System prüft den <span class="highlight">Portablen-Modus</span>. Es werden automatisch die Ordner `data/` und `logs/` erstellt, falls diese fehlen. Es ist keine manuelle Ordnerstruktur-Erstellung nötig.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step1.png" 
-                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step1.png'" 
-                 alt="Step 1" class="step-img">
+            <h2 class="gradient-text"><span class="text-gradient">Schritt 1: Initialisierung</span></h2>
+            <p style="color: var(--text-muted);">Das System prüft den <span class="highlight">Portablen-Modus</span>. Es
+                werden automatisch die Ordner `data/` und `logs/` erstellt, falls diese fehlen. Es ist keine manuelle
+                Ordnerstruktur-Erstellung nötig.</p>
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step1.png"
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step1.png'" alt="Step 1"
+                class="step-img">
         </div>
 
         <!-- Step 2 -->
         <div class="glass">
-            <h2 class="gradient-text">Schritt 2: Smart Link Parser 🔗</h2>
-            <p style="color: var(--text-muted);">Der <span class="highlight">Smart-Parser</span> (v2.0.8) erkennt automatisch das Eingabeformat. Du musst dich nicht um die genaue URL kümmern:</p>
+            <h2 class="gradient-text"><span class="text-gradient">Schritt 2: Smart Link Parser</span> 🔗</h2>
+            <p style="color: var(--text-muted);">Der <span class="highlight">Smart-Parser</span> (v2.0.8) erkennt
+                automatisch das Eingabeformat. Du musst dich nicht um die genaue URL kümmern:</p>
             <pre># Einfacher Name
 @username
 # Vollständiger Link
@@ -47,18 +54,20 @@ https://www.tikleap.com/profile/0fficial404</pre>
                 <li><b>TikTok Link:</b> Automatische Extraktion des Usernames.</li>
                 <li><b>TikLeap Link:</b> Übernahme des direkten Profil-Endpunkts.</li>
             </ul>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step2_filled.png" 
-                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step2_filled.png'" 
-                 alt="Step 2" class="step-img">
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step2_filled.png"
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step2_filled.png'" alt="Step 2"
+                class="step-img">
         </div>
 
         <!-- Step 3 & 4 summaries -->
         <div class="glass">
-            <h2 class="gradient-text">Schritt 3 & 4: Finetuning</h2>
-            <p style="color: var(--text-muted);">Bestimme deine <span class="highlight">Teams</span> und konfiguriere den <span class="highlight">Auto-Pilot</span>. Nach Abschluss wird die `profiles.txt` automatisch geschrieben und die `settings.json` initialisiert.</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png" 
-                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step4.png'" 
-                 alt="Step 4" class="step-img">
+            <h2 class="gradient-text"><span class="text-gradient">Schritt 3 & 4: Finetuning</span></h2>
+            <p style="color: var(--text-muted);">Bestimme deine <span class="highlight">Teams</span> und konfiguriere
+                den <span class="highlight">Auto-Pilot</span>. Nach Abschluss wird die `profiles.txt` automatisch
+                geschrieben und die `settings.json` initialisiert.</p>
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png"
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step4.png'" alt="Step 4"
+                class="step-img">
         </div>
     </div>
 
@@ -70,4 +79,5 @@ https://www.tikleap.com/profile/0fficial404</pre>
     <script src="config.js"></script>
     <script src="components.js"></script>
 </body>
+
 </html>

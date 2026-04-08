@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - Proxy Engine</title>
-    
+
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
 </head>
+
 <body>
     <div class="scroll-progress"></div>
     <header>
@@ -19,7 +23,7 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="gradient-text hero-title-large">Proxy Engine</h1>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">Proxy Engine</span></h1>
             <p class="hero-subtitle-muted">Elite anti-detection and bypass systems</p>
         </div>
     </header>
@@ -27,8 +31,11 @@
     <div class="container" data-aos="fade-up">
         <!-- Force Mode Explanation -->
         <div class="glass">
-            <h2 class="gradient-text">🛡️ Force Proxy Mode</h2>
-            <p style="color: var(--text-muted);">Der <span class="highlight">Force Mode</span> (v2.0.7) ist eine kritische Sicherheitsfunktion für High-Volume Tracking. Standardmäßig nutzt der Crawler deine lokale IP für den ersten Versuch. Im Force-Mode wird <span class="highlight">keine einzige Anfrage</span> über deine echte Internetverbindung gesendet.</p>
+            <h2 class="gradient-text">🛡️ <span class="text-gradient">Force Proxy Mode</span></h2>
+            <p style="color: var(--text-muted);">Der <span class="highlight">Force Mode</span> (v2.0.7) ist eine
+                kritische Sicherheitsfunktion für High-Volume Tracking. Standardmäßig nutzt der Crawler deine lokale IP
+                für den ersten Versuch. Im Force-Mode wird <span class="highlight">keine einzige Anfrage</span> über
+                deine echte Internetverbindung gesendet.</p>
             <pre>http://username:password@ip:port
 http://113.160.132.26:8080
 socks5://45.136.131.68:8446</pre>
@@ -37,15 +44,16 @@ socks5://45.136.131.68:8446</pre>
                 <li>Ideal für 24/7 Autopilot-Betrieb mit vielen Accounts.</li>
                 <li>Intelligente Wahl eines zufälligen Proxys ab der ersten Millisekunde.</li>
             </ul>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/profile_manager6.png" 
-                 onerror="this.onerror=null; this.src='images/tikleapcrawler/profile_manager6.png'" 
-                 alt="Proxy Engine" class="proxy-img">
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/profile_manager6.png"
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/profile_manager6.png'" alt="Proxy Engine"
+                class="proxy-img">
         </div>
 
         <!-- Automatic Self-Healing -->
         <div class="glass">
-            <h2 class="gradient-text">🚜 Smart Self-Healing Engine</h2>
-            <p style="color: var(--text-muted);">Die Proxy-Verwaltung arbeitet <span class="highlight">Event-Driven</span>. Wenn ein Proxy während eines Laufs blockiert wird:</p>
+            <h2 class="gradient-text">🚜 <span class="text-gradient">Smart Self-Healing Engine</span></h2>
+            <p style="color: var(--text-muted);">Die Proxy-Verwaltung arbeitet <span
+                    class="highlight">Event-Driven</span>. Wenn ein Proxy während eines Laufs blockiert wird:</p>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 10px;">
                 <li>Der Proxy wird sofort aus der `proxies.txt` entfernt.</li>
                 <li>Der Echtzeit-Zähler in der Sidebar aktualisiert sich live.</li>
@@ -62,4 +70,5 @@ socks5://45.136.131.68:8446</pre>
     <script src="config.js"></script>
     <script src="components.js"></script>
 </body>
+
 </html>

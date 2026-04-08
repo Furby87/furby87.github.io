@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - Data & Export</title>
-    
+
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
 </head>
+
 <body>
     <div class="scroll-progress"></div>
     <header>
@@ -19,7 +23,7 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="gradient-text hero-title-large">Data Management</h1>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">Data Management</span></h1>
             <p class="hero-subtitle-muted">High-performance storage and export</p>
         </div>
     </header>
@@ -27,28 +31,36 @@
     <div class="container" data-aos="fade-up">
         <!-- 2x3 Matrix Explanation -->
         <div class="glass">
-            <h2 class="gradient-text">📊 Die 2x3 KPI Matrix</h2>
-            <p style="color: var(--text-muted);">In der Version 2.0.8 haben wir die KPI-Karten restrukturiert, um eine logische Lesbarkeit zu gewährleisten. Die Matrix zeigt dir <span class="highlight">Ereignis-basierte</span> Höchst- und Tiefstwerte:</p>
+            <h2 class="gradient-text">📊 <span class="text-gradient">Die 2x3 KPI Matrix</span></h2>
+            <p style="color: var(--text-muted);">In der Version 2.0.8 haben wir die KPI-Karten restrukturiert, um eine
+                logische Lesbarkeit zu gewährleisten. Die Matrix zeigt dir <span
+                    class="highlight">Ereignis-basierte</span> Höchst- und Tiefstwerte:</p>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
                 <li><b>Top-Row (Main Stats):</b> Gesamter Umsatz, Durchschnitt und Monats-Trend.</li>
-                <li><b>Bottom-Row (Outlier Analytics):</b> Der absolut beste Tag (Max) und der schwächste Tag (Min > $0).</li>
-                <li><b>Live-Calculations:</b> Alle Werte werden in Echtzeit aus der `SQLite` Datenbank neu berechnet, wenn du einen Kanal auswählst.</li>
+                <li><b>Bottom-Row (Outlier Analytics):</b> Der absolut beste Tag (Max) und der schwächste Tag (Min >
+                    $0).</li>
+                <li><b>Live-Calculations:</b> Alle Werte werden in Echtzeit aus der `SQLite` Datenbank neu berechnet,
+                    wenn du einen Kanal auswählst.</li>
             </ul>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png" 
-                 onerror="this.src='images/tikleapcrawler/data_export7.png'" 
-                 alt="Data Analytics" class="data-img">
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png"
+                onerror="this.src='images/tikleapcrawler/data_export7.png'" alt="Data Analytics" class="data-img">
         </div>
 
         <!-- Export Logic -->
         <div class="glass">
-            <h2 class="gradient-text">📥 Excel-Ready Exports</h2>
-            <p style="color: var(--text-muted);">Beim Klick auf <span class="highlight">📤 CSV Export</span> wird automatisch eine Datei generiert, die ISO-konforme Datumsformate nutzt. Dies ermöglicht die direkte Weiterverarbeitung in **Microsoft Excel**, **Google Sheets** oder **Power BI**, ohne Text-zu-Spalten Korrekturen.</p>
+            <h2 class="gradient-text">📥 <span class="text-gradient">Excel-Ready Exports</span></h2>
+            <p style="color: var(--text-muted);">Beim Klick auf <span class="highlight">📤 CSV Export</span> wird
+                automatisch eine Datei generiert, die ISO-konforme Datumsformate nutzt. Dies ermöglicht die direkte
+                Weiterverarbeitung in **Microsoft Excel**, **Google Sheets** oder **Power BI**, ohne Text-zu-Spalten
+                Korrekturen.</p>
         </div>
 
         <!-- Migration -->
         <div class="glass">
-            <h2 class="gradient-text">🔄 Migration-Tool (Pro Only)</h2>
-            <p style="color: var(--text-muted);">Ändert ein Creator seinen Link? Nutze das <span class="highlight">Account Migration-Tool</span>. Dies schreibt die gesamte Historie in der Datenbank auf den neuen Namen um, sodass du keine historischen Daten verlierst.</p>
+            <h2 class="gradient-text">🔄 <span class="text-gradient">Migration-Tool (Pro Only)</span></h2>
+            <p style="color: var(--text-muted);">Ändert ein Creator seinen Link? Nutze das <span
+                    class="highlight">Account Migration-Tool</span>. Dies schreibt die gesamte Historie in der Datenbank
+                auf den neuen Namen um, sodass du keine historischen Daten verlierst.</p>
         </div>
     </div>
 
@@ -60,4 +72,5 @@
     <script src="config.js"></script>
     <script src="components.js"></script>
 </body>
+
 </html>

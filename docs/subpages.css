@@ -16,6 +16,14 @@ body {
         radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.08) 0px, transparent 50%) !important;
     font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif !important;
     margin: 0; padding: 0; min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling from overflowing content */
+}
+
+/* Global Image Safety */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container {
@@ -36,11 +44,29 @@ body {
     margin-bottom: 2rem !important;
 }
 
+.section h2, .gradient-text {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    color: #fff !important; /* Base color for icons/emojis */
+}
+
+/* The actual gradient effect for text nodes */
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensure it wraps carefully */
+}
+
 .section h2 {
-    color: #fff !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 0.8rem;
     margin-bottom: 1.5rem;
+    width: 100%; /* Ensure border is visible */
+    display: block; /* Back to block for full-width border */
 }
 
 /* Commands items list */
@@ -134,6 +160,15 @@ footer {
     background: transparent !important;
     color: #6b7280 !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    text-align: center !important;
+    padding: 30px 20px !important;
+}
+
+.header-logo {
+    display: block !important;
+    margin: 0 auto 25px !important;
+    width: 110px;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3));
 }
 
 header {
@@ -248,14 +283,26 @@ footer a:hover {
         font-size: 2.2rem !important;
     }
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr !important; /* Stack on very small screens */
         gap: 12px !important;
     }
     .stat-card {
         padding: 15px !important;
     }
-    .section {
-        padding: 18px !important;
+    .section, .glass {
+        padding: 20px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .footer-content, footer {
+        text-align: center !important;
+    }
+    .header-logo {
+        width: 90px !important;
+        margin-bottom: 20px !important;
+    }
+    .container {
+        padding: 0 10px 40px !important;
     }
 }
 
@@ -547,15 +594,22 @@ pre {
     margin-top: 15px;
 }
 
-.doc-img, .stat-img, .wizard-img, .proxy-img, .group-img, .data-img, .config-img, .cli-img, .step-img { 
+.doc-img, .stat-img, .wizard-img, .proxy-img, .group-img, .data-img, .config-img, .cli-img, .step-img, .responsive-img, .feature-img { 
     width: 100%; 
+    height: auto;
     border-radius: 16px; 
-    margin-top: 25px; 
+    margin-top: 20px; 
     border: 1px solid var(--glass-border); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-    aspect-ratio: 16/10; 
-    object-fit: cover; 
     background: rgba(255,255,255,0.02); 
+    display: block;
+}
+
+/* Optional fixed ratio for specific cards if needed elsewhere, 
+   but for general docs, height:auto is safer */
+.ratio-16-10 {
+    aspect-ratio: 16/10;
+    object-fit: cover;
 }
 
 /* Changelog & Versioning */
