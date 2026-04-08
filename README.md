@@ -38,6 +38,7 @@
 </div>
 
 ### [recon] personnel_record
+
 - 🔭 **Current_Mission**: [Developing_TikLeap_Analytics](https://furby87.github.io/TikLeapCrawler)
 - 🌱 **Skill_Acquisition**: Advanced C++, OSINT, and historical data patterns.
 - 👯 **Joint_Operations**: Open for innovative collaborations on automation & security.
@@ -48,6 +49,7 @@
 ## 🛠️ TECHNOLOGICAL_ARSENAL
 
 ### Tactical Proficiency Levels
+
 ```text
 Python:  [████████░░] 80%
 JS/Node: [███████░░░] 70%
@@ -60,6 +62,7 @@ C++/C#:  [██████░░░░] 60%
 </div>
 
 ### Primary Surveillance Equipment
+
 - **Frameworks**: `Scrapy`, `Selenium`, `BeautifulSoup`
 - **Security**: `Kali Linux`, `Social-Analyzer`, `Maltego`
 - **Hardware**: `Raspberry Pi 4`, `Arduino`, `ESP32`
@@ -98,18 +101,32 @@ C++/C#:  [██████░░░░] 60%
 </div>
 
 ### Operational Asset Highlights
+
 <div align="center">
-  <a href="https://github.com/Furby87/TikLeapCrawler">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Furby87&repo=TikLeapCrawler&theme=radical" height="150" />
-  </a>
-  <a href="https://github.com/Furby87/TikTok-UserInfoBot">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Furby87&repo=TikTok-UserInfoBot&theme=radical" height="150" />
-  </a>
+  <table border="0">
+    <tr>
+      <td align="center" width="400">
+        <a href="https://furby87.github.io/TikLeapCrawler">
+          <img src="https://img.shields.io/badge/PROJECT:_TikLeapCrawler-22d3ee?style=for-the-badge&logo=tiktok&logoColor=black" alt="TikLeapCrawler">
+          <br>
+          <code>[STATUS: PRIVATE_RECONNAISSANCE]</code>
+        </a>
+      </td>
+      <td align="center" width="400">
+        <a href="https://furby87.github.io/docs/ttuserinfobot.html">
+          <img src="https://img.shields.io/badge/PROJECT:_TT_UserInfo_Bot-22d3ee?style=for-the-badge&logo=telegram&logoColor=black" alt="TT_UserInfo_Bot">
+          <br>
+          <code>[STATUS: STABLE_UPLINK_ESTABLISHED]</code>
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
 
 ## 🖥️ [system] hardware_manifest
+
 - **OS**: `Windows 11` / `Kali Linux (VM)`
 - **Shell**: `PowerShell 7` / `Zsh (Oh My Zsh)`
 - **Editor**: `VS Code (Insiders)` / `PyCharm`
@@ -118,13 +135,14 @@ C++/C#:  [██████░░░░] 60%
 ---
 
 ## 📋 OPERATIONAL_LOG
+
 <div align="center">
 
 | Operational_Asset | Status | Encryption_Level |
 | :--- | :--- | :--- |
 | [TikLeapCrawler](https://furby87.github.io/TikLeapCrawler) | `ACTIVE_DEPLOYMENT` | `Level_4 (AES-256)` |
-| [DanteBot](https://furby87.github.io/DanteBot/Hub) | `STABLE_UPLINK` | `Level_3 (RSA-2048)` |
-| [Future_Asset] | `IN_RECONNAISSANCE` | `Redacted` |
+| [TT_UserInfo_Bot](https://furby87.github.io/ttuserinfobot.html) | `STABLE_UPLINK` | `Level_3 (RSA-2048)` |
+| [DanteBot](https://furby87.github.io/dantebot.html) | `OPERATIONAL_NODE` | `Level_3 (Shadow_AES)` |
 
 </div>
 
@@ -164,7 +182,7 @@ C++/C#:  [██████░░░░] 60%
 ---
 
 <p align="center">
-  <code>[ENCRYPTION: AES-256 ACTIVE]</code> • 
-  <code>[SECURITY CLEARANCE: LEVEL_4]</code> • 
+  <code>[ENCRYPTION: AES-256 ACTIVE]</code> •
+  <code>[SECURITY CLEARANCE: LEVEL_4]</code> •
   <code>[LAST_SYSTEM_PULSE: 2026-04-08]</code>
 </p>
