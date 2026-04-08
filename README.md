@@ -78,7 +78,11 @@ C++/C#:  [██████░░░░] 60%
 
   <br>
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Furby87&theme=radical&area=true&hide_border=true" width="800" alt="Activity Graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Furby87&theme=radical&area=true&hide_border=true">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Furby87&theme=github-light&area=true&hide_border=true">
+    <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Furby87&theme=radical&area=true&hide_border=true" width="800">
+  </picture>
 
   <br>
 
@@ -91,16 +95,38 @@ C++/C#:  [██████░░░░] 60%
 
 ---
 
-## 🎮 [utility] system_apps
+## 🖥️ [system] hardware_manifest
+- **OS**: `Windows 11` / `Kali Linux (VM)`
+- **Shell**: `PowerShell 7` / `Zsh (Oh My Zsh)`
+- **Editor**: `VS Code` / `PyCharm`
+- **Mainframe**: `Raspberry Pi 4` / `Self-Hosted Server`
+
+---
+
+## 📁 [log] operational_activity
+<div align="center">
+
+| Operational_Asset | Status | Encryption_Level |
+| :--- | :--- | :--- |
+| [TikLeapCrawler](https://furby87.github.io/TikLeapCrawler) | `ACTIVE_DEPLOYMENT` | `Level_4 (AES-256)` |
+| [DanteBot](https://furby87.github.io/DanteBot/Hub) | `STABLE_UPLINK` | `Level_3 (RSA-2048)` |
+| [Future_Asset] | `IN_RECONNAISSANCE` | `Redacted` |
+
+</div>
+
+---
+
+<br>
 
 <div align="center">
   <a href="https://github.com/Furby87/connect4-game">
     <img src="https://img.shields.io/badge/Play-Connect4-blue?style=for-the-badge&logo=gamepad" alt="Play Connect4">
   </a>
   <br><br>
-  ![Jokes](https://readme-jokes.vercel.app/api?theme=radical)
+  ![Jokes](https://readme-jokes.vercel.app/api)
 </div>
 
+---
 <br>
 
 <div align="center">
