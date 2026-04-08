@@ -1,4 +1,4 @@
-### Hi there 👋
+# Hi there! 👋 I'm Furby87
 
 ![Typing](https://readme-typing-svg.demolab.com/?lines=Hello👋;Allround-Developer💻;Open-Source+Enthusiast🚀)
 
@@ -38,6 +38,14 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=furby87&layout=donut&theme=light#gh-light-mode-only)](https://github.com/furby87/github-readme-stats)
 ![Furby's GitHub stats](https://github-readme-stats.vercel.app/api?username=Furby87&show_icons=true&theme=light#gh-light-mode-only)
 -->
+I'm a passionate developer with a hacker mindset, always exploring new technologies and building exciting projects.🚀
+
+- 🔭 I’m currently working on automating tasks for Twitch.tv and Nintendo Switch
+- 🌱 I’m constantly learning and experimenting with different programming languages
+- 👯 I’m looking to collaborate on fun and innovative projects
+- 💬 Ask me about Python, JavaScript, and automation tools
+- 📫 You can reach me at furby87@example.com
+
 - 🌱 I’m currently learning ... C++
 - 🤔 I’m looking for help with ... OSINT
 - 💬 Ask me about anything ... Python Bots
@@ -65,6 +73,22 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ![](https://hit.yhype.me/github/profile?user_id=6781054)
+
+## GitHub Stats 📊
+![Github Stats](https://github-readme-stats.vercel.app/api?username=Furby87)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Furby87)
+
+## Badges 🔥
+![GitHub followers](https://img.shields.io/github/followers/Furby87?label=Follow&style=social)
+![GitHub User's stars](https://img.shields.io/github/stars/Furby87?style=social)
+![Profile views](https://komarev.com/ghpvc/?username=Furby87)
+
+## Insights 🧠
+I have been an active GitHub user since 2014, with interests in technologies like Twitch.tv, Nintendo Switch automation, and TikTok-related projects. My coding habits include Python, JavaScript, HTML, CSS, Java, C#, and Shell. Over the years, I've built exciting projects like FurbyBot, Arma3Scripts, and more, showcasing my diverse skills and interests. 
+
+I enjoy contributing to various projects and exploring new domains in the tech world. Whether you're interested in gaming, social media, or automation tools, my GitHub profile offers a mix of creativity and technical proficiency for you to explore.
+
+For more information, check out [Furby87's GitHub Profile](https://github.com/Furby87). Feel free to connect with me for collaborations or just to chat about coding and cool projects! 🌟
 
 ### 🎮 Let's Play
 
