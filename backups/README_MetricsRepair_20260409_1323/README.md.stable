@@ -80,15 +80,21 @@ C++/C#:  [██████░░░░] 60%
 - **Security**: `Kali Linux`, `Social-Analyzer`, `Maltego`
 - **Hardware**: `Raspberry Pi 4`, `Arduino`, `ESP32`
 
-### 🔍 [recon] quick_shortcuts
-[OSINT_Assets](https://github.com/search?q=topic%3Aosint+user%3AFurby87&type=repositories) • [Operational_History](https://github.com/Furby87?tab=repositories) • [Secure_Uplink](https://t.me/Furby1337)
-
 ---
 
 ## 📊 INTELLIGENCE_DASHBOARD
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=Furby87&theme=radical&hide_border=true" height="180" alt="Streak Stats" />
+  <table border="0">
+    <tr>
+      <td><img src="https://github-readme-stats.vercel.app/api?username=Furby87&show_icons=true&theme=radical&hide_border=true" height="180" alt="GitHub Stats" /></td>
+      <td><img src="https://github-readme-stats.vercel.app/api/top-langs?username=Furby87&layout=compact&theme=radical&hide_border=true" height="180" alt="Top Languages" /></td>
+    </tr>
+    <tr>
+      <td><img src="https://streak-stats.demolab.com?user=Furby87&theme=radical&hide_border=true" height="180" alt="Streak Stats" /></td>
+      <td><img src="https://github-profile-trophy.vercel.app?username=Furby87&theme=radical&no-bg=true&no-frame=true" height="180" alt="Trophies" /></td>
+    </tr>
+  </table>
 
   <br>
 
@@ -97,29 +103,21 @@ C++/C#:  [██████░░░░] 60%
 
   <br>
 
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Furby87&theme=radical" width="800" alt="Intelligence Briefing">
+  <img src="https://metrics.lecoq.io/Furby87?template=terminal&base=header,activity,community,repositories&achievements=1&languages=1&config.timezone=Europe/Berlin" width="800" alt="Intelligence Briefing">
 
   <br>
 
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Furby87&theme=radical" width="400" alt="Language Distribution">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Furby87&theme=radical" width="400" alt="Productive Time">
+  <img src="https://metrics.lecoq.io/Furby87?template=classic&isocalendar=1&isocalendar.duration=full-year" width="800" alt="3D Isometric Calibration">
 
   <br>
+
+  <img src="https://metrics.lecoq.io/Furby87?template=classic&habits=1&habits.charts=1&habits.trim=1" width="800" alt="Coding Habits Pulse">
 
   <br>
 
   <img src="https://raw.githubusercontent.com/Furby87/Furby87/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only" alt="github contribution grid snake animation">
   <img src="https://raw.githubusercontent.com/Furby87/Furby87/output/github-contribution-grid-snake.svg#gh-light-mode-only" alt="github contribution grid snake animation">
 </div>
-
-### 📋 [system] operational_status_log
-```bash
-[RECON] Starting surveillance on tiktok_stream_api...
-[RECON] Target acquired: 12.8M potential data points.
-[UPLINK] Stable connection established with DanteNode_3.
-[ENCRYPTION] AES-256 handshake SUCCESS.
-[SECURE] Mission "TikLeap" is in ACTIVE_DEPLOYMENT.
-```
 
 ### Operational Asset Highlights
 
@@ -191,7 +189,6 @@ C++/C#:  [██████░░░░] 60%
 
 <div align="center">
   <img src="https://img.shields.io/badge/SECURITY_CLEARANCE-LEVEL_4-22d3ee?style=for-the-badge" alt="Security Clearance Level 4">
-  <img src="https://img.shields.io/badge/SYSTEM_HEALTH-95%25-success?style=for-the-badge&logo=heartbeat" alt="System Health">
   <img src="https://img.shields.io/badge/SYSTEM_LATENCY-OPTIMAL-success?style=for-the-badge" alt="System Latency Optimal">
   <img src="https://img.shields.io/badge/LAST_PULSE-2026--04--09-22d3ee?style=for-the-badge" alt="Last System Pulse">
 </div>
@@ -203,7 +200,7 @@ C++/C#:  [██████░░░░] 60%
     <img src="https://img.shields.io/badge/Play-Connect4-blue?style=for-the-badge&logo=gamepad" alt="Play Connect4">
   </a>
   <br><br>
-  <img src="https://readme-jokes.vercel.app/api" alt="Jokes">
+  ![Jokes](https://readme-jokes.vercel.app/api)
 </div>
 
 <br>
@@ -211,13 +208,8 @@ C++/C#:  [██████░░░░] 60%
 <div align="center">
   <a href="https://github.com/Furby87"><img src="https://img.shields.io/badge/POWERING_THE_MATRIX-fe2c55?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor this node"></a>
   <br><br>
-  <img src="https://img.shields.io/badge/BUILT_WITH-SCIENCE-0891b2?style=for-the-badge&logo=flask" height="30">
-  <img src="https://img.shields.io/badge/FEATURE-NOT_A_BUG-fe2c55?style=for-the-badge&logo=googleplay" height="30">
-  <img src="https://img.shields.io/badge/EICAR-ANTIVIRUS-black?style=for-the-badge&logo=eset" height="30">
-  <br><br>
-  <img src="https://img.shields.io/badge/BUILT_WITH-CYBER_TECH-22d3ee?style=for-the-badge&logo=probot" height="30">
-  <img src="https://img.shields.io/badge/ARMED_WITH-KNOWLEDGE-0891b2?style=for-the-badge&logo=gitbook" height="30">
-  <img src="https://img.shields.io/badge/VERIFIED_OPERATIVE-ACCESS_GRANTED-22d3ee?style=for-the-badge&logo=securityscorecard" height="30">
+  <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-love.svg" width="100" alt="made with love" ></a>
+  <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" width="100" alt="made with swag"></a>
   <br><br>
   <img src="https://user-images.githubusercontent.com/74038190/212284068-b4ee9a5c-331c-4d18-9481-53dd6b9debd5.gif" width="150">
 </div>
