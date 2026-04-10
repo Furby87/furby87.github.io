@@ -433,3 +433,91 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerText = new Date().getFullYear();
     });
 })();
+
+// ==========================================
+// 🔐 4. Cyber Dossier: Tactical Lore Upgrades (v43)
+// ==========================================
+
+// A. Encrypted Data Decoder Logic
+window.initiateDecryption = function() {
+    const textElement = document.getElementById('decoded-text');
+    const secretText = "[SIGNAL_DECODED] - THE MATRIX HAS YOU. PROTECT YOUR PACKETS.";
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    let iterations = 0;
+    
+    const interval = setInterval(() => {
+        textElement.innerText = secretText.split("")
+            .map((char, index) => {
+                if (index < iterations) return secretText[index];
+                return characters[Math.floor(Math.random() * characters.length)];
+            })
+            .join("");
+        
+        if (iterations >= secretText.length) {
+            clearInterval(interval);
+            textElement.style.color = "var(--secondary)";
+            textElement.style.textShadow = "0 0 10px var(--secondary)";
+        }
+        iterations += 1 / 3;
+    }, 30);
+};
+
+// B. Theme Calibration HUD (Self-destructing)
+function showThemeCalibration() {
+    const calibration = document.createElement('div');
+    calibration.className = 'glass';
+    calibration.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.8rem;
+        color: var(--secondary);
+        z-index: 10000;
+        border-left: 3px solid var(--secondary);
+        animation: slideIn 0.5s ease forwards;
+    `;
+    
+    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    calibration.innerText = `[SYS] CALIBRATING... ${isDark ? 'DARK_MODE' : 'LIGHT_MODE'} DETECTED. [OK]`;
+    
+    document.body.appendChild(calibration);
+    
+    setTimeout(() => {
+        calibration.style.animation = 'slideOut 0.5s ease forwards';
+        setTimeout(() => calibration.remove(), 500);
+    }, 3500);
+}
+
+// C. Secure Contact Handshake
+document.addEventListener('DOMContentLoaded', () => {
+    const contactLinks = document.querySelectorAll('a[href*="t.me"]');
+    contactLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const originalHTML = this.innerHTML;
+            if (originalHTML.includes('[ESTABLISHING')) return; // Prevent double click
+            
+            e.preventDefault();
+            this.innerHTML = `<i class="fas fa-satellite-dish fa-spin"></i> [ESTABLISHING_SECURE_LINK...]`;
+            this.style.borderColor = "var(--secondary)";
+            
+            setTimeout(() => {
+                window.open(this.href, '_blank');
+                this.innerHTML = originalHTML;
+                this.style.borderColor = "";
+            }, 1200);
+        });
+    });
+    
+    // Trigger Calibration
+    setTimeout(showThemeCalibration, 1000);
+});
+
+// Animation Keyframes Injection
+const loreStyle = document.createElement('style');
+loreStyle.innerHTML = `
+    @keyframes slideIn { from { transform: translateX(-120%); } to { transform: translateX(0); } }
+    @keyframes slideOut { from { transform: translateX(0); } to { transform: translateX(-120%); } }
+`;
+document.head.appendChild(loreStyle);

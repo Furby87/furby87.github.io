@@ -138,39 +138,24 @@
 
         <!-- GitHub Stats Section -->
         <section id="stats">
-            <h2 class="section-title reveal glitch-title" data-value="GitHub Activity & Stats">GitHub Activity & Stats</h2>
+            <h2 class="section-title reveal glitch-title" data-value="GitHub Activity & Stats">GitHub Activity & Stats
+            </h2>
             <div class="stats-grid reveal">
-                <!-- Row 1: Intelligence Header -->
-                <div class="stats-card glass stats-header">
-                    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Furby87&theme=radical"
-                        alt="Intelligence Briefing" />
-                </div>
-
-                <!-- Row 2: Tech Grid -->
                 <div class="stats-card glass">
-                    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Furby87&theme=radical"
+                    <img src="https://github-readme-stats.vercel.app/api?username=Furby87&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false"
+                        alt="Stats" />
+                </div>
+                <div class="stats-card glass">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Furby87&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false"
                         alt="Languages" />
-                </div>
-                <div class="stats-card glass">
-                    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Furby87&theme=radical"
-                        alt="Productive Time" />
                 </div>
                 <div class="stats-card glass">
                     <img src="https://streak-stats.demolab.com?user=Furby87&locale=en&mode=weekly&theme=dracula&hide_border=false&border_radius=5"
                         alt="Streak" />
                 </div>
-
-                <!-- Row 3: Tactical Lore Expansion -->
-                <div class="stats-card glass decoder-row" id="decoder-module">
-                    <div class="decoder-container">
-                        <h3 class="decoder-title">[DECODER: INTERCEPTED_SIGNAL]</h3>
-                        <p id="decoded-text">X7vB9$mP2... [ENCRYPTED]</p>
-                        <button class="contact-btn" onclick="initiateDecryption()" style="background: var(--glass-bg); cursor: pointer;">[INITIATE_DECRYPTION]</button>
-                    </div>
-                </div>
-                
-                <div class="stats-card glass joke-row">
-                    <img src="https://readme-jokes.vercel.app/api?theme=dracula" alt="Tactical Joke" />
+                <div class="stats-card glass">
+                    <img src="https://github-profile-trophy.vercel.app/?username=Furby87&theme=dracula&column=3&margin-w=15&margin-h=15&no-bg=true&no-frame=true"
+                        alt="Trophies" />
                 </div>
             </div>
         </section>
