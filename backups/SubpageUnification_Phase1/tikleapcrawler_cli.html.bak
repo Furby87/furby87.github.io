@@ -19,8 +19,8 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="glitch-title hero-title-large" data-value="CLI Interface"><span class="text-gradient">CLI Interface</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Unmatched power for advanced users: Termux & Linux</p>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">CLI Interface</span></h1>
+            <p class="hero-subtitle-muted">Unmatched power for advanced users: Termux & Linux</p>
         </div>
     </header>
 
@@ -51,6 +51,5 @@
     <div id="global-footer" data-type="tikleap"></div>
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

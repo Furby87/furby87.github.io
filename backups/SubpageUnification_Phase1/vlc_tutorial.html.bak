@@ -23,13 +23,13 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="glitch-title hero-title-large" data-value="VLC Media Player Guide"><span class="text-gradient">VLC Media Player Guide</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L0] - Streams direkt am PC oder Smartphone abspielen</p>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">VLC Media Player Guide</span></h1>
+            <p class="hero-subtitle-muted">Streams direkt am PC oder Smartphone abspielen</p>
         </div>
     </header>
 
     <div class="container">
-        <div class="section reveal" data-aos="fade-up">
+        <div class="section" data-aos="fade-up">
             <p class="info-banner-red">
                 <span class="icon">ℹ️</span>
                 <span>Wenn du eine RTMP-URL von unserem Bot erhältst, kannst du damit den Livestream direkt im VLC Media
@@ -157,7 +157,6 @@
 
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

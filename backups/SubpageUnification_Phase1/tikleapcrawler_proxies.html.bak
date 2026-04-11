@@ -23,8 +23,8 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="glitch-title hero-title-large" data-value="Proxy Engine"><span class="text-gradient">Proxy Engine</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Elite anti-detection and bypass systems</p>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">Proxy Engine</span></h1>
+            <p class="hero-subtitle-muted">Elite anti-detection and bypass systems</p>
         </div>
     </header>
 
@@ -69,7 +69,6 @@ socks5://45.136.131.68:8446</pre>
     <div id="global-footer" data-type="tikleap"></div>
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

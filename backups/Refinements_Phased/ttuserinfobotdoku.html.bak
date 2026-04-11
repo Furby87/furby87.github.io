@@ -10,44 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
-    <style>
-        .toc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .toc-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 10px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.3s ease;
-            text-align: center;
-            min-height: 120px;
-        }
-        .toc-card .icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-            transition: transform 0.3s ease;
-        }
-        .toc-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary) !important;
-            box-shadow: 0 5px 15px rgba(34, 211, 238, 0.2) !important;
-        }
-        .toc-card:hover .icon {
-            transform: scale(1.2);
-        }
-        .toc-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-    </style>
 </head>
 <body>
     <div class="scroll-progress"></div>
@@ -64,32 +26,14 @@
     <div class="container">
         <div class="section reveal" data-aos="fade-up">
             <h2>📚 <span class="text-gradient">Inhaltsverzeichnis</span></h2>
-            <div class="toc-grid">
-                <a href="#grundlagen" class="toc-card stat-card glass reveal">
-                    <div class="icon">🚀</div>
-                    <div class="toc-label">Grundlagen</div>
-                </a>
-                <a href="#befehle" class="toc-card stat-card glass reveal">
-                    <div class="icon">⌨️</div>
-                    <div class="toc-label">Befehle</div>
-                </a>
-                <a href="#profilanalyse" class="toc-card stat-card glass reveal">
-                    <div class="icon">🔍</div>
-                    <div class="toc-label">Profilanalyse</div>
-                </a>
-                <a href="#verlauf" class="toc-card stat-card glass reveal">
-                    <div class="icon">📊</div>
-                    <div class="toc-label">Verlauf</div>
-                </a>
-                <a href="#live" class="toc-card stat-card glass reveal">
-                    <div class="icon">🔴</div>
-                    <div class="toc-label">Live-Status</div>
-                </a>
-                <a href="#faq" class="toc-card stat-card glass reveal">
-                    <div class="icon">❓</div>
-                    <div class="toc-label">FAQ</div>
-                </a>
-            </div>
+            <ul>
+                <li><a href="#grundlagen">Grundlagen</a></li>
+                <li><a href="#befehle">Verfügbare Befehle</a></li>
+                <li><a href="#profilanalyse">Profilanalyse</a></li>
+                <li><a href="#verlauf">Verlaufsverfolgung</a></li>
+                <li><a href="#live">Live-Status</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
         </div>
 
         <div id="grundlagen" class="section" data-aos="fade-up">

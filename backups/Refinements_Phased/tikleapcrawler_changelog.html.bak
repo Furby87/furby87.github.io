@@ -60,7 +60,7 @@
         <div class="glass" style="text-align: center;">
             <p style="color: var(--text-muted);">Vollständiges Changelog auf GitHub verfügbar.</p>
             <a href="https://github.com/Furby87/TikleapCrawler/blob/main/CHANGELOG.md" target="_blank"
-                class="nav-btn next" style="justify-content: center;"><i class="fab fa-github"></i> VIEW FULL CHANGELOG</a>
+                class="bot-link">VIEW FULL CHANGELOG</a>
         </div>
     </div>
 

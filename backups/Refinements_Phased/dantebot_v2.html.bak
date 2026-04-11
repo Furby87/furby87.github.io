@@ -10,48 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="subpages.css">
     <style>
-        /* Tactical Tile System */
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px;
-            margin-top: 1.5rem;
-        }
-        .category-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 10px;
-            background: rgba(255, 255, 255, 0.03) !important;
-            backdrop-filter: blur(12px) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            min-height: 110px;
-            cursor: pointer;
-        }
-        .category-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary) !important;
-            box-shadow: 0 5px 15px rgba(34, 211, 238, 0.2);
-            background: rgba(255, 255, 255, 0.08) !important;
-        }
-        .category-card .stat-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease;
-        }
-        .category-card:hover .stat-icon {
-            transform: scale(1.15);
-        }
-        .category-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -671,38 +629,42 @@
 
         <div id="kategorien" class="section" data-aos="fade-up">
             <h2>📂 <span class="text-gradient">Verfügbare Kategorien</span></h2>
-            <div class="category-grid">
-                <div class="category-card reveal">
+            <div class="stats-grid">
+                <div class="stat-card">
                     <div class="stat-icon">🎭</div>
-                    <div class="category-label">Dante</div>
+                    <div class="stat-label">Dante</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">🌟</div>
-                    <div class="category-label">Mayline</div>
+                    <div class="stat-label">Mayline</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">🦷</div>
-                    <div class="category-label">Zahnfee</div>
+                    <div class="stat-label">Zahnfee</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">🏴‍☠️</div>
-                    <div class="category-label">Popirat</div>
+                    <div class="stat-label">Popirat</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">👨‍⚕️</div>
-                    <div class="category-label">Seelmann</div>
+                    <div class="stat-label">Seelmann</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">🎭</div>
-                    <div class="category-label">DKM</div>
+                    <div class="stat-label">DKM</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">🎲</div>
-                    <div class="category-label">Random</div>
+                    <div class="stat-label">Random</div>
                 </div>
-                <div class="category-card reveal">
+                <div class="stat-card">
                     <div class="stat-icon">🎮</div>
-                    <div class="category-label">Konami-Modus</div>
+                    <div class="stat-label">Konami-Modus</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔒</div>
+                    <div class="stat-label">Secret</div>
                 </div>
             </div>
         </div>

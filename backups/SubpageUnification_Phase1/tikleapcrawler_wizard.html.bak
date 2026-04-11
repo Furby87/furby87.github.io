@@ -23,16 +23,15 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="glitch-title hero-title-large" data-value="Onboarding Wizard"><span
-                    class="text-gradient">Onboarding Wizard</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Guided setup for pro-level analytics</p>
+            <h1 class="gradient-text hero-title-large">Onboarding Wizard</h1>
+            <p class="hero-subtitle-muted">Guided setup for pro-level analytics</p>
         </div>
     </header>
 
     <div class="container" data-aos="fade-up">
         <!-- Step 1 -->
-        <div class="glass reveal">
-            <h2 class="gradient-text"><span class="text-gradient">[STEP_01] Initialisierung</span></h2>
+        <div class="glass">
+            <h2 class="gradient-text"><span class="text-gradient">Schritt 1: Initialisierung</span></h2>
             <p style="color: var(--text-muted);">Das System prüft den <span class="highlight">Portablen-Modus</span>. Es
                 werden automatisch die Ordner `data/` und `logs/` erstellt, falls diese fehlen. Es ist keine manuelle
                 Ordnerstruktur-Erstellung nötig.</p>
@@ -42,8 +41,8 @@
         </div>
 
         <!-- Step 2 -->
-        <div class="glass reveal">
-            <h2 class="gradient-text"><span class="text-gradient">[STEP_02] Smart Link Parser</span> 🔗</h2>
+        <div class="glass">
+            <h2 class="gradient-text"><span class="text-gradient">Schritt 2: Smart Link Parser</span> 🔗</h2>
             <p style="color: var(--text-muted);">Der <span class="highlight">Smart-Parser</span> (v2.0.8) erkennt
                 automatisch das Eingabeformat. Du musst dich nicht um die genaue URL kümmern:</p>
             <pre># Einfacher Name
@@ -61,8 +60,8 @@ https://www.tikleap.com/profile/0fficial404</pre>
         </div>
 
         <!-- Step 3 & 4 summaries -->
-        <div class="glass reveal">
-            <h2 class="gradient-text"><span class="text-gradient">[STEP_03+STEP_04] Finetuning</span></h2>
+        <div class="glass">
+            <h2 class="gradient-text"><span class="text-gradient">Schritt 3 & 4: Finetuning</span></h2>
             <p style="color: var(--text-muted);">Bestimme deine <span class="highlight">Teams</span> und konfiguriere
                 den <span class="highlight">Auto-Pilot</span>. Nach Abschluss wird die `profiles.txt` automatisch
                 geschrieben und die `settings.json` initialisiert.</p>
@@ -79,7 +78,6 @@ https://www.tikleap.com/profile/0fficial404</pre>
     <div id="global-footer" data-type="tikleap"></div>
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

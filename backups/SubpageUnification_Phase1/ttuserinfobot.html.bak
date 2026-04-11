@@ -774,8 +774,8 @@
         <a href="index.html" class="back-button-top">
             <span>←</span> Zurück
         </a>
-        <h1 class="glitch-title" data-value="TikTok User Info Bot">TikTok User Info Bot</h1>
-        <div class="subtitle">[ACCESS_LEVEL: L4] - Der leistungsstarke Telegram-Bot für TikTok-Profilanalysen</div>
+        <h1>TikTok User Info Bot</h1>
+        <div class="subtitle">Der leistungsstarke Telegram-Bot für TikTok-Profilanalysen</div>
         <a href="https://t.me/TikTokAbfrageBot" class="bot-link">🤖 Bot auf Telegram öffnen</a>
     </header>
 
@@ -1197,7 +1197,6 @@
     </script>
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

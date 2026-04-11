@@ -96,8 +96,8 @@
             <img src="icon.png" 
                  onerror="this.onerror=null; this.src='images/tikleapcrawler/icon.png'" 
                  alt="TikLeap Logo" class="header-logo">
-            <h1 class="animate__animated animate__fadeInDown glitch-title" data-value="TikLeap Crawler Pro" style="font-size: 3.2rem; margin: 0 auto;"><span class="text-gradient">TikLeap Crawler Pro</span></h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-1s" style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px;">[ACCESS_LEVEL: L4] - PREMIUM EARNINGS TRACKER & ANALYTICS HUB</p>
+            <h1 class="animate__animated animate__fadeInDown gradient-text" style="font-size: 3.2rem; margin: 0 auto;"><span class="text-gradient">TikLeap Crawler Pro</span></h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s" style="color: var(--text-muted); font-size: 1.1rem; letter-spacing: 1px;">PREMIUM EARNINGS TRACKER & ANALYTICS HUB</p>
             <a href="https://github.com/Furby87/TikleapCrawler" class="bot-link animate__animated animate__pulse animate__infinite">OPEN REPOSITORY</a>
         </div>
     </header>
@@ -168,6 +168,5 @@
     <div id="global-footer" data-type="tikleap"></div>
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

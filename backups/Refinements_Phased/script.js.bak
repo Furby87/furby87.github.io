@@ -200,7 +200,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', () => {
     fetchRepos();
     initReveal();
-    animateTacticalNumbers();
 
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('mobile-menu');
@@ -514,33 +513,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger Calibration
     setTimeout(showThemeCalibration, 1000);
 });
-
-// ==========================================
-// 📊 5. Cyber Dossier: Animated Telemetry (v50)
-// ==========================================
-function animateTacticalNumbers() {
-    const counters = document.querySelectorAll('.stat-number[data-target]');
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        if (isNaN(target)) return;
-        
-        const suffix = counter.getAttribute('data-suffix') || '';
-        let count = 0;
-        const duration = 2000; 
-        const stepTime = 30;
-        const increment = target / (duration / stepTime);
-        
-        const interval = setInterval(() => {
-            count += increment;
-            if (count >= target) {
-                counter.innerText = target.toLocaleString('de-DE') + suffix;
-                clearInterval(interval);
-            } else {
-                counter.innerText = Math.floor(count).toLocaleString('de-DE') + suffix;
-            }
-        }, stepTime);
-    });
-}
 
 // Animation Keyframes Injection
 const loreStyle = document.createElement('style');

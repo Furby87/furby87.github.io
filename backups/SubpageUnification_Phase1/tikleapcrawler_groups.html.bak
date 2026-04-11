@@ -23,8 +23,8 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="glitch-title hero-title-large" data-value="Groups & Teams"><span class="text-gradient">Groups & Teams</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Aggregated views for creator agencies</p>
+            <h1 class="gradient-text hero-title-large"><span class="text-gradient">Groups & Teams</span></h1>
+            <p class="hero-subtitle-muted">Aggregated views for creator agencies</p>
         </div>
     </header>
 
@@ -66,7 +66,6 @@
     <div id="global-footer" data-type="tikleap"></div>
     <script src="config.js"></script>
     <script src="components.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
