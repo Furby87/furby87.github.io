@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - CLI Mode</title>
+    <meta name="description" content="Professioneller CLI-Modus für den TikLeap Crawler Pro. Maximale Performance auf Servern, Linux und Termux für Experten.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TikLeap Crawler Pro - CLI Mode">
+    <meta property="og:description" content="Headless-Power für TikTok-Analysen. Command Line Interface Guide für den TikLeap Crawler Pro.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/6781054?v=4">
     
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -35,11 +41,29 @@
 
         <div class="glass">
             <h2 class="gradient-text">📜 <span class="text-gradient">Befehle</span></h2>
-            <pre>python main.py --help</pre>
+            <div style="position: relative;">
+                <pre id="cmd-help">python main.py --help</pre>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('python main.py --help', this)">Kopieren</button>
+            </div>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
                 <li><b>--test-single:</b> Prüft einen einzelnen Account isoliert.</li>
                 <li><b>--wizard:</b> Startet das Setup im CLI-Dialog.</li>
+                <li><b>--test-schedule:</b> Simuliert einen beschleunigten 24h-Run.</li>
                 <li><b>--headless:</b> Führt den Crawler ohne GUI aus.</li>
+            </ul>
+        </div>
+
+        <div class="glass">
+            <h2 class="gradient-text">🗄️ <span class="text-gradient">merge_db.py</span></h2>
+            <p style="color: var(--text-muted);">Zusammenführen von Datenbanken mit integriertem Backup-System und UPSERT-Logik. Perfekt für Migrationen oder Daten-Zusammenführungen.</p>
+            <div style="position: relative; margin-top: 15px;">
+                <pre id="cmd-merge">python merge_db.py</pre>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('python merge_db.py', this)">Kopieren</button>
+            </div>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>Interaktiv:</b> Ohne Argumente öffnet sich ein Datei-Dialog zur Auswahl der Datenbank.</li>
+                <li><b>Sicherheit:</b> Erstellt vor dem Merge automatisch ein <code>.db.bak</code> Backup.</li>
+                <li><b>UPSERT Logik:</b> Erkennt Duplikate und behält bei Überschneidungen den neuesten Zeitstempel.</li>
             </ul>
         </div>
     </div>

@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - Data & Export</title>
+    <meta name="description" content="Datenmanagement & Export mit dem TikLeap Crawler Pro. Lerne alles über SQLite-Speicherung, Smart DB Merge und Excel-Exports.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TikLeap Crawler Pro - Data & Export">
+    <meta property="og:description" content="Echtzeit-KPIs und sichere Daten-Migration. So verwaltest du deine TikTok-Datenbestände professionell.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/6781054?v=4">
 
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -43,7 +49,18 @@
                     wenn du einen Kanal auswählst.</li>
             </ul>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png"
-                onerror="this.src='images/tikleapcrawler/data_export7.png'" alt="Data Analytics" class="data-img">
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/data_export7.png'" alt="Data Analytics" class="data-img">
+        </div>
+
+        <!-- Database Merge -->
+        <div class="glass">
+            <h2 class="gradient-text">🗄️ <span class="text-gradient">Smart Database Merge</span></h2>
+            <p style="color: var(--text-muted);">Das neue <span class="highlight">merge_db.py</span> Tool (v2.0.9) erlaubt das sichere Zusammenführen von mehreren Datenbanken:</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>UPSERT Logik:</b> Bei Duplikaten wird automatisch der Datensatz mit dem neuesten Zeitstempel priorisiert.</li>
+                <li><b>Integrierte Sicherung:</b> Vor jeder Operation wird automatisch eine <code>.db.bak</code> Datei erstellt.</li>
+                <li><b>Cross-Platform:</b> Funktioniert nahtlos zwischen Desktop- und Termux-Instanzen.</li>
+            </ul>
         </div>
 
         <!-- Export Logic -->
@@ -51,16 +68,15 @@
             <h2 class="gradient-text">📥 <span class="text-gradient">Excel-Ready Exports</span></h2>
             <p style="color: var(--text-muted);">Beim Klick auf <span class="highlight">📤 CSV Export</span> wird
                 automatisch eine Datei generiert, die ISO-konforme Datumsformate nutzt. Dies ermöglicht die direkte
-                Weiterverarbeitung in **Microsoft Excel**, **Google Sheets** oder **Power BI**, ohne Text-zu-Spalten
-                Korrekturen.</p>
+                Weiterverarbeitung in **Microsoft Excel**, **Google Sheets** oder **Power BI**.</p>
         </div>
 
         <!-- Migration -->
         <div class="glass">
-            <h2 class="gradient-text">🔄 <span class="text-gradient">Migration-Tool (Pro Only)</span></h2>
+            <h2 class="gradient-text">🔄 <span class="text-gradient">Account Migration-Tool</span></h2>
             <p style="color: var(--text-muted);">Ändert ein Creator seinen Link? Nutze das <span
-                    class="highlight">Account Migration-Tool</span>. Dies schreibt die gesamte Historie in der Datenbank
-                auf den neuen Namen um, sodass du keine historischen Daten verlierst.</p>
+                    class="highlight">Migration-Tool</span>, um die gesamte Historie in der Datenbank
+                auf den neuen Namen umzuschreiben, ohne Datenverlust.</p>
         </div>
     </div>
 
