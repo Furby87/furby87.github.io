@@ -56,8 +56,8 @@ function classifyProject(repo) {
             matchedCategories.push(cat);
         }
     }
-    
-    return matchedCategories.length > 0 ? matchedCategories : ['tools']; 
+
+    return matchedCategories.length > 0 ? matchedCategories : ['tools'];
 }
 
 // Fetch GitHub Repositories
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Typewriter Effect
-    const words = ["Full-Stack Developer", "Telegram Bot Creator", "Automation Expert", "IoT Enthusiast", "Pentest Lover", "Nerd & Open-source Enthusiast", "always looking for new things to break and build."];
+    const words = ["Full-Stack Developer", "Telegram Bot Architect", "Automation Specialist", "IoT Enthusiast", "Security Researcher", "Pentest Lover", "Open-source Contributor", "immer auf der Suche nach neuen Herausforderungen."];
     let wordIndex = 0;
     let charIndex = 0;
     const speed = 100;
@@ -440,12 +440,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 
 // A. Encrypted Data Decoder Logic
-window.initiateDecryption = function() {
+window.initiateDecryption = function () {
     const textElement = document.getElementById('decoded-text');
     const secretText = "[SIGNAL_DECODED] - THE MATRIX HAS YOU. PROTECT YOUR PACKETS.";
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
     let iterations = 0;
-    
+
     const interval = setInterval(() => {
         textElement.innerText = secretText.split("")
             .map((char, index) => {
@@ -453,7 +453,7 @@ window.initiateDecryption = function() {
                 return characters[Math.floor(Math.random() * characters.length)];
             })
             .join("");
-        
+
         if (iterations >= secretText.length) {
             clearInterval(interval);
             textElement.style.color = "var(--secondary)";
@@ -479,12 +479,12 @@ function showThemeCalibration() {
         border-left: 3px solid var(--secondary);
         animation: slideIn 0.5s ease forwards;
     `;
-    
+
     const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     calibration.innerText = `[SYS] CALIBRATING... ${isDark ? 'DARK_MODE' : 'LIGHT_MODE'} DETECTED. [OK]`;
-    
+
     document.body.appendChild(calibration);
-    
+
     setTimeout(() => {
         calibration.style.animation = 'slideOut 0.5s ease forwards';
         setTimeout(() => calibration.remove(), 500);
@@ -495,14 +495,14 @@ function showThemeCalibration() {
 document.addEventListener('DOMContentLoaded', () => {
     const contactLinks = document.querySelectorAll('a[href*="t.me"]');
     contactLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             const originalHTML = this.innerHTML;
             if (originalHTML.includes('[ESTABLISHING')) return; // Prevent double click
-            
+
             e.preventDefault();
             this.innerHTML = `<i class="fas fa-satellite-dish fa-spin"></i> [ESTABLISHING_SECURE_LINK...]`;
             this.style.borderColor = "var(--secondary)";
-            
+
             setTimeout(() => {
                 window.open(this.href, '_blank');
                 this.innerHTML = originalHTML;
@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1200);
         });
     });
-    
+
     // Trigger Calibration
     setTimeout(showThemeCalibration, 1000);
 });
@@ -523,13 +523,13 @@ function animateTacticalNumbers() {
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
         if (isNaN(target)) return;
-        
+
         const suffix = counter.getAttribute('data-suffix') || '';
         let count = 0;
-        const duration = 2000; 
+        const duration = 2000;
         const stepTime = 30;
         const increment = target / (duration / stepTime);
-        
+
         const interval = setInterval(() => {
             count += increment;
             if (count >= target) {
