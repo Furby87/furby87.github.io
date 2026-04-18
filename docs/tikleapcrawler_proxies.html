@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
+    <link rel="canonical" href="https://furby87.github.io/tikleapcrawler_proxies.html">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         </a>
         <div data-aos="zoom-out">
             <h1 class="glitch-title hero-title-large" data-value="Proxy Engine"><span class="text-gradient">Proxy Engine</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Elite anti-detection and bypass systems</p>
+            <p class="hero-subtitle-muted">[INFRASTRUCTURE] - Proxy-Architektur & Anti-Detection Systeme</p>
         </div>
     </header>
 
@@ -42,9 +43,12 @@
                 kritische Sicherheitsfunktion für High-Volume Tracking. Standardmäßig nutzt der Crawler deine lokale IP
                 für den ersten Versuch. Im Force-Mode wird <span class="highlight">keine einzige Anfrage</span> über
                 deine echte Internetverbindung gesendet.</p>
-            <pre>http://username:password@ip:port
+            <div style="position: relative;">
+                <pre>http://username:password@ip:port
 http://113.160.132.26:8080
 socks5://45.136.131.68:8446</pre>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('http://username:password@ip:port\nhttp://113.160.132.26:8080\nsocks5://45.136.131.68:8446', this)">Formate kopieren</button>
+            </div>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
                 <li>Absoluter Schutz vor IP-Banns auf TikLeap.</li>
                 <li>Ideal für 24/7 Autopilot-Betrieb mit vielen Accounts.</li>
@@ -52,7 +56,7 @@ socks5://45.136.131.68:8446</pre>
             </ul>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/profile_manager6.png"
                 onerror="this.onerror=null; this.src='images/tikleapcrawler/profile_manager6.png'" alt="Proxy Engine"
-                class="proxy-img">
+                class="proxy-img" loading="lazy">
         </div>
 
         <!-- Automatic Self-Healing -->
@@ -65,6 +69,10 @@ socks5://45.136.131.68:8446</pre>
                 <li>Der Echtzeit-Zähler in der Sidebar aktualisiert sich live.</li>
                 <li>Der Crawler rotiert automatisch zum nächsten verfügbaren Proxy.</li>
             </ul>
+            <div class="glass" style="margin-top: 20px; border-left: 3px solid var(--secondary); padding: 15px;">
+                <p style="font-size: 0.9rem; color: var(--secondary);"><b><i class="fas fa-hourglass-half"></i> Live Status Indikator:</b> In der neuen v2.0.9 Sidebar siehst du den Status deiner Proxy-Liste in Echtzeit (z.B. <code style="color: var(--text-main);">⏳ 45/901</code>).</p>
+            </div>
+        </div>
         </div>
     </div>
 

@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikLeap Crawler Pro - CLI Mode</title>
-    <meta name="description" content="Professioneller CLI-Modus für den TikLeap Crawler Pro. Maximale Performance auf Servern, Linux und Termux für Experten.">
+    <meta name="description"
+        content="Professioneller CLI-Modus für den TikLeap Crawler Pro. Maximale Performance auf Servern, Linux und Termux für Experten.">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="TikLeap Crawler Pro - CLI Mode">
-    <meta property="og:description" content="Headless-Power für TikTok-Analysen. Command Line Interface Guide für den TikLeap Crawler Pro.">
+    <meta property="og:description"
+        content="Headless-Power für TikTok-Analysen. Command Line Interface Guide für den TikLeap Crawler Pro.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/6781054?v=4">
-    
+
     <!-- Dependencies & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
+    <link rel="canonical" href="https://furby87.github.io/tikleapcrawler_cli.html">
 </head>
+
 <body>
     <div class="scroll-progress"></div>
     <header>
@@ -25,25 +32,28 @@
             <i class="fas fa-arrow-left"></i> ZURÜCK
         </a>
         <div data-aos="zoom-out">
-            <h1 class="glitch-title hero-title-large" data-value="CLI Interface"><span class="text-gradient">CLI Interface</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Unmatched power for advanced users: Termux & Linux</p>
+            <h1 class="glitch-title hero-title-large" data-value="CLI Interface"><span class="text-gradient">CLI
+                    Interface</span></h1>
+            <p class="hero-subtitle-muted">[TERMINAL] - Headless Execution & Expert Tools für Linux/Termux/Terminal</p>
         </div>
     </header>
 
     <div class="container" data-aos="fade-up">
         <div class="glass">
             <h2 class="gradient-text">💻 <span class="text-gradient">Portabilität</span></h2>
-            <p style="color: var(--text-muted);">Der TikLeap Crawler ist vollständig Headless-kompatibel und läuft ressourcensparend auf Servern oder Android (Termux).</p>
-            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png" 
-                 onerror="this.onerror=null; this.src='images/tikleapcrawler/dashboard7.png'" 
-                 alt="CLI Engine" class="cli-img">
+            <p style="color: var(--text-muted);">Der TikLeap Crawler ist vollständig Headless-kompatibel und läuft
+                ressourcensparend auf Servern oder Android (Termux).</p>
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/dashboard7.png"
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/dashboard7.png'" alt="CLI Engine"
+                class="cli-img" loading="lazy">
         </div>
 
         <div class="glass">
             <h2 class="gradient-text">📜 <span class="text-gradient">Befehle</span></h2>
             <div style="position: relative;">
                 <pre id="cmd-help">python main.py --help</pre>
-                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('python main.py --help', this)">Kopieren</button>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;"
+                    onclick="copyToClipboard('python main.py --help', this)">Kopieren</button>
             </div>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
                 <li><b>--test-single:</b> Prüft einen einzelnen Account isoliert.</li>
@@ -55,15 +65,18 @@
 
         <div class="glass">
             <h2 class="gradient-text">🗄️ <span class="text-gradient">merge_db.py</span></h2>
-            <p style="color: var(--text-muted);">Zusammenführen von Datenbanken mit integriertem Backup-System und UPSERT-Logik. Perfekt für Migrationen oder Daten-Zusammenführungen.</p>
+            <p style="color: var(--text-muted);">Zusammenführen von Datenbanken mit integriertem Backup-System und
+                UPSERT-Logik. Perfekt für Migrationen oder Daten-Zusammenführungen.</p>
             <div style="position: relative; margin-top: 15px;">
                 <pre id="cmd-merge">python merge_db.py</pre>
-                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('python merge_db.py', this)">Kopieren</button>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;"
+                    onclick="copyToClipboard('python merge_db.py', this)">Kopieren</button>
             </div>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
                 <li><b>Interaktiv:</b> Ohne Argumente öffnet sich ein Datei-Dialog zur Auswahl der Datenbank.</li>
                 <li><b>Sicherheit:</b> Erstellt vor dem Merge automatisch ein <code>.db.bak</code> Backup.</li>
-                <li><b>UPSERT Logik:</b> Erkennt Duplikate und behält bei Überschneidungen den neuesten Zeitstempel.</li>
+                <li><b>UPSERT Logik:</b> Erkennt Duplikate und behält bei Überschneidungen den neuesten Zeitstempel.
+                </li>
             </ul>
         </div>
     </div>
@@ -77,4 +90,5 @@
     <script src="components.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

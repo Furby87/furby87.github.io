@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
+    <link rel="canonical" href="https://furby87.github.io/tikleapcrawler_wizard.html">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
         <div data-aos="zoom-out">
             <h1 class="glitch-title hero-title-large" data-value="Onboarding Wizard"><span
                     class="text-gradient">Onboarding Wizard</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Guided setup for pro-level analytics</p>
+            <p class="hero-subtitle-muted">[ONBOARDING] - Automatischer Setup-Assistent für einen schnellen Start</p>
         </div>
     </header>
 
@@ -68,15 +69,31 @@ https://www.tikleap.com/profile/0fficial404</pre>
                 class="step-img">
         </div>
 
-        <!-- Step 3 & 4 summaries -->
+        <!-- Step 3 -->
         <div class="glass reveal">
-            <h2 class="gradient-text"><span class="text-gradient">[STEP_03+STEP_04] Finetuning</span></h2>
-            <p style="color: var(--text-muted);">Bestimme deine <span class="highlight">Teams</span> und konfiguriere
-                den <span class="highlight">Auto-Pilot</span>. Nach Abschluss wird die `profiles.txt` automatisch
-                geschrieben und die `settings.json` initialisiert.</p>
+            <h2 class="gradient-text"><span class="text-gradient">[STEP_03] Team & Groups</span> 👥</h2>
+            <p style="color: var(--text-muted);">Ordne deine Accounts logisch zu. In der v2.0.9 kannst du Creatoren direkt beim Setup in <span class="highlight">Teams</span> sortieren. Dies ermöglicht später das Filtern der Statistiken nach Gruppen.</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>Multi-Select:</b> Wähle vordefinierte Gruppen oder erstelle neue Tags.</li>
+                <li><b>Struktur:</b> Trenne z.B. "Privat", "Kunden" und "Test-Accounts".</li>
+            </ul>
+            <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/groups2.png"
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/groups2.png'" alt="Step 3"
+                class="step-img" loading="lazy">
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass reveal">
+            <h2 class="gradient-text"><span class="text-gradient">[STEP_04] Auto-Pilot & Init</span> 🚀</h2>
+            <p style="color: var(--text-muted);">Der finale Schritt konfiguriert den <span class="highlight">Hintergrund-Dienst</span>. Du entscheidest, wie oft der Crawler aktiv wird und ob er direkt minimiert im System-Tray starten soll.</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
+                <li><b>Interval:</b> Einstellen der Abfrage-Frequenz (Autopilot).</li>
+                <li><b>Tray-Start:</b> Sofortiger Start als diskreter Hintergrundprozess.</li>
+                <li><b>Config Write:</b> Erstellt final die <code>settings.json</code> und <code>profiles.txt</code>.</li>
+            </ul>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/setup_step4.png"
                 onerror="this.onerror=null; this.src='images/tikleapcrawler/setup_step4.png'" alt="Step 4"
-                class="step-img">
+                class="step-img" loading="lazy">
         </div>
     </div>
 

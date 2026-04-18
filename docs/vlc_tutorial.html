@@ -20,6 +20,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="subpages.css">
+    <link rel="canonical" href="https://furby87.github.io/vlc_tutorial.html">
 </head>
 
 <body>
@@ -41,6 +42,17 @@
                 <span>Wenn du eine RTMP-URL von unserem Bot erhältst, kannst du damit den Livestream direkt im VLC Media
                     Player anschauen. Wähle unten dein Gerät aus und befolge die simplen Schritte.</span>
             </p>
+        </div>
+
+        <!-- Connection Test Section -->
+        <div class="glass reveal" data-aos="fade-up" style="margin-bottom: 30px; border-color: var(--secondary);">
+            <h2 class="gradient-text">🧪 <span class="text-gradient">Verbindungstest (HLS)</span></h2>
+            <p style="color: var(--text-muted);">Teste hier, ob dein VLC korrekt konfiguriert ist. Dieser Stream ist immer online und ideal zum Üben der Handgriffe:</p>
+            <div style="position: relative; margin-top: 15px;">
+                <pre id="test-stream-url">https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8</pre>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', this)">URL Kopieren</button>
+            </div>
+            <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 10px;"><i>Hinweis: Dies ist ein HLS-Teststream von Mux. Er verhält sich in VLC identisch zu den TikTok RTMP-Streams.</i></p>
         </div>
 
         <div class="section" data-aos="fade-up" data-aos-delay="100">

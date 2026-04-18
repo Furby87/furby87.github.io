@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
+    <link rel="canonical" href="https://furby87.github.io/tikleapcrawler_data.html">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         </a>
         <div data-aos="zoom-out">
             <h1 class="glitch-title hero-title-large" data-value="Data Management"><span class="text-gradient">Data Management</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - High-performance storage and export</p>
+            <p class="hero-subtitle-muted">[DATABASE] - Hochleistungs-Speicherung & Export-Logik</p>
         </div>
     </header>
 
@@ -49,7 +50,7 @@
                     wenn du einen Kanal auswählst.</li>
             </ul>
             <img src="https://raw.githubusercontent.com/Furby87/TikleapCrawler/main/docs/images/data_export7.png"
-                onerror="this.onerror=null; this.src='images/tikleapcrawler/data_export7.png'" alt="Data Analytics" class="data-img">
+                onerror="this.onerror=null; this.src='images/tikleapcrawler/data_export7.png'" alt="Data Analytics" class="data-img" loading="lazy">
         </div>
 
         <!-- Database Merge -->
@@ -58,9 +59,12 @@
             <p style="color: var(--text-muted);">Das neue <span class="highlight">merge_db.py</span> Tool (v2.0.9) erlaubt das sichere Zusammenführen von mehreren Datenbanken:</p>
             <ul style="color: var(--text-muted); padding-left: 20px; margin-top: 15px;">
                 <li><b>UPSERT Logik:</b> Bei Duplikaten wird automatisch der Datensatz mit dem neuesten Zeitstempel priorisiert.</li>
-                <li><b>Integrierte Sicherung:</b> Vor jeder Operation wird automatisch eine <code>.db.bak</code> Datei erstellt.</li>
+                <li><b>Integrierte Sicherung:</b> Vor jeder Operation wird automatisch eine <code style="cursor:pointer; color:var(--secondary);" onclick="copyToClipboard('.db.bak', this)">.db.bak</code> Datei erstellt.</li>
                 <li><b>Cross-Platform:</b> Funktioniert nahtlos zwischen Desktop- und Termux-Instanzen.</li>
             </ul>
+            <div class="glass" style="margin-top: 20px; border-left: 3px solid var(--secondary); padding: 15px;">
+                <p style="font-size: 0.9rem; color: var(--secondary);"><b><i class="fas fa-undo"></i> Recovery & Modale:</b> Über das ℹ️ Dashboard-Icon (About) kannst du jederzeit eine ältere Sicherung (<code>.db.bak</code>) direkt in der GUI wiederherstellen.</p>
+            </div>
         </div>
 
         <!-- Export Logic -->

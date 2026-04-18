@@ -18,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="canonical" href="https://furby87.github.io/tikleapcrawler_config.html">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="subpages.css">
 </head>
@@ -30,7 +31,7 @@
         </a>
         <div data-aos="zoom-out">
             <h1 class="glitch-title hero-title-large" data-value="Configuration"><span class="text-gradient">Configuration</span></h1>
-            <p class="hero-subtitle-muted">[ACCESS_LEVEL: L4] - Fine-tune the engine for maximum efficiency</p>
+            <p class="hero-subtitle-muted">[SETTINGS] - Globale Parameter & Performance-Konfiguration</p>
         </div>
     </header>
 
@@ -40,9 +41,12 @@
             <h2 class="gradient-text">🍪 <span class="text-gradient">cookie.txt</span></h2>
             <p style="color: var(--text-muted);">Erforderlich für den Zugriff auf geschützte TikLeap-Profile. Nutze eine
                 Browser-Extension (z.B. "Get cookies.txt") im Netscape-Format.</p>
-            <pre># Netscape HTTP Cookie File
+            <div style="position: relative;">
+                <pre># Netscape HTTP Cookie File
 .tikleap.com	TRUE	/	TRUE	1735689600	session_id	xyz123...
 .tikleap.com	TRUE	/	TRUE	1735689600	csrf_token	abc456...</pre>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('# Netscape HTTP Cookie File\n.tikleap.com	TRUE	/	TRUE	1735689600	session_id	xyz123...\n.tikleap.com	TRUE	/	TRUE	1735689600	csrf_token	abc456...', this)">Format kopieren</button>
+            </div>
         </div>
 
         <!-- settings.json -->
@@ -50,7 +54,8 @@
             <h2 class="gradient-text">⚙️ <span class="text-gradient">settings.json</span></h2>
             <p style="color: var(--text-muted);">Speichert deine globalen Präferenzen. Wird automatisch im Ordner <span
                     class="highlight">/data</span> verwaltet.</p>
-            <pre>{
+            <div style="position: relative;">
+                <pre>{
     "timeframe": "Letzte 30 Tage",
     "legend_size": "Legende: Mikro",
     "auto_interval": "Alle 6 Std",
@@ -58,6 +63,8 @@
     "only_proxies": false,
     "view_mode": "Einzeln"
 }</pre>
+                <button class="copy-button" style="position: absolute; top: 10px; right: 10px;" onclick="copyToClipboard('{\n    &quot;timeframe&quot;: &quot;Letzte 30 Tage&quot;,\n    &quot;legend_size&quot;: &quot;Legende: Mikro&quot;,\n    &quot;auto_interval&quot;: &quot;Alle 6 Std&quot;,\n    &quot;use_proxies&quot;: true,\n    &quot;only_proxies&quot;: false,\n    &quot;view_mode&quot;: &quot;Einzeln&quot;\n}', this)">Config kopieren</button>
+            </div>
         </div>
 
         <!-- user_agent.txt -->

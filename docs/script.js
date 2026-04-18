@@ -268,12 +268,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 1. Preloader Fade-out
+    // 1. Event-based Preloader Fade-out
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add('fade-out');
-        }, 400); // 400ms grace period for load
+        const fadeOut = () => {
+            if (!preloader.classList.contains('fade-out')) {
+                preloader.classList.add('fade-out');
+                setTimeout(() => preloader.remove(), 1000);
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            fadeOut();
+        } else {
+            window.addEventListener('load', fadeOut);
+            // Fallback for slow connections
+            setTimeout(fadeOut, 3000);
+        }
     }
 
     // 2. Typewriter Effect
@@ -516,8 +527,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// 📊 5. Cyber Dossier: Animated Telemetry (v50)
+// 📋 5. Clipboard & Utility
 // ==========================================
+
+window.copyToClipboard = function(text, btn) {
+    if (!navigator.clipboard) {
+        // Fallback for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            showToast(btn);
+        } catch (err) {
+            console.error('Fallback copy failed', err);
+        }
+        document.body.removeChild(textArea);
+        return;
+    }
+    navigator.clipboard.writeText(text).then(() => {
+        showToast(btn);
+    }, (err) => {
+        console.error('Async: Could not copy text: ', err);
+    });
+};
+
+function showToast(btn) {
+    const originalText = btn.innerText;
+    btn.innerText = "Kopiert! ✓";
+    btn.classList.add('success');
+    setTimeout(() => {
+        btn.innerText = originalText;
+        btn.classList.remove('success');
+    }, 2000);
+}
+
 function animateTacticalNumbers() {
     const counters = document.querySelectorAll('.stat-number[data-target]');
     counters.forEach(counter => {
