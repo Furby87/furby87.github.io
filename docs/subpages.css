@@ -106,21 +106,85 @@ code {
     background: rgba(255, 255, 255, 0.02) !important;
     border: 1px solid rgba(255, 255, 255, 0.03) !important;
     color: #fff !important;
-    border-radius: 12px !important;
+    border-radius: 16px !important;
+    padding: 25px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
     transition: all 0.3s ease !important;
 }
 
+.stats-grid, .credits-grid, .button-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 20px !important;
+    margin: 25px 0 !important;
+}
+
+.action-button {
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 25px 20px !important;
+    border-radius: 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    min-height: 120px !important;
+    text-align: center !important;
+}
+
+.action-button .icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 12px !important;
+}
+
+.action-button .text {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+}
+
+.action-button .subtitle {
+    font-size: 0.75rem !important;
+    opacity: 0.6 !important;
+    color: var(--text-muted) !important;
+}
+
+.stat-icon, .credit-icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 15px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.stat-card:hover .stat-icon, .credit-card:hover .credit-icon {
+    transform: scale(1.15) !important;
+}
+
+.stat-number {
+    font-size: 1.8rem !important;
+    color: var(--secondary) !important;
+    font-weight: 800 !important;
+    margin-bottom: 5px !important;
+}
+
 .stat-label, .credit-content, .credit-content a, .command-description {
-    color: #cbd5e1 !important;
+    color: var(--text-muted) !important;
+    font-size: 0.95rem !important;
+}
+
+.credit-title {
+    font-weight: 700 !important;
+    color: var(--secondary) !important;
+    margin-bottom: 10px !important;
+    font-size: 1.1rem !important;
 }
 
 .stat-card:hover, .credit-card:hover {
     transform: translateY(-5px) !important;
-    border-color: rgba(34, 211, 238, 0.3) !important;
-}
-
-.stat-number {
-    color: #a855f7 !important;
+    border-color: rgba(34, 211, 238, 0.4) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .back-button, .support-button {
@@ -128,21 +192,49 @@ code {
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #d1d5db !important;
     border-radius: 20px !important;
+    padding: 10px 25px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.support-links {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+    margin-top: 25px !important;
 }
 
 .back-button:hover, .support-button:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(34, 211, 238, 0.1) !important;
     color: #fff !important;
-    border-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--secondary) !important;
+    transform: translateY(-2px) !important;
 }
 
 .bot-link {
-    background: linear-gradient(45deg, #a855f7, #22d3ee) !important;
+    display: inline-block !important;
+    background: linear-gradient(45deg, var(--primary), var(--secondary)) !important;
     color: #0c0d18 !important;
-    border-radius: 25px !important;
-    font-weight: 700 !important;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
+    padding: 15px 40px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-weight: 800 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 6px 25px rgba(168, 85, 247, 0.4) !important;
     border: none !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    margin: 15px 0 !important;
+}
+
+.bot-link:hover {
+    transform: scale(1.05) translateY(-2px) !important;
+    box-shadow: 0 10px 35px rgba(168, 85, 247, 0.6) !important;
 }
 
 .filter-buttons .filter-btn {
@@ -167,8 +259,18 @@ footer {
 .header-logo {
     display: block !important;
     margin: 0 auto 25px !important;
-    width: 110px;
-    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3));
+    width: 90px !important;
+    height: 90px !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3)) !important;
+}
+
+.bot-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 header {
