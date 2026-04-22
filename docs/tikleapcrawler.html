@@ -144,10 +144,25 @@
             .button-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
 
-            header {
-                padding: 3.5rem 0;
-            }
+        header {
+            padding: 3.5rem 0;
+        }
+
+        .header-logo {
+            animation: glitch-icon 3s infinite;
+            filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.4));
+            margin-bottom: 20px;
+        }
+
+        @keyframes glitch-icon {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
         }
     </style>
 </head>
@@ -169,6 +184,7 @@
                 EARNINGS TRACKER & ANALYTICS HUB</p>
             <a href="https://github.com/Furby87/TikleapCrawler"
                 class="bot-link animate__animated animate__pulse animate__infinite">OPEN REPOSITORY</a>
+            <div id="download-node"></div>
         </div>
     </header>
 
@@ -298,6 +314,37 @@
     <script src="config.js"></script>
     <script src="components.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Phase 7: Dynamic Release Fetch Logic
+        (function() {
+            const downloadNode = document.getElementById('download-node');
+            if (!downloadNode) return;
+
+            fetch('https://api.github.com/repos/Furby87/TikleapCrawler/releases/latest')
+                .then(response => {
+                    if (response.ok) return response.json();
+                    throw new Error('Not public or no releases yet');
+                })
+                .then(data => {
+                    if (data && data.assets && data.assets.length > 0) {
+                        // We take the first asset as the primary download
+                        const asset = data.assets[0];
+                        downloadNode.innerHTML = `
+                            <div class="animate__animated animate__fadeInUp" style="margin-top: 15px;">
+                                <a href="${asset.browser_download_url}" class="bot-link" style="background: linear-gradient(45deg, #22d3ee, #a855f7) !important; border: 1px solid rgba(255,255,255,0.1) !important;">
+                                    <i class="fas fa-cloud-download-alt"></i> DOWNLOAD ${data.tag_name}
+                                </a>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Latest build from official repository</p>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(err => {
+                    // Graceful silence while repo is private (404)
+                    console.log("[SYS] Release Monitor:", err.message);
+                });
+        })();
+    </script>
 </body>
 
 </html>
