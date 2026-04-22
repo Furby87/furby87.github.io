@@ -2,8 +2,8 @@
 
 <div align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Initializing_Connection...;Target:_[Furby87];Role:_Cyber_Architect;Status:_Active_Recherché...;&size=24&color=22d3ee&center=true&vCenter=true&width=500#gh-dark-mode-only" alt="Typing Animation">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Initializing_Connection...;Target:_[Furby87];Role:_Cyber_Architect;Status:_Active_Recherché...;&size=24&color=0891b2&center=true&vCenter=true&width=500#gh-light-mode-only" alt="Typing Animation">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Initializing_Connection...;Target:_[Furby87];Role:_Metadata_Architect;Status:_Active_Recherché...;Mission:_Standardizing_Documentation...;&size=24&color=22d3ee&center=true&vCenter=true&width=500#gh-dark-mode-only" alt="Typing Animation">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Initializing_Connection...;Target:_[Furby87];Role:_Metadata_Architect;Status:_Active_Recherché...;Mission:_Standardizing_Documentation...;&size=24&color=0891b2&center=true&vCenter=true&width=500#gh-light-mode-only" alt="Typing Animation">
   </a>
 
   <br>
@@ -38,8 +38,8 @@
 
 ### [recon] personnel_record
 
-- 🔭 **Current_Mission**: [Developing_TikLeap_Analytics](https://furby87.github.io/TikLeapCrawler)
-- 🌱 **Skill_Acquisition**: Advanced C++, OSINT, and historical data patterns.
+- 🔭 **Current_Mission**: [Documentation_Suite_Standardization](https://furby87.github.io) and [Developing_TikLeap_Analytics](https://furby87.github.io/TikLeapCrawler)
+- 🌱 **Skill_Acquisition**: Glassmorphism UI, SEO-Optimization, Advanced C++ , OSINT, and historical data patterns.
 - 👯 **Joint_Operations**: Open for innovative collaborations on automation & security.
 - 📫 **Encrypted_Uplink**: Discord or Telegram (@Furby1337)
 
@@ -59,7 +59,7 @@ C++/C#:  [██████░░░░] 60%
 ### [OFFENSIVE_SUITE]
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=py,js,nodejs,selenium,bash,lua,regex,xpath&perline=8&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=py,js,nodejs,selenium,bash,lua,regex,xpath,html,css&perline=10&theme=dark" />
 </div>
 
 ### [DEFENSIVE_TOOLS]
@@ -81,6 +81,7 @@ C++/C#:  [██████░░░░] 60%
 - **Hardware**: `Raspberry Pi 4`, `Arduino`, `ESP32`
 
 ### 🔍 [recon] quick_shortcuts
+
 [OSINT_Assets](https://github.com/search?q=topic%3Aosint+user%3AFurby87&type=repositories) • [Operational_History](https://github.com/Furby87?tab=repositories) • [Secure_Uplink](https://t.me/Furby1337)
 
 ---
@@ -113,11 +114,13 @@ C++/C#:  [██████░░░░] 60%
 </div>
 
 ### 📋 [system] operational_status_log
+
 ```bash
 [RECON] Starting surveillance on tiktok_stream_api...
 [RECON] Target acquired: 12.8M potential data points.
 [UPLINK] Stable connection established with DanteNode_3.
 [ENCRYPTION] AES-256 handshake SUCCESS.
+[SECURE] Mission "Favicon_Standardization" SUCCESS.
 [SECURE] Mission "TikLeap" is in ACTIVE_DEPLOYMENT.
 ```
 
@@ -126,18 +129,32 @@ C++/C#:  [██████░░░░] 60%
 <div align="center">
   <table border="0">
     <tr>
-      <td align="center" width="400">
-        <a href="https://furby87.github.io/TikLeapCrawler">
-          <img src="https://img.shields.io/badge/PROJECT:_TikLeapCrawler-22d3ee?style=for-the-badge&logo=tiktok&logoColor=black" alt="TikLeapCrawler">
+      <td align="center" width="220">
+        <a href="https://furby87.github.io">
+          <img src="https://img.shields.io/badge/MASTER_HUB-22d3ee?style=for-the-badge&logo=homeassistant&logoColor=black" alt="Master Documentation Hub">
           <br>
-          <code>[STATUS: PRIVATE_RECONNAISSANCE]</code>
+          <code>[STATUS: HUB_ONLINE]</code>
         </a>
       </td>
-      <td align="center" width="400">
-        <a href="https://furby87.github.io/docs/ttuserinfobot.html">
-          <img src="https://img.shields.io/badge/PROJECT:_TT_UserInfo_Bot-22d3ee?style=for-the-badge&logo=telegram&logoColor=black" alt="TT_UserInfo_Bot">
+      <td align="center" width="220">
+        <a href="https://furby87.github.io/tikleapcrawler.html">
+          <img src="https://img.shields.io/badge/TikLeap_Crawler-22d3ee?style=for-the-badge&logo=tiktok&logoColor=black" alt="TikLeapCrawler">
           <br>
-          <code>[STATUS: STABLE_UPLINK_ESTABLISHED]</code>
+          <code>[STATUS: RECON_ACTIVE]</code>
+        </a>
+      </td>
+      <td align="center" width="220">
+        <a href="https://furby87.github.io/ttuserinfobot.html">
+          <img src="https://img.shields.io/badge/TT_UserInfo_Bot-22d3ee?style=for-the-badge&logo=telegram&logoColor=black" alt="TT_UserInfo_Bot">
+          <br>
+          <code>[STATUS: UPLINK_STABLE]</code>
+        </a>
+      </td>
+      <td align="center" width="220">
+        <a href="https://furby87.github.io/dantebot.html">
+          <img src="https://img.shields.io/badge/DanteBot_Node-22d3ee?style=for-the-badge&logo=probot&logoColor=black" alt="DanteBot">
+          <br>
+          <code>[STATUS: OPERATIONAL]</code>
         </a>
       </td>
     </tr>
@@ -161,7 +178,8 @@ C++/C#:  [██████░░░░] 60%
 
 | Operational_Asset | Status | Encryption_Level |
 | :--- | :--- | :--- |
-| [TikLeapCrawler](https://furby87.github.io/TikLeapCrawler) | `ACTIVE_DEPLOYMENT` | `Level_4 (AES-256)` |
+| [Master_Command_Center](https://furby87.github.io) | `CORE_NODE_ONLINE` | `Level_5 (ROOT)` |
+| [TikLeapCrawler](https://furby87.github.io/tikleapcrawler.html) | `ACTIVE_DEPLOYMENT` | `Level_4 (AES-256)` |
 | [TT_UserInfo_Bot](https://furby87.github.io/ttuserinfobot.html) | `STABLE_UPLINK` | `Level_3 (RSA-2048)` |
 | [DanteBot](https://furby87.github.io/dantebot.html) | `OPERATIONAL_NODE` | `Level_3 (Shadow_AES)` |
 
@@ -227,5 +245,5 @@ C++/C#:  [██████░░░░] 60%
 <p align="center">
   <code>[ENCRYPTION: AES-256 ACTIVE]</code> •
   <code>[SECURITY CLEARANCE: LEVEL_4]</code> •
-  <code>[LAST_SYSTEM_PULSE: 2026-04-08]</code>
+  <code>[LAST_SYSTEM_PULSE: 2026-04-22]</code>
 </p>
